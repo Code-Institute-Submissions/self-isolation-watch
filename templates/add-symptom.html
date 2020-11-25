@@ -1,13 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
+
+  <div class="row">
+    <h3 class="center-align"> Hey {{ username }} here are your current symptoms. 
+<!--show the users symptoms-->
+ <ul class="collapsible">
+ {% for symptom in symptoms %}
+    <li>
+      <div class="collapsible-header"><i class="prefix fas fa-viruses"></i><strong>{{ symptom.symptom_name }}, experienced since {{ symptom.start_date}}</strong></div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+{% endfor %}
+  </ul>
+
+    Feel free to update/ delete any of them!</h3>
+
+
+  </div>
+
   <div class="row">
     <h3 class="center-align"> Add your symptoms</h3>
   </div>
-    <!--new symptom form  -->
+<!--new symptom form  -->
      
   <div class="row">
-    <form class="col s12" method="POST" action="">
+  <!--new symptom form  -->
+    <form class="col s12" method="POST" action="add_symptom">
 
+<!--status of your self isolation  -->
+    <div class="row">
+      <div class="input-field col s12">
+      <i class="prefix fas fa-house-user"></i>
+    <select id="isolation_status" name="isolation_status" class="validate" required>
+      <option value="" disabled selected>Status</option>
+      {% for stat in status %}
+        <option value="{{ stat.isolation_status }}">{{ stat.isolation_status }}</option>
+      {% endfor %}
+ 
+    </select>
+    <label for="isolation_status">What's your self isolation status?</label>
+  </div>
+    </div>
+
+<!--new symptom  -->
       <div class="row">
         <div class="input-field col s6">
           <i class="prefix fas fa-viruses"></i>
@@ -15,7 +50,7 @@
           <label for="symptom_name"><h3>Symptom</h3></label>
         </div>
       </div>
-
+<!-- symptom description -->
       <div class="row">
         <div class="input-field col s6">
           <i class="prefix fas fa-pen-square"></i>
@@ -23,7 +58,7 @@
           <label for="description">Description</label>
         </div>
       </div>
-
+<!--symptom start date  -->
         <div class="row">
         <div class="input-field col s6">
           <i class="prefix fas fa-calendar-alt"></i>
@@ -31,7 +66,7 @@
           <label for="start_date">Start date</label>
         </div>
       </div>
-
+<!--mood -->
         <div class="row">
         <div class="input-field col s6">
           <i class="prefix fas fa-meh"></i>
@@ -40,7 +75,14 @@
         </div>
       </div>
 
-      
+<!--submit button  -->
+    <div class="row">
+    <div class="col center-align s6">
+            <button class="btn waves-effect waves-light " type="submit" name="action">Save 
+       <i class="fas fa-check-square"></i>
+  </button>
+    </div>
+    </div>
     </form>
   </div>
 {% endblock %}

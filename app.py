@@ -1,12 +1,12 @@
 import os
-from flask import(
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
-if os.path.exists("env.py"):
-    import env
+from flask import (
+                Flask, flash, render_template,
+                redirect, request, session, url_for)
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+if os.path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 
@@ -60,7 +60,8 @@ def login():
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back, {}".format(request.form.get("username")))
-                return redirect(url_for("get_symptoms", username=session["user"]))
+                return redirect(
+                    url_for("get_symptoms", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect username and/or Password")
@@ -74,7 +75,17 @@ def login():
 
 @app.route("/add_symptom", methods=["GET", "POST"])
 def add_symptom():
-    return render_template("add-symptom.html")
+    new_symptom = {
+            "isolation_status": request.form.get("isolation_status"),
+            "symptom_name": request.form.get("symptom_name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("start_date"),
+            "mood": request.form.get("mood")
+        }
+    mongo.db.symptoms.insert_one(new_symptom)
+    flash("Your symptom has been added!")
+    status = mongo.db.status.find()
+    return render_template("add-symptom.html", status=status)
 
 
 @app.route("/logout")

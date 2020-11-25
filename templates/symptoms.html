@@ -8,9 +8,11 @@ hello mate to add your own symtpoms to the list, regsiter/ log in</h1>
 <div class="row">
 <div class="col center-align">
 {% for symptom in symptoms %}
+    {{ symptom.isolation_status }} <br>
     {{ symptom.symptom_name}} <br>
     {{ symptom.description}} <br>
     {{ symptom.start_date}} <br>
+    {{ symptom.mood}} <br>
 {% endfor %}
 </div>
 
