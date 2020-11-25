@@ -34,10 +34,14 @@
       <a href="#!" class="brand-logo center">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger">
       <ul class="left hide-on-med-and-down">
-
+        {% if session.user %}
+            <li><a href="{{ url_for('add_symptom') }}">Add symptom</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
+        {% else %}
             <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="">Add symptom</a></li>
+        {% endif %}  
       </ul>
     </div>
   </nav>

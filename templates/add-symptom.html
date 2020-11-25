@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <h3 class="center-align"> Add your symptoms</h3>
+  </div>
+    <!--new symptom form  -->
+     
+  <div class="row">
+    <form class="col s12" method="POST" action="">
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="prefix fas fa-viruses"></i>
+          <input id="symptom_name" type="text" name="symptom_name" class="validate">
+          <label for="symptom_name"><h3>Symptom</h3></label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="prefix fas fa-pen-square"></i>
+          <textarea  id="description" type="text" name="description" class="validate" required></textarea>
+          <label for="description">Description</label>
+        </div>
+      </div>
+
+        <div class="row">
+        <div class="input-field col s6">
+          <i class="prefix fas fa-calendar-alt"></i>
+        <input type="text" class="datepicker validate" id="start_date" name="start_date" required>
+          <label for="start_date">Start date</label>
+        </div>
+      </div>
+
+        <div class="row">
+        <div class="input-field col s6">
+          <i class="prefix fas fa-meh"></i>
+          <textarea id="mood" type="text" name="mood" class="validate" required></textarea>
+          <label for="mood">How is your mood and mental health?</label>
+        </div>
+      </div>
+
+      
+    </form>
+  </div>
+{% endblock %}
