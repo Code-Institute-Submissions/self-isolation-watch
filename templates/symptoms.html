@@ -16,10 +16,13 @@ To add your own symtpoms to the list, regsiter/ log in</h1>
             <div class="collapsible-header">
             <div class="col s3">
             <i class="prefix fas fa-viruses"></i>
-            <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
+            {% if session.user| lower == symptom.symptom_recipient | lower %}
+                <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Delete</a>
+                <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
+            {% endif %}
             </div>
             <div class="col s9">
-            <strong>{{ symptom.symptom_name }} </strong> Experienced Since : <strong>{{ symptom.start_date}}</strong></div>
+            <strong>{{ symptom.symptom_name }} </strong> Experienced Since : <strong>{{ symptom.start_date}}</strong> added by : {{ symptom.symptom_recipient }}</div>
             </div>
             <div class="collapsible-body"><p>{{ symptom.description }}</p></div>
         </li>

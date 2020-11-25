@@ -46,7 +46,7 @@ def register():
         else:
             flash("Passwords do not match! Please try again")
             return redirect(url_for("register"))
-    return render_template("register.html")
+    return render_template("add-symptom.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -80,7 +80,8 @@ def add_symptom():
             "symptom_name": request.form.get("symptom_name"),
             "description": request.form.get("description"),
             "start_date": request.form.get("start_date"),
-            "mood": request.form.get("mood")
+            "mood": request.form.get("mood"),
+            "symptom_recipient": session["user"]
         }
     mongo.db.symptoms.insert_one(new_symptom)
     flash("Your symptom has been added!")
@@ -92,10 +93,11 @@ def add_symptom():
 def edit_symptom(symptom_id):
     if request.method == "POST":
         updated_symptom = {
-                "isolation_status": request.form.get("isolation_status"), "symptom_name": request.form.get("symptom_name"),
+             "isolation_status": request.form.get("isolation_status"), "symptom_name": request.form.get("symptom_name"),
                 "description": request.form.get("description"),
                 "start_date": request.form.get("start_date"),
-                "mood": request.form.get("mood")
+                "mood": request.form.get("mood"),
+                "symptom_recipient": session["user"]
         }
         mongo.db.symptoms.update(
             {"_id": ObjectId(symptom_id)}, updated_symptom)
@@ -104,6 +106,14 @@ def edit_symptom(symptom_id):
     symptom = mongo.db.symptoms.find_one({"_id": ObjectId(symptom_id)})
     status = mongo.db.status.find()
     return render_template("edit_symptom.html", status=status, symptom=symptom)
+
+
+@app.route("/delete_symptom/<symptom_id>")
+def delete_symptom(symptom_id):
+    mongo.db.symptoms.remove(
+            {"_id": ObjectId(symptom_id)})
+    flash("Your symptom has been deleted!")
+    return redirect(url_for("get_symptoms"))
 
 
 @app.route("/logout")
