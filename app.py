@@ -88,6 +88,14 @@ def add_symptom():
     return render_template("add-symptom.html", status=status)
 
 
+@app.route("/edit_symptom/<symptom_id>", methods=["GET", "POST"])
+def edit_symptom(symptom_id):
+
+
+    status = mongo.db.status.find()
+    return render_template("edit_symptom.html", status=status, symptom=symptom)
+
+
 @app.route("/logout")
 def logout():
     flash("You have been logged out")

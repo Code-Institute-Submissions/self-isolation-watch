@@ -3,7 +3,7 @@
     $('.sidenav').sidenav();
   });
 
-/* initialisation for date picker on profile form */
+/* initialisation for date picker on new symptom form */
   $(document).ready(function(){
     $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",
@@ -13,8 +13,14 @@
             done: "select"
         }
     });
-
+/* initialisation for select tool on new symptom  form */
   $(document).ready(function(){
     $('select').formSelect();
   })
-});
+
+/* initialisation for select tool on collapsible function for list of symptoms on symptom landing page */
+ $(document).ready(function(){
+    $('.collapsible').collapsible();
+     })
+
+    });

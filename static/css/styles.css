@@ -1,0 +1,5 @@
+body{
+    background-repeat: no-repeat;
+    background-image:url({{url_for('static', filename='images/background.jpg')}})
+    
+}

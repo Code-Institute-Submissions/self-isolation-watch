@@ -1,19 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 <!--main page body-->
+
 <div class="row">
+
 <h1 class="center-align"> 
-hello mate to add your own symtpoms to the list, regsiter/ log in</h1>
+To add your own symtpoms to the list, regsiter/ log in</h1>
 </div>
 <div class="row">
 <div class="col center-align">
-{% for symptom in symptoms %}
-    {{ symptom.isolation_status }} <br>
-    {{ symptom.symptom_name}} <br>
-    {{ symptom.description}} <br>
-    {{ symptom.start_date}} <br>
-    {{ symptom.mood}} <br>
-{% endfor %}
+
+<ul class="collapsible">
+    {% for symptom in symptoms %}
+        <li>
+            <div class="collapsible-header">
+            <div class="col s3">
+            <i class="prefix fas fa-viruses"></i>
+            <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
+            </div>
+            <div class="col s9">
+            <strong>{{ symptom.symptom_name }} </strong> Experienced Since : <strong>{{ symptom.start_date}}</strong></div>
+            </div>
+            <div class="collapsible-body"><p>{{ symptom.description }}</p></div>
+        </li>
+    {% endfor %}
+</ul>
+
+
+
 </div>
 
 
