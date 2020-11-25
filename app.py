@@ -90,8 +90,18 @@ def add_symptom():
 
 @app.route("/edit_symptom/<symptom_id>", methods=["GET", "POST"])
 def edit_symptom(symptom_id):
+    if request.method == "POST":
+        updated_symptom = {
+                "isolation_status": request.form.get("isolation_status"), "symptom_name": request.form.get("symptom_name"),
+                "description": request.form.get("description"),
+                "start_date": request.form.get("start_date"),
+                "mood": request.form.get("mood")
+        }
+        mongo.db.symptoms.update(
+            {"_id": ObjectId(symptom_id)}, updated_symptom)
+        flash("Your symptom has been updated!")
 
-
+    symptom = mongo.db.symptoms.find_one({"_id": ObjectId(symptom_id)})
     status = mongo.db.status.find()
     return render_template("edit_symptom.html", status=status, symptom=symptom)
 
