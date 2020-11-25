@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<!--main page body-->
+<div class="row">
+<h1 class="center-align"> 
+hello mate</h1>
+</div>
+<div class="row">
+<div class="col center-align">
+{% for symptom in symptoms %}
+    {{ symptom.symptom_name}} <br>
+    {{ symptom.description}} <br>
+    {{ symptom.start_date}} <br>
+{% endfor %}
+</div>
+
+
+
+
+</div>
+{% endblock %}
