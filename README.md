@@ -1,45 +1,30 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
-Welcome USER_NAME,
+## Milestone 3 project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+# Self isolation watch
+'Self isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 
+This will help them keep note of their potential retraction of the virus as well as give them an indication into how contagious they are. Users will be able to create a profile, where they save their symptoms, update them accordingly and when they are no longer symptomatic, they can delete them.' 
 
-## Gitpod Reminders
+## Main Aims 
+- To create an app that gives people a platform to share their symtpoms and learn about each others.
+- Take the pressure of a person to remember when they started feeling this way. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Stories 
+ 
+- 'As a recent self isolater, I want to keep track of what symtpoms I have and how long I have had them, so that I have more information to give to the doctor.'
 
-`python3 -m http.server`
+- 'As a key worker, I want to browse through patients' symptoms, so that I can speed up diagnosis. '
 
-A blue button should appear to click: *Make Public*,
+- 'As a recent self isolater, I want to update the symptoms I have had, so that I can find out how far from recovery I am.'
 
-Another blue button should appear to click: *Open Browser*.
+- 'As a recent self isolater, I want to read through other peoples symptoms and compare, so that I can find out if my symptoms are typical.'
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+## Personnas 
+- 'Someone at work has recently tested positive for covid-19, we must self isolate and track our symtoms (if any), I spend all day on my laptop, if only there was an app where i could record my symptoms and the date i started feeling the symptoms too!' (Evelyn, 31, mother of 2 children under 5)
 
-Another blue button should appear to click: *Open Browser*.
+- 'Its so frustrating when patients come to me saying that they feel ill and they think they have COVID, but no note of when they started feeling ill! I wish they would bring me more information' (Jocelyn, 55, Nurse) 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
+- 'I feel terrible, but I dont know if its just a flu.. I want to know if my symtpoms are from COVID or something else. Im conscious of all the fear mongering and fake news out there..' (Luke, 28, Marketing manager)
 
 Happy coding!
