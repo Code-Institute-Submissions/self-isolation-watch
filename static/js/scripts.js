@@ -22,5 +22,6 @@
  $(document).ready(function(){
     $('.collapsible').collapsible();
      })
-
+/* initialisation for dropdown tool on for list of symptoms on my_symptoms page */     
+  $('.dropdown-trigger').dropdown();
     });

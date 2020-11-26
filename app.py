@@ -78,9 +78,8 @@ def login():
 def my_symptoms(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("my_symptoms.html", username=username)
-
-
+    symptoms = list(mongo.db.symptoms.find())
+    return render_template("my_symptoms.html", username=username, symptoms=symptoms)
 
 
 
