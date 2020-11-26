@@ -27,4 +27,24 @@ This will help them keep note of their potential retraction of the virus as well
 
 - 'I feel terrible, but I dont know if its just a flu.. I want to know if my symtpoms are from COVID or something else. Im conscious of all the fear mongering and fake news out there..' (Luke, 28, Marketing manager)
 
-Happy coding!
+
+
+
+## Bugs discovered
+
+- Refresh causing null data input
+
+* Everytime I was refreshing the page and logged in, a new input which was blank was being added to my mongo db. It was then also showing up on my page, as I was displaying all mongo.db entries. 
+
+### solution:
+
+- Materialize Code not displaying 
+
+* I had added some code from a meaterialize carousel and it wasnt showing up on my page.
+* I tried to chnage the colour of the text and double checked that I wasnt pasting within any none relevant for loops etc. 
+
+### solution:
+
+
+### credits
+![background image by sarah kilian](https://unsplash.com/photos/yvxw4K9lYKo)
