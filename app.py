@@ -43,10 +43,11 @@ def register():
         # put the new user into 'session' cookie
             session["user"] = request.form.get("username").lower()
             flash("Registration Successful!")
+            return redirect(url_for("my_symptoms", username=session["user"]))
         else:
             flash("Passwords do not match! Please try again")
             return redirect(url_for("register"))
-    return render_template("add-symptom.html")
+    return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -61,7 +62,7 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(
-                    url_for("get_symptoms", username=session["user"]))
+                    url_for("my_symptoms", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect username and/or Password")
@@ -71,6 +72,16 @@ def login():
             flash("Incorrect username and/or Password")
             return redirect(url_for("login"))
     return render_template("login.html")
+
+
+@app.route("/my_symptoms/<username>", methods=["GET", "POST"])
+def my_symptoms(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("my_symptoms.html", username=username)
+
+
+
 
 
 @app.route("/add_symptom", methods=["GET", "POST"])

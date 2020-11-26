@@ -38,6 +38,8 @@
             <li><a href="{{ url_for('add_symptom') }}">Add symptom</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
+            <li><a href="{{ url_for('my_symptoms', username=session['user']) }}
+            ">My Symptoms</a></li>
         {% else %}
             <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
