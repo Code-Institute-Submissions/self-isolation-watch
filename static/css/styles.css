@@ -30,7 +30,21 @@ nav ul a {
 .symptom-container{
     padding: 5rem 1rem 1rem 1rem
 }
+.titles{
+   font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+     font-size: 30px;
+    text-align: center;
+    color:#E26D5C;
+}
 
+.subtitles{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+     font-size: 20px;
+    text-align: center;
+    
+}
 .flashes{
     font-family: 'Quicksand', sans-serif;
     color: #472D30;
@@ -42,11 +56,10 @@ nav ul a {
 .logo{
     text-decoration: none;
     cursor: none;
-    padding:1rem;
     width: 50%;
     height: 50%;
     display: flex;
-    opacity: 0.5;
+
 }
 
 form{

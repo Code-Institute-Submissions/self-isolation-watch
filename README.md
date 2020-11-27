@@ -73,16 +73,47 @@ Proof of me working through this :
 - flash messages displaying with ``` [' '] ```
 
 * I started trying to solve this issue by applying some css to the flash messages. This indeed made them more aesthetically pleasing, but did not solve the issue. 
-* 
+* I then began to do some research which threw up plenty of alternative options for writing a conditional statement and for loop for my flash messages to sit within, but none helped me. 
+* Finally, I found a thread in slack of someone experiencing the same issue! 
+
 
 ### solution:
-1. 
+1. I simply had to change the 'messages' object in the curly brackets to singular. I realised that i had initially made this mistake, because i was thinking of it as, all the flash messages must follow this format, but in reality, i only want one message at a time and EACH message must follow the same conditions. 
 ```
+<div class="row">
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="col s12 flashes">
+                <h3 class="center-align">{{messages}}</h3>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</div>
 
+```
+```
+<div class="row">
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="col s12 flashes">
+                <h3 class="center-align">{{message}}</h3>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</div>
 
 ```
 Proof of me working through this :
 ![How the flash messages appeared initially](/testing/screenshots/flash-messages(1).png)
+![Initial searching, my eyes hadn't picked up the singular 'message' in these examples](/testing/screenshots/flash-messages(4).png)
+![I found somoene in slack with the ssme issue.. but it was written in croation..](/testing/screenshots/flash-messages(2).png)
+![Double checked that this person did in fact have the same issue, before reaching out](/testing/screenshots/flash-messages(3).png)
+
+
 
 
 

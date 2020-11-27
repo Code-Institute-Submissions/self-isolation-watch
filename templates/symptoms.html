@@ -3,16 +3,25 @@
 <!--main page body-->
 
 <div class="row">
-<div class="col s6">
-<img class="img-fluid logo" src="{{ url_for('static',filename='images/logo.png') }}">
+
+<img class="img-fluid logo col s6" src="{{ url_for('static',filename='images/logo.png') }}">
+</div>
+<div class="row">
+<div class="col s12">
+<h1 class="titles">
+Welcome
+</h1>
+<p class="paragraphs">
+We are here to try and put a positive spin on the gruelling task of self isolation! Swipe for the instructions!
+</p>
 </div>
 </div>
 
 <div class="row">
    <div class="carousel carousel-slider center white-text col s12">
     <div class="carousel-item black" href="#one!" id="#carousel-1">
-      <h2 class="">Welcome</h2>
-      <p class="white-text">We are here to try and put a positive spin on the gruelling task of self isolation! Swipe for the instructions!</p>
+      <h2 class="subtitles">Want to use this service?</h2>
+      <p class="white-text">just scroll through</p>
     </div>
     <div class="carousel-item amber white-text" href="#two!">
            <div class="carousel-fixed-item center white-text">
@@ -57,7 +66,21 @@
             <i class="prefix fas fa-viruses"></i>
             {% if session.user| lower == symptom.symptom_recipient | lower %}
               <!--add an are you sure button  --> 
-                <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Delete</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Delete</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Are you sure you want to delete?</h4>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}"
+                        class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                    <a href="#symptom-dropdown" class="modal-close waves-effect waves-green btn-flat">No</a>
+                </div>
+                </div>
+
                 <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
             {% endif %}
             </div>
