@@ -2,12 +2,12 @@
 {% block content %}
 
   <div class="row">
-    <form class="col s12" method="POST" action="{{ url_for('login') }}">
+    <form class="col s12 form-styles" method="POST" action="{{ url_for('login') }}">
     <h3 class="center-align"> Login to see your symptom list and add a new one</h3>
 <!--email for register -->
       <div class="input-field col s12">
           <i class="fas fa-envelope"></i>
-          <input id="username" type="text" class="validate" name="username" placeholder="username" required pattern="^[a-z0-9_-]{3,16}$" minlength="5">
+          <input id="username" type="text" class="validate input-styles" name="username" placeholder="username" required pattern="^[a-z0-9_-]{3,16}$" minlength="5">
         </div>
 <!--password for register -->
       <div class="input-field col s12">

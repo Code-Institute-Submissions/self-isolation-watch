@@ -131,7 +131,7 @@ def delete_symptom(symptom_id):
 
 @app.route("/logout")
 def logout():
-    flash("You have been logged out")
+    flash("You have been logged out. See you soon and take care!")
     session.pop("user")
     return redirect(url_for("get_symptoms"))
 

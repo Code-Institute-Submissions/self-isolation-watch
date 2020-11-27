@@ -3,24 +3,35 @@
 <!--main page body-->
 
 <div class="row">
+<div class="col s6">
+<img class="img-fluid logo" src="{{ url_for('static',filename='images/logo.png') }}">
+</div>
+</div>
 
-   <div class="carousel carousel-slider center white-text">
-    <div class="carousel-fixed-item center white-text">
-      <a class="btn waves-effect black grey-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test">COVID-19 TEST</a>
-    </div>
-    <div class="carousel-item red" href="#one!">
-      <h2>Welcome</h2>
+<div class="row">
+   <div class="carousel carousel-slider center white-text col s12">
+    <div class="carousel-item black" href="#one!" id="#carousel-1">
+      <h2 class="">Welcome</h2>
       <p class="white-text">We are here to try and put a positive spin on the gruelling task of self isolation! Swipe for the instructions!</p>
     </div>
     <div class="carousel-item amber white-text" href="#two!">
+           <div class="carousel-fixed-item center white-text">
+      <a class="btn waves-effect transparent black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
+    </div>
       <h2>One</h2>
       <p class="white-text">Have a scroll below at the symptoms people are experiencing, as a result of coming into contact with COVID-19.</p>
     </div>
     <div class="carousel-item green white-text" href="#three!">
+        <div class="carousel-fixed-item center white-text">
+      <a class="btn waves-effect white black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
+    </div>
       <h2>Two</h2>
       <p class="white-text">Register so that you can add your own symptoms. When youve added a symptom, you will see it in the list below! You can edit and delete the symptoms at any time.</p>
     </div>
     <div class="carousel-item blue white-text" href="#four!">
+           <div class="carousel-fixed-item center white-text">
+      <a class="btn waves-effect white black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
+    </div>
       <h2>Three</h2>
       <p class="white-text">Monitor your health and use this as a tool!</p>
       <ul class="site-actions">
@@ -32,11 +43,12 @@
     </div>
   </div>
 </div>
+</div>
 
-<div class="row">
-<div class="col center-align">
+<div class="row symptom-container">
+<div class="col s8">
 
-<ul class="collapsible">
+<ul class="collapsible ">
     {% for symptom in symptoms %}
         <li>
             <div class="collapsible-header">
@@ -57,4 +69,8 @@
 </ul>
 </div>
 </div>
+
+
+
+
 {% endblock %}
