@@ -31,5 +31,8 @@
     indicators: true
   });
 
-
+/* initialisation for modals for double checking deleting */  
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
     });
