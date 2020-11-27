@@ -58,7 +58,8 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                existing_user["password"], request.form.get(
+                    "password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(
@@ -79,8 +80,8 @@ def my_symptoms(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     symptoms = list(mongo.db.symptoms.find())
-    return render_template("my_symptoms.html", username=username, symptoms=symptoms)
-
+    return render_template(
+        "my_symptoms.html", username=username, symptoms=symptoms)
 
 
 @app.route("/add_symptom", methods=["GET", "POST"])
@@ -103,15 +104,17 @@ def add_symptom():
 def edit_symptom(symptom_id):
     if request.method == "POST":
         updated_symptom = {
-             "isolation_status": request.form.get("isolation_status"), "symptom_name": request.form.get("symptom_name"),
-                "description": request.form.get("description"),
-                "start_date": request.form.get("start_date"),
-                "mood": request.form.get("mood"),
-                "symptom_recipient": session["user"]
+            "isolation_status": request.form.get("isolation_status"),
+            "symptom_name": request.form.get("symptom_name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("start_date"),
+            "mood": request.form.get("mood"),
+            "symptom_recipient": session["user"]
         }
         mongo.db.symptoms.update(
             {"_id": ObjectId(symptom_id)}, updated_symptom)
         flash("Your symptom has been updated!")
+        return render_template("symptoms.html")
 
     symptom = mongo.db.symptoms.find_one({"_id": ObjectId(symptom_id)})
     status = mongo.db.status.find()

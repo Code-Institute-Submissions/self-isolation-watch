@@ -31,7 +31,7 @@
  <!--top navbar -->
  <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">Logo</a>
+      <a href="#!" class="brand-logo center"><img class="img-fluid logo" src="{{ url_for('static',filename='images/logo.png') }}"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger">
       <ul class="left hide-on-med-and-down">
         {% if session.user %}
@@ -60,6 +60,7 @@
 
 <section>
 <!--flash messages -->
+<div class="flash-messages">
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         {% for message in messages %}
@@ -69,14 +70,15 @@
         {% endfor %}
         {% endif %}
 {% endwith %}
-
+</div>
 </section>
 
     <main class="container">
         {% block content %} 
         {% endblock %}
     </main>
- <!--footer -->   
+ <!--footer -->  
+ <footer> 
     <div class="footer-copyright">
     <div class="container">
     <div class="row">

@@ -24,4 +24,12 @@
      })
 /* initialisation for dropdown tool on for list of symptoms on my_symptoms page */     
   $('.dropdown-trigger').dropdown();
+
+/* initialisation for carousel on welcome page */  
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+
+
     });

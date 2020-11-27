@@ -4,9 +4,35 @@
 
 <div class="row">
 
-<h1 class="center-align"> 
-To add your own symtpoms to the list, regsiter/ log in</h1>
+   <div class="carousel carousel-slider center white-text">
+    <div class="carousel-fixed-item center white-text">
+      <a class="btn waves-effect black grey-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test">COVID-19 TEST</a>
+    </div>
+    <div class="carousel-item red" href="#one!">
+      <h2>Welcome</h2>
+      <p class="white-text">We are here to try and put a positive spin on the gruelling task of self isolation! Swipe for the instructions!</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>One</h2>
+      <p class="white-text">Have a scroll below at the symptoms people are experiencing, as a result of coming into contact with COVID-19.</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Two</h2>
+      <p class="white-text">Register so that you can add your own symptoms. When youve added a symptom, you will see it in the list below! You can edit and delete the symptoms at any time.</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Three</h2>
+      <p class="white-text">Monitor your health and use this as a tool!</p>
+      <ul class="site-actions">
+      <li >You can track your symptoms</li>
+      <li >Read other peoples' symptoms</li>
+      <li >Edit your symptoms at any time!</li>
+      </ul>
+
+    </div>
+  </div>
 </div>
+
 <div class="row">
 <div class="col center-align">
 
@@ -17,6 +43,7 @@ To add your own symtpoms to the list, regsiter/ log in</h1>
             <div class="col s3">
             <i class="prefix fas fa-viruses"></i>
             {% if session.user| lower == symptom.symptom_recipient | lower %}
+              <!--add an are you sure button  --> 
                 <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Delete</a>
                 <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
             {% endif %}
@@ -28,13 +55,6 @@ To add your own symtpoms to the list, regsiter/ log in</h1>
         </li>
     {% endfor %}
 </ul>
-
-
-
 </div>
-
-
-
-
 </div>
 {% endblock %}
