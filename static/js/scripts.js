@@ -46,4 +46,14 @@ clipboard.on('success', function(e) {
 // If copy to clipboard function is not supported by users' browser, an error is triggered here
 clipboard.on('error', function(e) {
 alert("Oops, it looks like this function isn't supported on your browser! Don't worry, Just copy this: https://self-isolation-watch.herokuapp.com/");
+
+
+});
+// scroll to top
+const scroller = document.querySelector(".scroller");
+window.addEventListener("scroll" , () => {
+    if (window.pageYOffset>100){
+        scroller.classList.add("active");
+    } else {scroller.classList.remove("active");
+}
 });
