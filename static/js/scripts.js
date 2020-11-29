@@ -36,3 +36,14 @@
     $('.modal').modal();
   });
     });
+
+/* copying the site URL */ 
+let clipboard = new ClipboardJS('.fa-copy');
+// If copy to clipboard function is successful
+clipboard.on('success', function(e) {
+    $('.fa-copy').append('<p class="copied">Copied!</p>');
+});
+// If copy to clipboard function is not supported by users' browser, an error is triggered here
+clipboard.on('error', function(e) {
+alert("Oops, it looks like this function isn't supported on your browser! Don't worry, Just copy this: https://self-isolation-watch.herokuapp.com/");
+});

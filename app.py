@@ -96,7 +96,6 @@ def my_symptoms(username):
         }
     mongo.db.symptoms.insert_one(new_symptom)
     status = mongo.db.status.find()
-    flash("Your symptom has been added! Click here to view ")
     return render_template(
         "my_symptoms.html", username=username, symptoms=symptoms, status=status
         )
