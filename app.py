@@ -73,12 +73,10 @@ def login():
                     url_for("my_symptoms", username=session["user"]))
             else:
                 # invalid password match
-                flash("Incorrect username and/or Password")
-                return redirect(url_for("login"))
+                return render_template("error_page.html")
         else:
             # username doesn't exist
-            flash("Incorrect username and/or Password")
-            return redirect(url_for("login"))
+            return render_template("error_page.html")
     return render_template("login.html")
 
 
@@ -87,8 +85,21 @@ def my_symptoms(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     symptoms = list(mongo.db.symptoms.find())
+# put if not statement here for empty list
+    new_symptom = {
+            "isolation_status": request.form.get("isolation_status"),
+            "symptom_name": request.form.get("symptom_name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("start_date"),
+            "mood": request.form.get("mood"),
+            "symptom_recipient": session["user"]
+        }
+    mongo.db.symptoms.insert_one(new_symptom)
+    status = mongo.db.status.find()
+    flash("Your symptom has been added! Click here to view ")
     return render_template(
-        "my_symptoms.html", username=username, symptoms=symptoms)
+        "my_symptoms.html", username=username, symptoms=symptoms, status=status
+        )
 
 
 @app.route("/add_symptom", methods=["GET", "POST"])
@@ -102,9 +113,10 @@ def add_symptom():
             "symptom_recipient": session["user"]
         }
     mongo.db.symptoms.insert_one(new_symptom)
-    flash("Your symptom has been added!")
     status = mongo.db.status.find()
-    return render_template("add-symptom.html", status=status)
+    flash("Your symptom has been added!")
+    return redirect(url_for(
+        "my_symptoms", username=session['user'], status=status))
 
 
 @app.route("/edit_symptom/<symptom_id>", methods=["GET", "POST"])
@@ -121,7 +133,7 @@ def edit_symptom(symptom_id):
         mongo.db.symptoms.update(
             {"_id": ObjectId(symptom_id)}, updated_symptom)
         flash("Your symptom has been updated!")
-        return render_template("symptoms.html")
+        return redirect(url_for("my_symptoms", username=session['user']))
 
     symptom = mongo.db.symptoms.find_one({"_id": ObjectId(symptom_id)})
     status = mongo.db.status.find()
@@ -134,6 +146,7 @@ def delete_symptom(symptom_id):
             {"_id": ObjectId(symptom_id)})
     flash("Your symptom has been deleted!")
     return redirect(url_for("get_symptoms"))
+    # if the delete is triggered from my_symptoms page.. it want it to return redirect render template my_symptoms.html
 
 
 @app.route("/logout")
