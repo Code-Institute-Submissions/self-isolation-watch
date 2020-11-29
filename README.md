@@ -101,6 +101,47 @@ Wireframes:
 ## Features
 
 ### Existing Features
+The app has 5 pages in total: symptoms, register, login, my symptoms, log out. on arrival to the app, symptoms, register and login are all thats available, once logged in, user now sees, log out, my symptoms, symptoms and add symptom. 
+
+Whilst building, I had add symtpom as a seperate page, however towards the en d of building the site, i saw that it was possible and better UX to have the add symptom form on the my symptom/ profile page. I simly made the navigation link to add symptom, the id of the add symptom form, which is on the my symptoms page. 
+
+#### Database structure
+
+The data for this project is stored in my MongoDB database within three collections as follows:
+- *Users* - This collection stores the user's username and their enctrypted password created when they signed up to self isolation watch.
+- *Symptoms* - When a user creates a symptom, it is stored within this collection with the following information: The username linking the symptom to their profile, the symptom name, the users self isolation status, description of their symptom, date from which they have been experienceing the symptom and their mood and mental health. 
+- *Status* - The self isolation status options are saved in seperate documents within the status collection. The statuses are itterated through to provide the self isolation status of the user, when completeing the form to add a symptom. 
+
+
+#### Consistent features across all pages
+
+- The menu at the top of the page and footer are consistent in design and responsive throughout the website. However, the contents of the menu changes depending on if a user is logged in or not.
+
+- The menu bar for users logged in features a 'Sign Out' button where the 'Sign Up' button usually is. When a user in session chooses to sign out, a flash message confirms this action and they are redirected back to the 'Sign In' page.
+
+- The footer features an icon to copy the URL for ease of sharing the app with others, created with clipboard.js (referenced below). When a user successfully copies the url, they are notified with 'Copied!' being appended to the text. If it fails (for example, without browser support), an alert tells the user the issue and explains how to manually copy the url to share it on.
+
+- Although each page features different illustrations/ graphics, they are all designed with the same color palette and are from the same illustrator for consistency.
+
+- All sign in/ sign up buttons are designed consistently in their respective colors across the app.
+
+- The active page is underlined with a green line to show the user which page their are on.
+
+- All flash messages appear 
+
+- If a user has not logged in, they are unable to access the pages closed to users in session as the pages are redirected back to the open pages, with most of these redirections leading to the 'Sign Up' page to prompt them to create an account.
+
+### symptoms
+- search box
+- carousel
+### sign up 
+- errror page
+### login
+### add symptom
+### my symptoms
+### logout
+ 
+ 
 
 
 
@@ -311,3 +352,4 @@ Thank you to the following people who helped with support and inspiration:
 [helpful links for copy to clipboard function (2)](https://webdesign.tutsplus.com/tutorials/copy-to-clipboard-made-easy-with-clipboardjs--cms-25086)
 
 [helpful tutorial on using bcrypt](https://www.youtube.com/watch?v=xPW1MSMd_B0)
+[scroll up js from previous project(https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js
