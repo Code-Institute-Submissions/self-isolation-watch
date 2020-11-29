@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_symptoms")
 def get_symptoms():
-    symptoms = list(mongo.db.symptoms.find())
+    symptoms = list(mongo.db.symptoms.find().limit(3))
     return render_template("symptoms.html", symptoms=symptoms)
 
 
