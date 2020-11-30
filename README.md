@@ -156,6 +156,10 @@ The data for this project is stored in my MongoDB database within three collecti
 * 
 
 ### solution:
+* simply had forgotten to add the correct type to the password field on both register and login forms
+
+![rectified](testing/screenshots/solving-password-encode.png)
+
 
 ## - Refresh causing null data input
 
