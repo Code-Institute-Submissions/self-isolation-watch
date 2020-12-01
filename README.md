@@ -99,11 +99,14 @@ Wireframes:
 
 
 ## Features
+### Future Features 
+- This list is limited to ' ' and they can click ' ' if they want to see the entire list.
+- chat and share symptoms
 
 ### Existing Features
 The app has 5 pages in total: symptoms, register, login, my symptoms, log out. on arrival to the app, symptoms, register and login are all thats available, once logged in, user now sees, log out, my symptoms, symptoms and add symptom. 
 
-Whilst building, I had add symtpom as a seperate page, however towards the en d of building the site, i saw that it was possible and better UX to have the add symptom form on the my symptom/ profile page. I simly made the navigation link to add symptom, the id of the add symptom form, which is on the my symptoms page. 
+Whilst building, I had add symtpom as a seperate page, however towards the end of building the site, i saw that it was possible and better UX to have the add symptom form on the my symptom/ profile page. I simply made the navigation link to add symptom, the id of the add symptom form, which is on the my symptoms page. 
 
 #### Database structure
 
@@ -117,30 +120,59 @@ The data for this project is stored in my MongoDB database within three collecti
 
 - The menu at the top of the page and footer are consistent in design and responsive throughout the website. However, the contents of the menu changes depending on if a user is logged in or not.
 
-- The menu bar for users logged in features a 'Sign Out' button where the 'Sign Up' button usually is. When a user in session chooses to sign out, a flash message confirms this action and they are redirected back to the 'Sign In' page.
+- The menu bar differs depending on the user session.
+ For users logged in reads as :
+![This](testing/screenshots/navbar-when-logged-in.png) 
+whereas the menu bar, if a user is not logged in/signed up says:
+![This](testing/screenshots/navbar-when-logged-out.png)
 
-- The footer features an icon to copy the URL for ease of sharing the app with others, created with clipboard.js (referenced below). When a user successfully copies the url, they are notified with 'Copied!' being appended to the text. If it fails (for example, without browser support), an alert tells the user the issue and explains how to manually copy the url to share it on.
 
-- Although each page features different illustrations/ graphics, they are all designed with the same color palette and are from the same illustrator for consistency.
+- In keeping with previuos projects, i decided to have a footer for the app. I always founbd it a nice way of bringing the site together and adding to site uniformity.
 
-- All sign in/ sign up buttons are designed consistently in their respective colors across the app.
+- The footer features an icon to copy the URL for ease of sharing the app with friends and family. 
+To do this I used clipboard.js (referenced below). When a user successfully copies the url, they are notified with 'Copied!' being appended to the text. Equally, if the users browser doesnt support the cdn and the action therefore fails, an alert tells the user the issue and explains how to manually copy the url to share it on. 
 
-- The active page is underlined with a green line to show the user which page their are on.
+- scroll to top button,
 
-- All flash messages appear 
+- All flash messages appear with the same css.
 
-- If a user has not logged in, they are unable to access the pages closed to users in session as the pages are redirected back to the open pages, with most of these redirections leading to the 'Sign Up' page to prompt them to create an account.
 
-### symptoms
-- search box
-- carousel
-### sign up 
-- errror page
+#### symptoms (homepage)
+- The user sees two short sentences to welcome them in and to help them immediately understand what the purpose of this app is.
+- The user then scrolls down to see a carousel feature with 4 sections, the first with an uplifting image, second; explaining the idea behind the app, third; how it can be helpful and a finally a summary of what the user is capable of doing on the app.
+- as the user scrolls down, they see a list of the symtpoms that have been previously added. 
+- below the list of symptoms, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the mongodb collection that the symptoms are located in. I acheived this function by folowing the steps from the codeinstitue module, lesson ' '  
+- on the list, they will see edit delete bittons on the items they have added. if they do either flash messages appear
+- On smaller devices, ...
+
+
+### sign up  
+- this page is pretty empty, there is nothing other than a form for the user to sign up. 
+- if a person tries to sign up with an existing username a flash message appears, i decided no to do an error page for this as it is a human error often made because people click sign up instea dof login. 
+- if a person then rememebrs they actually have an account, they can also login from here toop, usimng the login link next to the register button. 
+
 ### login
+- this page is pretty empty, there is nothing other than a form for the user to login.
+- if a person then rememebrs they actually do not have an account, they can also sign up from here toop, using the sign up link next to the loginbutton. 
+- if they are on trying to use a username that doesnt exist, if they are entering a password that doesnt exist or both, they are redirected to an error page. 
+- the error page states the potential reasons for their failure to login and a link to try again. i wanted to use an error page here instead of a flash message because, i thought it was better defensive programming then telling a pitential hacker, what exactly the issue was. 
+
 ### add symptom
+- this page is actually not its own page, rather a part of the mysymptoms page. 
+- the add symptom link leads a user to tthe my symptoms page, however just at the add symptopm form. The form asks.....
+- i chose these questions because....
+
+
+
+
 ### my symptoms
+- i wanted the user to see their current symptoms here, so provided a list of their user specific symptoms, which from here they could edit or delete. 
+- if they choose to delet any of their current symptoms, a modal is in place for them to confirm deleting. Again, this was good UX and defensive programming?
+- if the user clicks edit, they will be taken to their symptom, with the fields filled out as was orginally saved. they can edit or cancel. 
+- if the user has no current symptoms, alternate text will appear saying ..... i didnt want to use a flash message here as i wanted the body text to be consistent and more persuasive. flash messages disappear and this text wouldnt until a new symptom was added. 
+
 ### logout
- 
+ - on logging out the user will see a flash message saying.. 
  
 
 
@@ -240,7 +272,7 @@ Proof of me working through this :
 ![When rectified](/testing/screenshots/carousel-bug(4).png)
 
 
-- flash messages displaying with ``` [' '] ```
+## flash messages displaying with ``` [' '] ```
 
 * I started trying to solve this issue by applying some css to the flash messages. This indeed made them more aesthetically pleasing, but did not solve the issue. 
 * I then began to do some research which threw up plenty of alternative options for writing a conditional statement and for loop for my flash messages to sit within, but none helped me. 
@@ -401,7 +433,7 @@ Thank you to the following people who helped with support and inspiration:
 
 
 ### credits
-[youtube video explaining how to use the copy to clipboard function in js](https://www.youtube.com/watch?v=VhhjC2XxvFc)
-[helpful link for copy to clipboard function (1)](https://clipboardjs.com/)
+
+[helpful link for copy to clipboard function](https://clipboardjs.com/)
 
 [scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
