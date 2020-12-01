@@ -1,32 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--edit page text  -->
   <div class="row">
-{% if session.user %}
-    <h3 class="center-align"> Hey {{ username }} here are your current symptoms. </h3>
-    <h3> My Symptoms </h3>
-<!--show the users symptoms-->
- <ul class="collapsible">
- {% for symptom in symptoms %}
-    <li>
-      <div class="collapsible-header"><i class="prefix fas fa-viruses"></i><strong>{{ symptom.symptom_name }}, experienced since {{ symptom.start_date}}</strong></div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-{% endfor %}
-  </ul>
-
-    <h3> Feel free to update/ delete any of them!</h3>
-{% endif %}
-
+  <div class="col s12">
+    <h2 class="subtitles">To make real use of this tool, its important that you update your symptoms as soon as they worsen/ improve.</h2>
+    <p>What you record is valuable data for key workers in the healthcare system. They will be able to speed up your diagnosis, which will in turn, get you back on your feet in no time!</p>
+  </div>
   </div>
 
+<!--symptom form to be edited -->   
   <div class="row">
-    <h3 class="center-align"> Add your symptoms</h3>
-  </div>
-<!--new symptom form  -->
-     
-  <div class="row">
-  <!--new symptom form  -->
     <form class="col s12" method="POST" action="{{ url_for('edit_symptom', symptom_id=symptom._id) }}">
 
 <!--status of your self isolation  -->
