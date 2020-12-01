@@ -164,8 +164,58 @@ The data for this project is stored in my MongoDB database within three collecti
 ## - Refresh causing null data input
 
 * Everytime I was refreshing the page and logged in, a new input which was blank was being added to my mongo db. It was then also showing up on my page, as I was displaying all mongo.db entries. 
+* tried to add an if statement syaing on form submit, only submit if its filled out correctly, but because my form is a dictionary this function doesnt work!
+* added an if else statement to state that the post method means that the form should be be inserted and the get mehtod means that the current symptoms should simply display: 
+```
+@app.route("/add_symptom", methods=["GET", "POST"])
+def add_symptom():
+    **if request.method == "POST":**
+        new_symptom = {
+                "isolation_status": request.form.get("isolation_status"),
+                "symptom_name": request.form.get("symptom_name"),
+                "description": request.form.get("description"),
+                "start_date": request.form.get("start_date"),
+                "mood": request.form.get("mood"),
+                "symptom_recipient": session["user"]
+            }
+        mongo.db.symptoms.insert_one(new_symptom)
+        flash("Your symptom has been added!")
+        return redirect(url_for(
+            "my_symptoms", username=session['user']))
+    else:
+        status = mongo.db.status.find()
+    return render_template("my_symptoms.html", status=status)
+
+```
 
 ### solution:
+* i added the if else statement to the my symptoms view as it was the view which was doing the actioning of the add symotom. 
+
+```
+@app.route("/my_symptoms/<username>", methods=["GET", "POST"])
+def my_symptoms(username):
+    if request.method == "POST":
+        new_symptom = {
+            "isolation_status": request.form.get("isolation_status"),
+            "symptom_name": request.form.get("symptom_name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("start_date"),
+            "mood": request.form.get("mood"),
+            "symptom_recipient": session["user"]
+        }
+        mongo.db.symptoms.insert_one(new_symptom)
+        return redirect(url_for(
+            "my_symptoms", username=session['user']))
+    else:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        status = mongo.db.status.find()
+        symptoms = list(mongo.db.symptoms.find())
+    return render_template(
+        "my_symptoms.html",
+        username=username, symptoms=symptoms, status=status)
+        
+```
 
 ## - Materialize 'carousel item' code not displaying 
 
@@ -352,8 +402,6 @@ Thank you to the following people who helped with support and inspiration:
 
 ### credits
 [youtube video explaining how to use the copy to clipboard function in js](https://www.youtube.com/watch?v=VhhjC2XxvFc)
-[helpful links for copy to clipboard function (1)](https://clipboardjs.com/)
-[helpful links for copy to clipboard function (2)](https://webdesign.tutsplus.com/tutorials/copy-to-clipboard-made-easy-with-clipboardjs--cms-25086)
+[helpful link for copy to clipboard function (1)](https://clipboardjs.com/)
 
-[helpful tutorial on using bcrypt](https://www.youtube.com/watch?v=xPW1MSMd_B0)
-[scroll up js from previous project(https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js
+[scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
