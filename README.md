@@ -192,6 +192,97 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 
 ![rectified](testing/screenshots/solving-password-encode.png)
 
+## - Jinja if statement and for loop, not functioning correctly 
+* i wanted a title for the symtpom list to appear on the my symtpoms page, followed by the users symptoms. if they did not have any symptoms, i wanted to provide text that prompts them to add one. i tried to execute this with 
+```
+{% if symptom %}
+{% for symptom in symptoms %}
+<div class="row">
+    <div class="col s12">
+        <h2 class="subtitles">Here are your symptoms</h2>
+    </div>
+</div>
+{% endfor %}
+
+{% else %}
+<div class="row">
+    <div class="col s12">
+        <h2 class="subtitles">Looks like you don't have any current symptoms!</h2>
+        <p>
+            Either you're a really healthy cookie.. or you havent got round to adding
+            any yet!
+        </p>
+        <a href="#add_symptoms">Here's where you can add your symptoms!</a>
+    </div>
+</div>
+{% endif %}
+```
+However, when executing this code i was getting 
+![this](/testing/screenshots/if-my_symptoms(1).png)
+The correct text shows until i add a symptom and then the symptom displays, (which is correct) but I wanted the 'looks like you dont have any current symptoms' to disappear and be replaced with 'here are your symptoms'. 
+
+* I changed the 
+``` {% if symptom %} ``` to ``` {% if symptoms %} ``` 
+as symptoms is the name of my variable. this resulted in ![this](/testing/screenshots/if-my_symptoms(2).png). This was because i was using the 'symptoms variable, which i had defined in the my_symptoms view. 
+![this](/testing/screenshots/if-my_symptoms(3).png)
+however, as you can see, that list has no filter and is calling all of the symptoms. hence why 'here are your symptoms' appears the same number of times as there are total symptoms
+
+* I changed the symptoms variable to  ```symptoms = list(mongo.db.symptoms.find({"symptom_recipient": username}))`` so that it would now only show the list of the symptoms pertsiing to that person on the my symptoms page. 
+
+* I then cleaned uo the jinja template code 
+``` <!--if statement stating which html to display and when  -->
+{% if symptoms %}
+    <div class="row">
+        <div class="col s12">
+            <h2 class="subtitles">Here are your symptoms</h2>
+            <ul>
+                {% for symptom in symptoms %}
+                    <li>
+                        <h1 class="title">{{ symptom.symptom_name }}</h1>
+                        <p>{{ symptom.description }}</p>
+                        <h3 class="small-titles">
+                            Experienced Since : {{ symptom.start_date}} added by : {{ symptom.symptom_recipient }}
+                        </h3>
+                        <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
+                        <!-- confirm delete modal -->
+                        <a class="waves-effect waves-light btn modal-trigger" href="#delete-confirmation">Delete</a>
+                        <div id="delete-confirmation" class="modal">
+                            <div class="modal-content col s12">
+                                <h4 class="subtitles">Are you sure you want to delete?</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                            </div>
+                        </div>
+                        <div class="divider deep-orange"></div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+<!--if there are no symptoms  -->    
+{% else %}
+    <div class="row">
+        <div class="col s12">
+            <h2 class="subtitles">Looks like you don't have any current symptoms!</h2>
+            <p>
+                Either you're a really healthy cookie.. or you havent got round to adding any yet!
+            </p>
+            <a href="#add_symptoms">Here's where you can add your symptoms!</a>
+        </div>
+    </div>
+{% endif %} 
+```
+and no longer needed to define a condition for the session user. 
+
+### solution:
+* Adding a filter on the symptoms list within the app.py file and making the jinja code more formatted and clearer. 
+
+
+
+
+
 
 ## - Refresh causing null data input
 
