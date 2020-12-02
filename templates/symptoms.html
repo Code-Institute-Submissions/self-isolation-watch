@@ -1,113 +1,151 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <!--main page body-->
-
+<!--welcome text -->
 <div class="row">
-<div class="col s12">
-<h1 class="titles">
-Welcome
-</h1>
-<p class="paragraphs">
-We are here to try and put a positive spin on the gruelling task of self isolation! Swipe for the instructions!
-</p>
+  <div class="col s12">
+    <h1 class="titles">Welcome</h1>
+    <p class="paragraphs">
+      We are here to try and put a positive spin on the gruelling task of self
+      isolation! Swipe to find out what we're about!
+    </p>
+  </div>
 </div>
-</div>
-
+<!--welcome carousel -->
 <div class="row">
-   <div class="carousel carousel-slider center white-text col s12">
-    <div class="carousel-item black" href="#one!" id="#carousel-1">
-      <h2 class="subtitles">Want to use this service?</h2>
-      <p class="white-text">just scroll through</p>
-    </div>
-    <div class="carousel-item amber white-text" href="#two!">
-           <div class="carousel-fixed-item center white-text">
-      <a class="btn waves-effect transparent black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
-    </div>
-      <h2>One</h2>
-      <p class="white-text">Have a scroll below at the symptoms people are experiencing, as a result of coming into contact with COVID-19.</p>
+  <div class="carousel carousel-slider center white-text col s12">
+    <div class="carousel-item black" href="#one!" id="#carousel-1"></div>
+    <div class="carousel-item amber" href="#two!">
+      <div class="carousel-fixed-item center white-text">
+        <a
+          class="btn waves-effect white"
+          href="https://www.gov.uk/get-coronavirus-test"
+          target="blank"
+          >COVID-19 TEST</a
+        >
+      </div>
+      <h2 class="subtitles">
+        We all know the strain that COVID-19 has placed upon our hero health care systems. 
+        We wanted to create an app that you could use to track and share your potential COVID-19 symptoms, so that if you do need to speak to a doctor or nurse, because you think you may have corona virus, you can hand them some documented data, to make their life easier and your diagnosis faster!
+      </h2>
     </div>
     <div class="carousel-item green white-text" href="#three!">
-        <div class="carousel-fixed-item center white-text">
-      <a class="btn waves-effect white black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
-    </div>
-      <h2>Two</h2>
-      <p class="white-text">Register so that you can add your own symptoms. When youve added a symptom, you will see it in the list below! You can edit and delete the symptoms at any time.</p>
+      <div class="carousel-fixed-item center white-text">
+        <a
+          class="btn waves-effect white"
+          href="https://www.gov.uk/get-coronavirus-test"
+          target="blank"
+          >COVID-19 TEST</a
+        >
+      </div>
+      <h2 class="subtitles">
+        Register so that you can add your own symptoms. When youve added a
+        symptom, you will see it in the list below! You can edit and delete your
+        symptoms at any time.
+      </h2>
     </div>
     <div class="carousel-item blue white-text" href="#four!">
-           <div class="carousel-fixed-item center white-text">
-      <a class="btn waves-effect white black-text darken-text-2" href="https://www.gov.uk/get-coronavirus-test" target="blank">COVID-19 TEST</a>
-    </div>
-      <h2>Three</h2>
-      <p class="white-text">Monitor your health and use this as a tool!</p>
-      <ul class="site-actions">
-      <li >You can track your symptoms</li>
-      <li >Read other peoples' symptoms</li>
-      <li >Edit your symptoms at any time!</li>
+      <div class="carousel-fixed-item center white-text">
+        <a
+          class="btn waves-effect white"
+          href="https://www.gov.uk/get-coronavirus-test"
+          target="blank"
+          >COVID-19 TEST</a
+        >
+      </div>
+      <h2 class="subtitles">Monitor your health and use this as a tool!</h2>
+          <ul class="site-actions bullets">
+        <li>You can track your symptoms</li>
+        <li>Read other peoples' symptoms</li>
+        <li>Edit your symptoms at any time!</li>
       </ul>
 
     </div>
   </div>
 </div>
 
-
+<!--symptom list -->
 <div class="row">
-
-<div class="col s8">
-
-<ul class="collapsible ">
-    {% for symptom in symptoms %}
-        <li>
-            <div class="collapsible-header">
-            <div class="col s3">
+  <div class="col s8">
+    <ul class="collapsible">
+      {% for symptom in symptoms %}
+      <li>
+        <div class="collapsible-header">
+          <div class="col s3">
             <i class="prefix fas fa-viruses"></i>
+            <!--making the session user able to edit/ delete their symtpom from the list, if theyre logged in  -->
             {% if session.user| lower == symptom.symptom_recipient | lower %}
-              <!--add an are you sure button  --> 
 
-            <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small green accented">Edit</a>
-            <a class="waves-effect waves-light btn modal-trigger" href="#delete-confirmation">Delete</a>
+            <a
+              href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}"
+              class="btn-small green accented"
+              >Edit</a
+            >
+            <!--delete confirmation modal  -->
+            <a
+              class="waves-effect waves-light btn modal-trigger"
+              href="#delete-confirmation"
+              >Delete</a
+            >
             <div id="delete-confirmation" class="modal">
-    <div class="modal-content col s12">
-      <h4 class="subtitles">Are you sure you want to delete?</h4>
-    </div>
-    <div class="modal-footer">
-       <a href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-    </div>
-  </div>
-
-
-
+              <div class="modal-content col s12">
+                <h4 class="subtitles">Are you sure you want to delete?</h4>
+              </div>
+              <div class="modal-footer">
+                <a
+                  href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}"
+                  class="modal-close waves-effect waves-green btn-flat"
+                  >Yes</a
+                >
+                <a
+                  href="#!"
+                  class="modal-close waves-effect waves-green btn-flat"
+                  >No</a
+                >
+              </div>
+            </div>
 
             {% endif %}
-            </div>
-            <div class="col s9">
-            <strong>{{ symptom.symptom_name }} </strong> Experienced Since : <strong>{{ symptom.start_date}}</strong> added by : {{ symptom.symptom_recipient }}</div>
-            </div>
-            <div class="collapsible-body"><p>{{ symptom.description }}</p></div>
-        </li>
-    {% endfor %}
-</ul>
+          </div>
+          <div class="col s9">
+            <strong>{{ symptom.symptom_name }} </strong> Experienced Since :
+            <strong>{{ symptom.start_date}}</strong> added by : {{
+            symptom.symptom_recipient }}
+          </div>
+        </div>
+        <div class="collapsible-body"><p>{{ symptom.description }}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
-</div>
+<!--search function to search through symptom list  -->
 <div class="row">
-<div class="col s8">
-<form class="card-panel" action="{{ url_for('search') }}" method="POST">
-	<div class="valign-wrapper center-align">
-		<div class="input-field col center-align s4">
-			<i class="fas fa-search prefix"></i>
-			<input type="text" name="query" id="query" minlength="3" class="validate" required>
-			<label for="query">Search Symptoms
-</label>
-			<div class="col s12 m4">
-				<a href="{{ url_for('get_symptoms') }}" class="btn text-shadow">Reset</a>
-<button class="submit btn blue">
-<i class="fas fa-search left"></i>Search
-</button>
-</div>
-</div>
-</div>
-</form>
-</div>
+  <div class="col s8">
+    <form class="card-panel" action="{{ url_for('search') }}" method="POST">
+      <div class="valign-wrapper center-align">
+        <div class="input-field col center-align s4">
+          <i class="fas fa-search prefix"></i>
+          <input
+            type="text"
+            name="query"
+            id="query"
+            minlength="3"
+            class="validate"
+            required
+          />
+          <label for="query">Search Symptoms </label>
+          <div class="col s12 m4">
+            <a href="{{ url_for('get_symptoms') }}" class="btn text-shadow"
+              >Reset</a
+            >
+            <button class="submit btn blue">
+              <i class="fas fa-search left"></i>Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 {% endblock %}
