@@ -36,9 +36,9 @@
       <ul class="left hide-on-med-and-down">
         {% if session.user %}
             <li><a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms">Add symptom</a></li>
-            <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
             <li><a href="{{ url_for('my_symptoms', username=session['user']) }}">My Symptoms</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
         {% else %}
             <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
