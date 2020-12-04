@@ -134,15 +134,15 @@ label{
 }
 
 .amber{
-    background-color: #472D30!important;
+    background-color: #472D30;
 }
 
 .green{
-background-color: #723D46!important;
+background-color: #723D46;
 }
 
 .blue{
-background-color: #E26D5C!important;
+background-color: #E26D5C;
 }
 
 
@@ -208,14 +208,14 @@ color: black;
 
 
 .scroller {
-  background: red;
+  
   position: fixed;
   bottom: 16px;
   right:32px;
   width:50px;
   height:50px;
-  border-radius: 50%;
-  display: contents;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size:32px;
@@ -231,10 +231,12 @@ color: black;
   opacity:1;
   pointer-events: auto;
   text-decoration: none;
+  color: #E26D5C;
 }
 
 .fa-chevron-up{
-    color: #39393A;
+    color: #E26D5C;
+    text-decoration: none;
 }
 
 .divider{
