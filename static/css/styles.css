@@ -59,8 +59,25 @@ nav ul a {
     font-weight: 500;
      font-size: 20px;
     text-align: center;
+    padding:1rem 0 .5rem;
     
 }
+.underline{
+    text-decoration:underline;
+    
+}
+.nav-titles{
+    font-size: 1.5rem;
+    display: block;
+    padding: 15px 0;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    text-transform:uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+
 .flashes{
     font-family: 'Quicksand', sans-serif;
     color: #472D30;
@@ -115,12 +132,7 @@ label{
     color: #E26D5C;
 }
 
-.carousel {
-    height: 400px !important;
-    width: 640px !important;
-    position: relative;
- 
-}
+
 
 .carousel-item{
        padding: 2rem 0 0;
@@ -133,15 +145,15 @@ label{
    opacity: 0.5;
 }
 
-.amber{
+.carousel-2{
     background-color: #472D30;
 }
 
-.green{
+.carousel-3{
 background-color: #723D46;
 }
 
-.blue{
+.carousel-4{
 background-color: #E26D5C;
 }
 
@@ -240,5 +252,23 @@ color: black;
 }
 
 .divider{
-    background-color: #C9CBA3;
+    background-color: #E26D5C;
+    margin-top:1rem;
+    padding-bottom:1rem;
+}
+
+.collapsible-header {
+    background-color: #E26D5C;
+    border-bottom: 2px solid #C9CBA3;
+}
+
+.delete{
+    background-color:#C9CBA3;
+
+}
+
+.edit{
+    background-color:#723D46;
+    color:#fafafa;
+
 }

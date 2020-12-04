@@ -11,10 +11,12 @@
   </div>
 </div>
 <!--welcome carousel -->
-<div class="row">
-  <div class="carousel carousel-slider center white-text col s12">
+<div class="row container">
+  <div class="col s12">
+<div id="carouselControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
     <div class="carousel-item black" href="#one!" id="#carousel-1"></div>
-    <div class="carousel-item amber" href="#two!">
+    <div class="carousel-item carousel-2" href="#two!">
       <div class="carousel-fixed-item center white-text">
         <a
           class="btn waves-effect white"
@@ -28,13 +30,14 @@
         We wanted to create an app that you could use to track and share your potential COVID-19 symptoms, so that if you do need to speak to a doctor or nurse, because you think you may have corona virus, you can hand them some documented data, to make their life easier and your diagnosis faster!
       </h2>
     </div>
-    <div class="carousel-item green white-text" href="#three!">
+  <div class="carousel-item carousel-3 white-text" href="#three!">
       <div class="carousel-fixed-item center white-text">
+      
         <a
           class="btn waves-effect white"
-          href="https://www.gov.uk/get-coronavirus-test"
+          href="https://www.gov.uk/government/news/online-isolation-notes-launched-providing-proof-of-coronavirus-absence-from-work#:~:text=Isolation%20notes%20will%20provide%20employees,to%20leave%20their%20homes."
           target="blank"
-          >COVID-19 TEST</a
+          >Isolation Notes</a
         >
       </div>
       <h2 class="subtitles">
@@ -43,17 +46,18 @@
         symptoms at any time.
       </h2>
     </div>
-    <div class="carousel-item blue white-text" href="#four!">
+
+        <div class="carousel-item carousel-4 white-text" href="#four!">
       <div class="carousel-fixed-item center white-text">
         <a
           class="btn waves-effect white"
-          href="https://www.gov.uk/get-coronavirus-test"
+          href="{{ url_for('register') }}"
           target="blank"
-          >COVID-19 TEST</a
+          >Get started now!</a
         >
       </div>
       <h2 class="subtitles">Monitor your health and use this as a tool!</h2>
-          <ul class="site-actions bullets">
+          <ul>
         <li>You can track your symptoms</li>
         <li>Read other peoples' symptoms</li>
         <li>Edit your symptoms at any time!</li>
@@ -61,6 +65,16 @@
 
     </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
 </div>
 
 <!--symptom list -->
@@ -77,12 +91,12 @@
 
             <a
               href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}"
-              class="btn-small green accented"
+              class="btn-small edit"
               >Edit</a
             >
             <!--delete confirmation modal  -->
             <a
-              class="waves-effect waves-light btn modal-trigger"
+              class="waves-effect btn modal-trigger delete "
               href="#delete-confirmation"
               >Delete</a
             >
@@ -107,8 +121,8 @@
             {% endif %}
           </div>
           <div class="col s9">
-            <strong>{{ symptom.symptom_name }} </strong> Experienced Since :
-            <strong>{{ symptom.start_date}}</strong> added by : {{
+            <h2 class="subtitles">{{ symptom.symptom_name }} </h2> Experienced Since :
+            <h3 class="subtitles">{{ symptom.start_date}}</h3> added by : {{
             symptom.symptom_recipient }}
           </div>
         </div>
@@ -138,7 +152,7 @@
             <a href="{{ url_for('get_symptoms') }}" class="btn text-shadow"
               >Reset</a
             >
-            <button class="submit btn blue">
+            <button class="submit btn edit">
               <i class="fas fa-search left"></i>Search
             </button>
           </div>

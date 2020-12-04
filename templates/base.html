@@ -35,14 +35,14 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul class="left hide-on-med-and-down">
         {% if session.user %}
-            <li><a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms">Add symptom</a></li>
-            <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
-            <li><a href="{{ url_for('my_symptoms', username=session['user']) }}">My Symptoms</a></li>
-            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            <li><a active-color="orange" href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms"><h2 class="nav-titles">Add symptom</h2></a></li>
+            <li><a href="{{ url_for('get_symptoms') }}"><h2 class="nav-titles">Symptoms</h2></a></li>
+            <li><a href="{{ url_for('my_symptoms', username=session['user']) }}"><h2 class="nav-titles">My Symptoms</h2></a></li>
+            <li><a href="{{ url_for('logout') }}"><h2 class="nav-titles">Log out</h2></a></li>
         {% else %}
-            <li><a href="{{ url_for('get_symptoms') }}">Symptoms</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('get_symptoms') }}"><h2 class="nav-titles">Symptoms</h2></a></li>
+            <li><a href="{{ url_for('register') }}"><h2 class="nav-titles">Register</h2></a></li>
+            <li><a href="{{ url_for('login') }}"><h2 class="nav-titles">Login</h2></a></li>
         {% endif %}  
       </ul>
     </div>
@@ -50,10 +50,17 @@
 
  <!--mobile navbar -->
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">Symptoms</a></li>
-    <li><a href="">Add symptom</a></li>
-    <li><a href="#"></a></li>
-</ul>
+        {% if session.user %}
+            <li><a active-color="orange" href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms"><h2 class="nav-titles">Add symptom</h2></a></li>
+            <li><a href="{{ url_for('get_symptoms') }}"><h2 class="nav-titles">Symptoms</h2></a></li>
+            <li><a href="{{ url_for('my_symptoms', username=session['user']) }}"><h2 class="nav-titles">My Symptoms</h2></a></li>
+            <li><a href="{{ url_for('logout') }}"><h2 class="nav-titles">Log out</h2></a></li>
+        {% else %}
+            <li><a href="{{ url_for('get_symptoms') }}"><h2 class="nav-titles">Symptoms</h2></a></li>
+            <li><a href="{{ url_for('register') }}"><h2 class="nav-titles">Register</h2></a></li>
+            <li><a href="{{ url_for('login') }}"><h2 class="nav-titles">Login</h2></a></li>
+        {% endif %}  
+      </ul>
 
 </header>
 
