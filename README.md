@@ -76,7 +76,7 @@ I also wanted to provide a search bar, for users to search through the list of s
     8. whilst logged off, they still have the opportunity to view the symptoms on the homepage, but juts not add to them. 
 
 5. Surface plane: 
-    * Due to the nature of the app strategy. I was concious that most images reflecting the topic could be triggereing to users. I decided early on that i would not use many pictures, the colours would be uplfiting but proffesional and I didnt want to lower the seriousness of the topic, with animations. 
+    * Due to the nature of the app strategy. I was concious that most images reflecting the topic could be triggereing to users. I decided early on that i would not use any images, the colours would be uplfiting but proffesional and I didnt want to lower the seriousness of the topic, with animations. 
     * Unlike my 2 previous Milestone Projects, I found it more effective to not have a logo, although there is defiently scope for this in the future. 
     * I used [coolors](https://coolors.co/), to create a coulor palette to work with, as shown below. I chose this palette as the colors were uplifting and warm yet formal, i felt this was the perfecct balance of feelings to be evoked in users when visiting my app. I wanted them to feel hopeful that they were going to be okay, soothed that this app and tool exists, but also aware of the importance of their data. 
 
@@ -138,12 +138,11 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 
 
 #### symptoms (homepage)
-- The user sees two short sentences to welcome them in and to help them immediately understand what the purpose of this app is.
-- The user then scrolls down to see a carousel feature with 4 sections, the first with an uplifting image, second; explaining the idea behind the app, third; how it can be helpful and a finally a summary of what the user is capable of doing on the app.
+- The user sees a few short sentences to welcome them in and to help them immediately understand what the purpose of this app is. There is then a link which when pressed takes the user to the register page. 
+
 - as the user scrolls down, they see a list of the symtpoms that have been previously added. 
 - below the list of symptoms, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the mongodb collection that the symptoms are located in. I acheived this function by folowing the steps from the codeinstitue module, lesson ' '  
 - on the list, they will see edit delete bittons on the items they have added. if they do either flash messages appear
-- On smaller devices, ...
 
 
 ### sign up  
@@ -174,9 +173,6 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 ### logout
  - on logging out the user will see a flash message saying.. 
  
-
-
-
 
 
 
@@ -407,12 +403,9 @@ Proof of me working through this :
 ![Double checked that this person did in fact have the same issue, before reaching out](/testing/screenshots/flash-messages(3).png)
 
 
+[More in depth testing can be found here](testing.md) 
 
 
-
-## Testing
-
-Please view the complete testing process in this separate document [here]().
 
 ## Deployment
 
