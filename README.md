@@ -1,96 +1,100 @@
 
 ## Milestone 3 project
 
-# Self isolation watch
-'Self isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 
-This will help them keep note of their potential retraction of the virus as well as give them an indication into how contagious they are. Users will be able to create a profile, where they save their symptoms, update them accordingly and when they are no longer symptomatic, they can delete them.' 
+# Self-isolation watch
+'Self-isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 
+This will help them keep a note of their potential retraction of the virus as well as give them an indication into how contagious they are. Users will be able to create a profile, where they save their symptoms, update them accordingly and when they are no longer symptomatic, they can delete them.' 
 
 ## Main Aims 
-- To create an app that gives people a platform to share their symtpoms and learn about each others.
+- To create an app that gives people a platform to share their symptoms and learn about each other.
 - Take the pressure of a person to remember when they started feeling this way. 
 
 ## User Stories 
  
-- 'As a recent self isolater, I want to keep track of what symtpoms I have and how long I have had them, so that I have more information to give to the doctor.'
+- 'As a recent self isolator, I want to keep track of what symptoms I have and how long I have had them so that I have more information to give to the doctor.'
 
 - 'As a key worker, I want to browse through patients' symptoms, so that I can speed up diagnosis. '
 
-- 'As a recent self isolater, I want to update the symptoms I have had, so that I can find out how far from recovery I am.'
+- 'As a recent self isolator, I want to update the symptoms I have had so that I can find out how far from recovery I am.'
 
-- 'As a recent self isolater, I want to read through other peoples symptoms and compare, so that I can find out if my symptoms are typical.'
+- 'As a recent self isolator, I want to read through other peoples symptoms and compare, so that I can find out if my symptoms are typical.'
 
 
-## Personnas 
-- 'Someone at work has recently tested positive for covid-19, we must self isolate and track our symtoms (if any), I spend all day on my laptop, if only there was an app where i could record my symptoms and the date i started feeling the symptoms too!' (Evelyn, 31, mother of 2 children under 5)
+## Personas 
+- 'Someone at work has recently tested positive for covid-19, we must self isolate and track our symptoms (if any), I spend all day on my laptop if only there was an app where I could record my symptoms and the date I started feeling the symptoms too!' (Evelyn, 31, mother of 2 children under 5)
 
-- 'Its so frustrating when patients come to me saying that they feel ill and they think they have COVID, but no note of when they started feeling ill! I wish they would bring me more information' (Jocelyn, 55, Nurse) 
+- 'It's so frustrating when patients come to me saying that they feel ill and they think they have COVID, but no note of when they started feeling ill! I wish they would bring me more information' (Jocelyn, 55, Nurse) 
 
-- 'I feel terrible, but I dont know if its just a flu.. I want to know if my symtpoms are from COVID or something else. Im conscious of all the fear mongering and fake news out there..' (Luke, 28, Marketing manager)
+- 'I feel terrible, but I don't know if it is just ...the flu I want to know if my symptoms are from COVID or something else. I'm conscious of all the fear-mongering and fake news out there..' (Luke, 28, Marketing manager)
 
 ## UX design process
 
 ### Design Process
 
 #### Design Process: UX Research 
-Initially I had the idea to make an app which I would use in my career as a Personal Trainer, however, with the help of my wonderful [mentor]() I recognised that my emotional investment in the fruition of this project idea, was blocking my ability to see the importance of the functionality. It was also an idea, which required the user to already be aware of other such apps/ technology and was therefore not as accessible as the current idea I have ran with. 
+Initially, I had the idea to make an app which I would use in my career as a Personal Trainer, however, with the help of my wonderful [mentor]() I recognised that my emotional investment in the fruition of this project idea, was blocking my ability to see the importance of the functionality. It was also an idea, which required the user to already be aware of other such apps/ technology and was therefore not as accessible as the current idea I have run with. 
 
-I went for a COVID test and in the booking stages, I was being asked about what symptoms I have had to make me think that i may have contracted the virus. 
+I went for a COVID test and in the booking stages, I was being asked about what symptoms I have had to make me think that I may have contracted the virus. 
 
-This triggered my idea, i thought that the average person, may not be able to accurately track when they started experiencing symptoms and unless faced with a format that asked you the right questions, the person may not recongise the severity of their symtpom. 
+This triggered my idea, I thought that the average person, may not be able to accurately track when they started experiencing symptoms and unless faced with a format that asked you the right questions, the person may not recognise the severity of their symptoms. 
 
-I used the easy to understand format of the [official gov- NHS site](https://www.gov.uk/get-coronavirus-test) and understood that user accessibilty was of the utmost importance. 
+I used the easy to understand the format of the [official gov- NHS site](https://www.gov.uk/get-coronavirus-test) and understood that user accessibilty was of the utmost importance. 
 
 I knew that I wanted to create an app that would:
-- releive the average person of the task of remebering what exactly their symtpoms were and when they developed. 
-- provide a mechanism so that these symptoms could be updated/ deleted and created EASILY.
-- ensure that my design would tell users that this site is for functional use, but also that this is a tool to hopefully serve for a goo outcome. 
-- i was also adamant that i didnt want the site to be inundated with 'news' or 'information' forced upon the user. As we all know, the pandemic is a very emotional topic and causes unease for much of the population. 
+- Relieve the average person of the task of remembering what exactly their symptoms were and when they developed. 
+- Provide a mechanism so that these symptoms could be updated/ deleted and created EASILY.
+- Ensure that my design would tell users that this site is for functional use, but also that this is a tool to hopefully serve for a good outcome. 
+- I was also adamant that I didn't want the site to be inundated with 'news' or 'information' forced upon the user. As we all know, the pandemic is a very emotional topic and causes unease for much of the population. 
 
-I based my simplostic functional aspect of the app on the module-[mini-project-task-application]() expertly delivered by [code Institute]()
+I based my simplistic functional aspect of the app on the module-[mini-project-task-application]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
 
 
 #### Design process: UX Design
 
-1. Strategy plane: According to healthcare proffesionals, one of the biggest helps when having to diagnose a patient, is details on the patients symptoms. With the horrendous strain on our health care systems, i deduced that this app could be used as a tool to releive the workload of some of the hardworking front line staff that are in charge of diagnosing. 
+1. Strategy plane: According to healthcare professionals, one of the biggest strains, when having to diagnose a patient, is the lack of detail regarding the patients' symptoms. 
+I deduced that this app could be used as a tool to directly lighten the workload of some of the hardworking front line staff that are in charge of diagnosing. 
+From my experience as a British citizen, living throughout the tough times of 2020 and COVID-19, I have seen that amidst the chaos caused by the virus, it is very difficult to also keep track of your health. I hoped that this app would serve in helping people specify and track their potential COVID-19 symptoms and even spare a second to look at how they may be affecting their mental health and mood!
 
-2. Scope plane: After deciding on who this app was aimed toward and how it would be benefiting them, i started to think of the features i would need to use to make sure the app fit the needs of the users. The user would have to be able to:
+2. Scope plane: After deciding on who this app was aimed toward and how it would be benefiting them, I started to think of the features I would need to use to make sure the app fit the needs of the users. The user would have to be able to:
 - **C** reate their symptoms
-- **R** ead and view the symptoms of others, as a reference point of the'r own and for future development, potentially interact with a user who has a symptom that this user recognises and wants to offer advice on. 
-- **U** pdate their symptoms, again the tracking of the progression or regression of symtpoms will help significantly in the diagnosis process. 
+- **R** ead and view the symptoms of others, as a reference point of their own and for future development, potentially interact with a user who has a symptom that this user recognises and wants to offer advice on. 
+- **U** pdate their symptoms, again the tracking of the progression or regression of symptoms will help significantly in the diagnosis process. 
 - **D** elete their symptoms when they are no longer applicable.
 
-I would input these key features into the design through the use of regsitration and login functionality, which would store the users information, allowing for the above tasks to be carried out effectively. 
+I would input these key features into the design through the use of registration and login functionality, which would store the users' information, allowing for the above tasks to be carried out effectively. 
 
-I also wanted to provide a search bar, for users to search through the list of symptoms. In addition to this, i wanted to insure that i always had reinforcing messages/ prompts to let the user know what was happening, eg 'your symptom has been updated'.
+I also wanted to provide a search bar, for users to search through the list of symptoms. In addition to this, I wanted to ensure that I always had reinforcing messages/ prompts to let the user know what was happening, eg 'your symptom has been updated'.
 
-3. Structure plane: I wanted to insure that the structure of this app was data centric. therefore i wanted to limit the pages. I would have a registration/ login page and a homepage. Once the user was logged in / registered, the pages they could naviagte between would be; add symptom, my_symptoms, home page and logout. I wanted this structure so that users would find this app easy to use and functional. Based on the subject matter, i figured that less is more, i was sure that if they were aware that it was important to track their symptoms, they would have been inundated with plenty of informsation regarding covid. i dint need to be another source. 
+3. Structure plane: I wanted to ensure that the structure of this app was data-centric. Therefore I wanted to limit the pages. I would have a registration/ login page and a homepage. Once the user was logged in / registered, the pages they could navigate between would be; add symptom, my symptoms, home page and logout. I wanted this structure so that users would find this app easy to use and functional. Based on the subject matter, I figured that less is more, I was sure that if they were aware that it was important to track their symptoms, they would have been inundated with plenty of information regarding covid. I didn't need to be another source. 
 
-4. Skeleton plane: When deciding the above, i started to decipher the user experience up to this point. 
-    1. The user would open the app, have a breif read of the limited content i have added for aesthetic and instructuonal puproses. 
-    2. scroll down to see a list of ymptoms, (already added by other users), at this point they may choose that they wan to have a thorough read through these entries. Or search for a keyword, in the hopes that someone else has also experienced that same symptom. They couod do either, i would provide a search box for them to do so. The list will also be collapsible, showing only the headlines of the symptom entry; the symptom, the date they started experiencing the symtpom and who added it. If you click on it, then you will see the description of the symptom. I didnt want to make the isolation status of the person viewable, to anyone except the user whom the data is belonging to. Politically, whether people are chosing to self isolate, can be a huge source of contension and although a person could not be recognised from the username they have chosen, i wouldnt want the app to be the cause of any controversy moving forward. 
-    3. as the user scrolls to the bottom of the page, they would see a footer, with a useful news link and the option to copy the site url, so that they can share it with others. 
-    4. Once registered, they would be taken to the my symptoms page. and greeted with a welcome message including their username. Here they will see their current symtpoms and have the option to add new symptoms. 
-    5. i wanted them to see how easy the process of adding and editing their symptoms are, with reinforcing messages such as 'your symtpom has been updated' and redirecting them to the list of their symptoms, viewable both on their profile (my symotoms tab) and the home page. 
-    6. to make things faster, i wanted them to be able to edit/ delete on of their symptoms when viewing the list of symptoms on the homepoage and on their profiles. 
+4. Skeleton plane: When deciding the above, I started to gauge the user experience up to this point. 
+    1. The user would open the app, have a brief read of the limited content, provided for explanatory and instructional purposes. 
+    2. scroll down to see a list of symptoms, (already added by other users), at this point they may choose that they want to have a thorough read through these entries. Or, they may want to search for a keyword, in the hopes that someone else has also experienced that same symptom. They could do either, I would provide a search box for them to do so. 
+The list of symptoms will also be collapsible, showing only the headlines of the symptom entry; the symptom, the date the user started experiencing the symptom and who added it. 
+If you click on it, then you will see the description of the symptom. I didn't want to make the isolation status of the person viewable, to anyone except the user whom the data belonged to. Politically, whether people are choosing to self-isolate, can be a huge source of contention and although a person could not be recognised from the username they have chosen, I wouldn't want the app to be the cause of any controversy moving forward. 
+    3. as the user scrolls to the bottom of the page, they would see a footer, with a useful news link and the option to copy the site URL, so that they can share it with others. 
+    4. Once registered, they would be taken to the my symptoms page and greeted with a welcome message including their username. Here they will see their current symptoms and have the option to add new symptoms. 
+    5. I wanted them to see how easy the process of adding and editing their symptoms are, with reinforcing messages such as 'your symptom has been updated' and redirecting them to the list of their symptoms, viewable both on their profile (my symptoms tab) and the home page. 
+    6. to make things faster, I wanted them to be able to edit/ delete on of their symptoms when viewing the list of symptoms on the homepage and on their profiles. 
     7. after inputting their data/ simply reading their current data, they will log off and be told they have been logged off. 
     8. whilst logged off, they still have the opportunity to view the symptoms on the homepage, but juts not add to them. 
 
 5. Surface plane: 
-    * Due to the nature of the app strategy. I was concious that most images reflecting the topic could be triggereing to users. I decided early on that i would not use any images, the colours would be uplfiting but proffesional and I didnt want to lower the seriousness of the topic, with animations. 
-    * Unlike my 2 previous Milestone Projects, I found it more effective to not have a logo, although there is defiently scope for this in the future. 
-    * I used [coolors](https://coolors.co/), to create a coulor palette to work with, as shown below. I chose this palette as the colors were uplifting and warm yet formal, i felt this was the perfecct balance of feelings to be evoked in users when visiting my app. I wanted them to feel hopeful that they were going to be okay, soothed that this app and tool exists, but also aware of the importance of their data. 
+    * Due to the nature of the app strategy. I was conscious that most images reflecting the topic could be triggering to users. I decided early on that I would not use any images, the colours would be uplifting but professional and I didn't want to lower the seriousness of the topic, with animations. 
+    * In line with neutrality, I found it more effective to not have a logo, although there is scope for this in the future. 
+    * I used [coolors](https://coolors.co/), to create a colour palette to work with, as shown below. I chose this palette as the colours were uplifting and warm yet formal, I felt this was the perfect balance of feelings to be evoked in users when visiting my app. I wanted them to feel hopeful that they were going to be okay, soothed that this app and tool exists, but also aware of the importance of their data. 
 
-    * I used Roboto and quicksand from Google Fonts, for the fonts used throughout my project. I saw the two fonts used together on a peers MS3 project and thought together the fonts were informative yet appraochable. 
+    * I used Roboto and quicksand from Google Fonts, for the fonts used throughout my project. I saw the two fonts used together on a peers MS3 project and thought together the fonts were informative yet approachable. 
 
-    * I wanted to add a scroll-to-top button, which i had used in a previous project in this project as i felt it really added to smoot transition for the user. 
+    * I wanted to add a scroll-to-top button, which I had used in a previous project in this project as I felt it really added to smooth transition for the user. 
 
-> Note: It was during the design process that i started to really develop my idea. I was sure to keep referring to my user stories to insure that i was meeting my criteria and my subsequent decisions made sense. 
+> Note: It was during the design process that I started to properly develop my idea. I was sure to keep referring to my user stories to ensure that I was meeting my criteria and my subsequent decisions made sense. 
 
 ### Design process
 
-Selected color palette:
+Selected colour palette:
 ### Colour scheme
-It was important to me that the seriousness of the topic wasnt distracted from and the site was still inviting and palatable. For this reason i decided on ![This colour scheme](/wireframes/Colour-scheme.png)
+It was important to me that the seriousness of the topic wasn't distracted from and the site was still inviting and palatable. For this reason i decided on ![This colour scheme](/wireframes/Colour-scheme.png)
 
 Wireframes:
 ![Desktop devices](wireframes/desktop.png)
@@ -102,23 +106,31 @@ Wireframes:
 ### Future Features 
 - This list is limited to ' ' and they can click ' ' if they want to see the entire list.
 - chat and share symptoms
+## Features
+### Future Features 
+- This list is limited to ' ' and they can click ' ' if they want to see the entire list.
+- chat and share symptoms
+- line remains under page on nav bar to indictae what page you are on.
+- images
+
+
 
 ### Existing Features
-The app has 5 pages in total: symptoms, register, login, my symptoms, log out. on arrival to the app, symptoms, register and login are all thats available, once logged in, user now sees, log out, my symptoms, symptoms and add symptom. 
+The app has 5 pages in total: symptoms, register, login, my symptoms, log out. on arrival to the app, symptoms, register and login are all that's available, once logged in, the user now sees, log out, my symptoms, symptoms and add symptom. 
 
-Whilst building, I had add symtpom as a seperate page, however towards the end of building the site, i saw that it was possible and better UX to have the add symptom form on the my symptom/ profile page. I simply made the navigation link to add symptom, the id of the add symptom form, which is on the my symptoms page. 
+Whilst building, I had 'add symptom' as a separate page, however, towards the end of building the site, I saw that it was possible and better UX to have the add symptom form on my symptoms/ profile page. I simply made the navigation link to add symptom, the id of the add symptom form, which is on the 'my symptoms' page. 
 
 #### Database structure
 
 The data for this project is stored in my MongoDB database within three collections as follows:
-- *Users* - This collection stores the user's username and their enctrypted password created when they signed up to self isolation watch.
-- *Symptoms* - When a user creates a symptom, it is stored within this collection with the following information: The username linking the symptom to their profile, the symptom name, the users self isolation status, description of their symptom, date from which they have been experienceing the symptom and their mood and mental health. 
-- *Status* - The self isolation status options are saved in seperate documents within the status collection. The statuses are itterated through to provide the self isolation status of the user, when completeing the form to add a symptom. 
+- *Users* - This collection stores the user's username and their encrypted password created when they signed up to self-isolation watch.
+- *Symptoms* - When a user creates a symptom, it is stored within this collection with the following information: The username linking the symptom to their profile, the symptom name, the users' self-isolation status, description of their symptom, date from which they have been experiencing the symptom and their mood and mental health. 
+- *Status* - The self-isolation status options are saved in separate documents within the status collection. The statuses are iterated through to provide the self-isolation status of the user when completing the form to add a symptom. 
 
 
 #### Consistent features across all pages
 
-- The menu at the top of the page and footer are consistent in design and responsive throughout the website. However, the contents of the menu changes depending on if a user is logged in or not.
+- The menu at the top of the page and footer are consistent in design and responsive throughout the website. However, the menu changes depending on if a user is logged in or not.
 
 - The menu bar differs depending on the user session.
  For users logged in reads as :
@@ -127,69 +139,62 @@ whereas the menu bar, if a user is not logged in/signed up says:
 ![This](testing/screenshots/navbar-when-logged-out.png)
 
 
-- In keeping with previuos projects, i decided to have a footer for the app. I always founbd it a nice way of bringing the site together and adding to site uniformity.
+- In keeping with previous projects, I decided to have a footer for the app. I always found it a nice way of bringing the site together and adding to site uniformity.
 
 - The footer features an icon to copy the URL for ease of sharing the app with friends and family. 
-To do this I used clipboard.js (referenced below). When a user successfully copies the url, they are notified with 'Copied!' being appended to the text. Equally, if the users browser doesnt support the cdn and the action therefore fails, an alert tells the user the issue and explains how to manually copy the url to share it on. 
+To do this I used clipboard.js (referenced below). When a user successfully copies the URL, they are notified with 'Copied!'  Equally, if the users' browser doesn't support the CDN and the action therefore fails, an alert tells the user the issue and explains how to manually copy the url to share it on. 
 
 - scroll to top button,
 
-- All flash messages appear with the same css.
+- All flash messages appear with the same CSS.
 
 
 #### symptoms (homepage)
 - The user sees a few short sentences to welcome them in and to help them immediately understand what the purpose of this app is. There is then a link which when pressed takes the user to the register page. 
 
-- as the user scrolls down, they see a list of the symtpoms that have been previously added. 
-- below the list of symptoms, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the mongodb collection that the symptoms are located in. I acheived this function by folowing the steps from the codeinstitue module, lesson ' '  
-- on the list, they will see edit delete bittons on the items they have added. if they do either flash messages appear
+- as the user scrolls down, they see a list of the symptoms that have been previously added. 
+- below the list of symptoms, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the MongoDB collection that the symptoms are located in. I achieved this function by following the steps from the Code Institue module, lesson ' '  
+- on the list, they will see edit delete buttons on the items they have added. if they do either flash messages appear
 
 
 ### sign up  
 - this page is pretty empty, there is nothing other than a form for the user to sign up. 
-- if a person tries to sign up with an existing username a flash message appears, i decided no to do an error page for this as it is a human error often made because people click sign up instea dof login. 
-- if a person then rememebrs they actually have an account, they can also login from here toop, usimng the login link next to the register button. 
+- if a person tries to sign up with an existing username a flash message appears, I decided no to do an error page for this as it is a human error often made because people click sign up instead of login. 
+- if a person then remembers that they do have an account, they can also login from here top, using the login link next to the register button. 
 
 ### login
 - this page is pretty empty, there is nothing other than a form for the user to login.
-- if a person then rememebrs they actually do not have an account, they can also sign up from here toop, using the sign up link next to the loginbutton. 
-- if they are on trying to use a username that doesnt exist, if they are entering a password that doesnt exist or both, they are redirected to an error page. 
-- the error page states the potential reasons for their failure to login and a link to try again. i wanted to use an error page here instead of a flash message because, i thought it was better defensive programming then telling a pitential hacker, what exactly the issue was. 
+- if a person then remembers that they do not have an account, they can also sign up from here top, using the sign up link next to the login button. 
+- if they are on trying to use a username that doesn't exist, if they are entering a password that doesn't exist or both, they are redirected to an error page. 
+- the error page states the potential reasons for their failure to login and a link to try again. I wanted to use an error page here instead of a flash message because, I thought it was better defensive programming then telling a potential hacker, what exactly the issue was. 
 
 ### add symptom
-- this page is actually not its own page, rather a part of the mysymptoms page. 
-- the add symptom link leads a user to tthe my symptoms page, however just at the add symptopm form. The form asks.....
-- i chose these questions because....
-
-
-
+- this page is not a page, rather a part of the 'my symptoms' page. 
+- the 'add symptom' link leads the user directly to the 'add symptom' form.
+-The form asks: I chose these questions because;
 
 ### my symptoms
-- i wanted the user to see their current symptoms here, so provided a list of their user specific symptoms, which from here they could edit or delete. 
-- if they choose to delet any of their current symptoms, a modal is in place for them to confirm deleting. Again, this was good UX and defensive programming?
-- if the user clicks edit, they will be taken to their symptom, with the fields filled out as was orginally saved. they can edit or cancel. 
-- if the user has no current symptoms, alternate text will appear saying ..... i didnt want to use a flash message here as i wanted the body text to be consistent and more persuasive. flash messages disappear and this text wouldnt until a new symptom was added. 
+- I wanted the user to see their current symptoms here, so provided a list of their user-specific symptoms, which from here they could edit or delete. 
+- if they choose to delete any of their current symptoms, a modal is in place for them to confirm deleting. Again, this was good UX and defensive programming.
+- if the user clicks edit, they will be taken to their symptom, with the fields filled out as was originally saved. they can edit or cancel. 
+- if the user has no current symptoms, the alternative text will appear saying : 
+ I didn't want to use a flash message here as I wanted the body text to be consistent and more persuasive. flash messages disappear and this text wouldn't until a new symptom was added. 
 
 ### logout
- - on logging out the user will see a flash message saying.. 
+ - on logging out the user will see a flash message saying: and the user is directed back to the home page (symptoms)
  
-
-
 
 
 # Bugs discovered
 
 ## - Password not encoding
-
-* 
-
 ### solution:
-* simply had forgotten to add the correct type to the password field on both register and login forms
+* Simply had forgotten to add the correct type to the password field on both register and login forms.
 
 ![rectified](testing/screenshots/solving-password-encode.png)
 
 ## - Jinja if statement and for loop, not functioning correctly 
-* i wanted a title for the symtpom list to appear on the my symtpoms page, followed by the users symptoms. if they did not have any symptoms, i wanted to provide text that prompts them to add one. i tried to execute this with 
+* I wanted a title for the symptom list to appear on the 'my symtpoms' page, followed by the users' symptoms. If they did not have any symptoms, I wanted to provide text that prompts them to add one. I tried to execute this with 
 ```
 {% if symptom %}
 {% for symptom in symptoms %}
@@ -213,19 +218,19 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 </div>
 {% endif %}
 ```
-However, when executing this code i was getting 
+However, when executing this code I was getting 
 ![this](/testing/screenshots/if-my_symptoms(1).png)
-The correct text shows until i add a symptom and then the symptom displays, (which is correct) but I wanted the 'looks like you dont have any current symptoms' to disappear and be replaced with 'here are your symptoms'. 
+The correct text shows until I add a symptom and then the symptom displays, (which is correct) but I wanted the 'looks like you don't have any current symptoms' to disappear and be replaced with 'here are your symptoms'. 
 
 * I changed the 
 ``` {% if symptom %} ``` to ``` {% if symptoms %} ``` 
-as symptoms is the name of my variable. this resulted in ![this](/testing/screenshots/if-my_symptoms(2).png). This was because i was using the 'symptoms variable, which i had defined in the my_symptoms view. 
+as 'symptoms' is the name of my variable, this resulted in ![this](/testing/screenshots/if-my_symptoms(2).png). This was because i was using the 'symptoms' variable, which I had defined in the my_symptoms view. 
 ![this](/testing/screenshots/if-my_symptoms(3).png)
-however, as you can see, that list has no filter and is calling all of the symptoms. hence why 'here are your symptoms' appears the same number of times as there are total symptoms
+However, as you can see, that list has no filter and is calling all of the symptoms. Hence why 'here are your symptoms' appears the same number of times as there are total symptoms.
 
-* I changed the symptoms variable to  ```symptoms = list(mongo.db.symptoms.find({"symptom_recipient": username}))`` so that it would now only show the list of the symptoms pertsiing to that person on the my symptoms page. 
+* I changed the symptoms variable to  ```symptoms = list(mongo.db.symptoms.find({"symptom_recipient": username}))`` so that it would now only show the list of the symptoms of that user on their 'my symptoms' page. 
 
-* I then cleaned uo the jinja template code 
+* I then cleaned up the jinja template code 
 ``` <!--if statement stating which html to display and when  -->
 {% if symptoms %}
     <div class="row">
@@ -275,11 +280,6 @@ and no longer needed to define a condition for the session user.
 ### solution:
 * Adding a filter on the symptoms list within the app.py file and making the jinja code more formatted and clearer. 
 
-
-
-
-
-
 ## - Refresh causing null data input
 
 * Everytime I was refreshing the page and logged in, a new input which was blank was being added to my mongo db. It was then also showing up on my page, as I was displaying all mongo.db entries. 
@@ -308,7 +308,7 @@ def add_symptom():
 ```
 
 ### solution:
-* i added the if else statement to the my symptoms view as it was the view which was doing the actioning of the add symotom. 
+* I added the if-else statement to the 'my symptoms' view as it was the view which was doing the actioning of adding a symptom. 
 
 ```
 @app.route("/my_symptoms/<username>", methods=["GET", "POST"])
@@ -335,39 +335,14 @@ def my_symptoms(username):
         username=username, symptoms=symptoms, status=status)
         
 ```
-
-## - Materialize 'carousel item' code not displaying 
-
-* I had added some code from a meaterialize carousel and it wasnt showing up on my page.
-* I tried to chnage the colour of the text and double checked that I wasnt pasting within any none relevant for loops etc. 
-* I double checked that I had added the initialising JS code.
-* I noticed that the carousel was not placed within a col, just a row. 
-
-### solution:
-1. After more scrutiny, I realised that the class for the carousel itel was actually set to '0'!
-2. I rectified this with the following code in my styles.css file. 
-```
-.carousel {
-    height: 400px !important;
-}
-
-```
-Proof of me working through this :
-![Classes of the carousel item](/testing/screenshots/carousel-bug(1).png)
-![Proof that the carousel code was loading](/testing/screenshots/carousel-bug(2).png)
-![The height was originally '0'](/testing/screenshots/carousel-bug(3).png)
-![When rectified](/testing/screenshots/carousel-bug(4).png)
-
-
 ## flash messages displaying with ``` [' '] ```
 
-* I started trying to solve this issue by applying some css to the flash messages. This indeed made them more aesthetically pleasing, but did not solve the issue. 
+* I started trying to solve this issue by applying some CSS to the flash messages. This indeed made them more aesthetically pleasing but did not solve the issue. 
 * I then began to do some research which threw up plenty of alternative options for writing a conditional statement and for loop for my flash messages to sit within, but none helped me. 
 * Finally, I found a thread in slack of someone experiencing the same issue! 
 
-
 ### solution:
-1. I simply had to change the 'messages' object in the curly brackets to singular. I realised that i had initially made this mistake, because i was thinking of it as, all the flash messages must follow this format, but in reality, i only want one message at a time and EACH message must follow the same conditions. 
+1. I simply had to change the 'messages' object in the curly brackets to singular. I realised that I had initially made this mistake, because I was thinking of it as, all the flash messages must follow this format, but in reality, I only want one message at a time and EACH message must follow the same conditions. 
 ```
 <div class="row">
 {% with messages = get_flashed_messages() %}
@@ -399,13 +374,16 @@ Proof of me working through this :
 Proof of me working through this :
 ![How the flash messages appeared initially](/testing/screenshots/flash-messages(1).png)
 ![Initial searching, my eyes hadn't picked up the singular 'message' in these examples](/testing/screenshots/flash-messages(4).png)
-![I found somoene in slack with the ssme issue.. but it was written in croation..](/testing/screenshots/flash-messages(2).png)
-![Double checked that this person did in fact have the same issue, before reaching out](/testing/screenshots/flash-messages(3).png)
+![I found someone in slack with the same issue.. but it was written in Croatian..](/testing/screenshots/flash-messages(2).png)
+![Double checked that this person did, in fact, have the same issue, before reaching out](/testing/screenshots/flash-messages(3).png)
 
 
 [More in depth testing can be found here](testing.md) 
 
+## Known Bugs
 
+### layout of footer not adhering to sizing rules
+### 
 
 ## Deployment
 
