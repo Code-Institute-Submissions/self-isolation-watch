@@ -40,7 +40,10 @@ nav ul a {
     text-decoration: none;
     }
  
-
+.active-page{
+    background-color:#723D46;
+    color: white;
+}
 
 /* footer */
 
@@ -106,21 +109,12 @@ color: #e26d5c;
      font-size: 20px;
     text-align: center;
     padding:1rem 0 .5rem;
-<<<<<<< HEAD
     
 }
 .underline{
     text-decoration:underline;
     
 }
-=======
-    
-}
-.underline{
-    text-decoration:underline;
-    
-}
->>>>>>> 5a229d59e8ba017af8c8b644c2ded45dc28a6816
 .nav-titles{
     font-size: 1.5rem;
     display: block;
@@ -180,7 +174,6 @@ top:.50rem;
     color: #E26D5C;
 }
 
-<<<<<<< HEAD
 .scroller {
   
   position: fixed;
@@ -199,9 +192,6 @@ top:.50rem;
   pointer-events: none;
   transition: all .4s;
 }
-=======
-
->>>>>>> 5a229d59e8ba017af8c8b644c2ded45dc28a6816
 
 .scroller.active {
   bottom:32px;
@@ -216,7 +206,6 @@ top:.50rem;
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 
 /* add symptom form */
 .dropdown-content li>span {
@@ -239,18 +228,6 @@ top:.50rem;
 .datepicker{
     width: 100%;
     height: 350px;
-=======
-.carousel-2{
-    background-color: #472D30;
-}
-
-.carousel-3{
-background-color: #723D46;
-}
-
-.carousel-4{
-background-color: #E26D5C;
->>>>>>> 5a229d59e8ba017af8c8b644c2ded45dc28a6816
 }
 
 
@@ -299,75 +276,16 @@ select{
 .isolation_status-label{
    padding:.5rem 2.2rem 0 0; 
 }
-<<<<<<< HEAD
 .select-wrapper input.select-dropdown {
     position: absolute;
     padding:0 2.2rem;
     border-bottom:none;
-=======
-
-
-.scroller {
-  
-  position: fixed;
-  bottom: 16px;
-  right:32px;
-  width:50px;
-  height:50px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size:32px;
-  color:#39393A;
-  text-decoration: none;
-  opacity:0;
-  pointer-events: none;
-  transition: all .4s;
->>>>>>> 5a229d59e8ba017af8c8b644c2ded45dc28a6816
 }
 /* media queries */
 
-<<<<<<< HEAD
   @media #{$small-and-down} .input-field>label {
    {
 padding: 1rem 1rem .5rem 0;
 
 }
   }
-=======
-.scroller.active {
-  bottom:32px;
-  opacity:1;
-  pointer-events: auto;
-  text-decoration: none;
-  color: #E26D5C;
-}
-
-.fa-chevron-up{
-    color: #E26D5C;
-    text-decoration: none;
-}
-
-.divider{
-    background-color: #E26D5C;
-    margin-top:1rem;
-    padding-bottom:1rem;
-}
-
-.collapsible-header {
-    background-color: #E26D5C;
-    border-bottom: 2px solid #C9CBA3;
-}
-
-.delete{
-    background-color:#C9CBA3;
-
-}
-
-.edit{
-    background-color:#723D46;
-    color:#fafafa;
-
-}
->>>>>>> 5a229d59e8ba017af8c8b644c2ded45dc28a6816
