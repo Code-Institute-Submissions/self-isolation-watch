@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -31,7 +32,7 @@
  <!--top navbar -->
  <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center"></a>
+      
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul class="left hide-on-med-and-down">
         {% if session.user %}
@@ -89,24 +90,24 @@
     
  <!--footer -->  
  <footer class="page-footer">
-          <div class="container">
             <div class="row">
-              <div class="col s12">
-                <h5 class="white-text">Thank you for visiting!</h5>
-                <p class="grey-text text-lighten-4">Please stay safe and if you would like to share our site with any friends/family, please copy the link here: 
-                <i class="fas fa-copy copy-btn" data-clipboard-text="https://self-isolation-watch.herokuapp.com"></i> </p>
+              <div class="col s12 m4 l4">
+                <h5 class="subtitles black-text">To share our site with anyone, please copy the link here:  <i class="fas fa-copy copy-btn" data-clipboard-text="https://self-isolation-watch.herokuapp.com"></i></h5>
+            
               </div>
+             <div class="col s12 m4 l4"><h5 class="subtitles black-text">
+             © 2020 Copyright Text</h5>
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2020 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="https://www.bbc.co.uk/news/uk-51768274"><i class="fas fa-globe-americas">Stay up to date here</i></a>
+
+            <div class="col s12 m4 l4">
+            <h5 class="subtitles black-text">Stay up to date here <a class="black-text" href="https://www.bbc.co.uk/news/uk-51768274"><i class="fas fa-globe-americas prefix"></i></a> </h5>
+            
+            </div>  
             </div>
-          </div>
+            
         </footer>
             
-  <a href="#" class="scroller container"><i class="fas fa-chevron-circle-up"></i></a>
+  <a href="#" class="scroller container" aria-label="scroll to top"><i class="fas fa-chevron-circle-up"></i></a>
           
        
   </body>

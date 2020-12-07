@@ -2,17 +2,13 @@
 {% block content %}
 <!--my symptoms page body-->
 <!--welcome text -->
-<div class="row">
-    <div class="col s12">
-        <h1 class="titles">Good to see you again!</h1>
-    </div>
-</div>
+
 
 <!--if statement stating which html to display and when  -->
 {% if symptoms %}
     <div class="row">
         <div class="col s12">
-            <h2 class="subtitles underline">Here are your symptoms</h2>
+            <h1 class="titles">Here are your symptoms</h1>
             <ul>
                 {% for symptom in symptoms %}
                     <li>
@@ -44,7 +40,7 @@
 {% else %}
     <div class="row">
         <div class="col s12">
-            <h2 class="subtitles">Looks like you don't have any current symptoms!</h2>
+            <h1 class="titles">Looks like you don't have any current symptoms!</h1>
             <p>
                 Either you're a really healthy cookie.. or you havent got round to adding any yet!
             </p>
@@ -65,6 +61,7 @@
             <!--status of your self isolation  -->
             <div class="row">
                 <div class="input-field col s6">
+                <i class="fas left fa-house-user"></i>
                     <select id="isolation_status" name="isolation_status" class="validate" required>
                         <option value="" disabled selected>
                             What's your self isolation status?
@@ -75,7 +72,7 @@
                         </option>
                         {% endfor %}
                     </select>
-                    <label for="isolation_status"></label><i class="fas left fa-house-user"></i>
+                    <label for="isolation_status"></label>
                 </div>
             </div>
 
