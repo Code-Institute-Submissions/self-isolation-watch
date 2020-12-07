@@ -17,8 +17,14 @@
       "**/.theia": true,
       "**/core.Microsoft*": true,
       "**/core.mongo*": true,
-      "**/core.python*": true,
+      "**/core.python*": true
    },
 "emmet.extensionsPath": ".theia",
-"editor.autoSave": "off"
+"editor.autoSave": "off",
+"workbench.editor.highlightModifiedTabs": true,
+"java.semanticHighlighting.enabled": true,
+"intelephense.completion.triggerParameterHints": true,
+"clangd.semanticHighlighting": true,
+"editor.occurrencesHighlight": true,
+"editor.selectionHighlight": true
 }

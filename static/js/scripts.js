@@ -26,10 +26,6 @@
 /* initialisation for dropdown tool on for list of symptoms on my_symptoms page */     
   $('.dropdown-trigger').dropdown();
 
-/* initialisation for carousel on welcome page */  
-$('.carousel').carousel({
-  interval: 2000
-})
 
 /* initialisation for modals for double checking deleting */  
   $(document).ready(function(){
