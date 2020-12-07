@@ -1,26 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <div class="row">
-    <div class="col s12">
-       <h1 class="titles"> Login to review, edit or delete your current symptoms and add new ones! </h1>
+<div class="row">
+<div class="col s12">
+    <h1 class="titles"> Login to review, edit or delete your current symptoms and add new ones! 
+    </h1>
+    
     <form method="POST" action="{{ url_for('login') }}">
-<!--email for register -->
+
+<!--username for register -->
       <div class="input-field col s12">
           <i class="fas fa-envelope"></i>
           <input id="username" type="text" class="validate input-styles" name="username" placeholder="username" required pattern="^[a-z0-9_-]{3,16}$" minlength="5">
-        </div>
+      </div>
 <!--password for register -->
       <div class="input-field col s12">
           <i class="fas fa-lock"></i>
           <input id="password" type="password" class="validate" name="password" placeholder="password" required minlength="5" maxlength="15">
-     </div>
+      </div>
   <div class="col s6">
  <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Log in
   <i class="fas fa-sign-in-alt"></i>
   </button>
+  </div>
+
+<div class="col s6">
+     <h3 class="small-titles center-align">
+  Need to register? <a class="btn waves-effect waves-light" href="{{ url_for('login') }}"><i class="fas prefix fa-sign-in-alt"></i> Register here! </a></h3>
+
 </div>
     </form>
+    
 </div>
-  </div>
+</div>
+
 {% endblock %}

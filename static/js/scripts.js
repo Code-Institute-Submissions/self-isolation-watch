@@ -27,10 +27,9 @@
   $('.dropdown-trigger').dropdown();
 
 /* initialisation for carousel on welcome page */  
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
+$('.carousel').carousel({
+  interval: 2000
+})
 
 /* initialisation for modals for double checking deleting */  
   $(document).ready(function(){

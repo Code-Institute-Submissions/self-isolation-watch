@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto:wght@100;300;400;500&display=swap');
 
+/* base.html */
+
 body{
     background-color: #FFE1A8;
     font-family: 'Roboto', 'sans-serif';
@@ -7,9 +9,16 @@ body{
     text-align: center;
     font-size: 20px;
     padding: 1rem 0rem 0rem 0rem;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 
 }
+  main {
+    flex: 1 0 auto;
+  }
 
+/* navbar */
 
 nav {
     color: black;
@@ -30,16 +39,53 @@ nav ul a {
     color: black;
     text-decoration: none;
     }
+ 
+
+
+/* footer */
+
+.page-footer {
+    color: black;
+    background-color: #C9CBA3;
+position: relative;
+width:100%;
+  bottom: 0;
+  padding:2rem 0rem 1rem 0rem;
+
+
+}
+.fa-globe-americas:hover{
+    color: #e26d5c;
+    }
+
+.fa-copy:hover{
+    color: #e26d5c;
+}
+.copied{
+color: #e26d5c;
+}
+
+/* symptoms */
+
+.welcome{
+    background-image:url("/static/images/carousel-1.jpg");
+
+}
+
+
 
 .symptom-container{
     padding: 5rem 1rem 1rem 1rem
 }
+
+/* headings paragraphs and labels */
+
 .titles{
    font-family: 'Quicksand', sans-serif;
     font-weight: 600;
      font-size: 30px;
     text-align: center;
-    color:#E26D5C;
+    color:#723D46;
 }
 .button-labels{
       font-family: 'Quicksand', sans-serif;
@@ -52,31 +98,48 @@ nav ul a {
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
      font-size: 15px;
-    color:#E26D5C;   
+    color:#723d46;   
 }
 .subtitles{
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
      font-size: 20px;
     text-align: center;
+    padding:1rem 0 .5rem;
     
 }
+.underline{
+    text-decoration:underline;
+    
+}
+.nav-titles{
+    font-size: 1.5rem;
+    display: block;
+    padding: 15px 0;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    text-transform:uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+
 .flashes{
     font-family: 'Quicksand', sans-serif;
-    color: #472D30;
+    color: #723D46;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 
 }
-.logo{
-    text-decoration: none;
-    cursor: none;
-    width: 50%;
-    height: 50%;
-    display: flex;
 
+.white-text{
+       font-family:'Roboto',  'sans-serif';
+    font-weight: 500;
+    font-size: 20;
 }
+
+/* elements used throughout all pages */
 
 form{
     background-color: white;
@@ -84,21 +147,9 @@ form{
     font-family:'Roboto',  'sans-serif';
     font-weight: 200;
     color: black;
+    margin: 5rem;
 }
 
-select{
-   font-family:'Roboto',  'sans-serif';
-    font-weight: 500;
-    color: black;
-    font-size: 18;
-    padding: .5rem .25rem .5rem .25rem;
-
-
-}
-
-textarea{
-    border: none;
-}
 
 label{
      font-family: 'Quicksand', sans-serif;
@@ -109,113 +160,26 @@ label{
     text-align: left;
 
 }
+.input-field>label {
+color: black;
+left:2rem;
+top:.50rem;
+}
 
 .input-field{
     background-color: #fafafa;
     color: #E26D5C;
 }
 
-.carousel {
-    height: 400px !important;
-    width: 640px !important;
-    position: relative;
- 
-}
-
-.carousel-item{
-       padding: 2rem 0 0;
-
-}
-.black{
-  background-image: url("/static/images/carousel-1.jpg");
-   background-repeat: repeat;
-   background-position: center;
-   opacity: 0.5;
-}
-
-.amber{
-    background-color: #472D30!important;
-}
-
-.green{
-background-color: #723D46!important;
-}
-
-.blue{
-background-color: #E26D5C!important;
-}
-
-
-.carousel.carousel-slider .carousel-item p {
-    font-size: 15px;
-    padding: 3rem;
-    
-}
-.white-text{
-       font-family:'Roboto',  'sans-serif';
-    font-weight: 500;
-    font-size: 20;
-}
-
-.carousel-fixed-item{
-    padding: 0 0 2rem 0;
-}
-
-form{
-    margin: 5rem;
-}
-footer{
-  position: relative;
-  left: 0;
-  bottom: 0;
-  padding:2rem 0rem 1rem 0rem;
-      width: 100%;
-
-}
-.page-footer {
-    
-    color: black;
-    background-color: #C9CBA3;
-
-
-}
-
-.fa-copy{
-    cursor: pointer;
-}
-
-.fa-copy:hover{
-    color: black;
-}
-.copied{
-color: black;
-}
-
-#delete-confirmation{
-    height: auto;
-    width: 340px;
-}
-
-.datepicker{
-    width: 100%;
-    height: 350px;
-}
-
-.modal{
-    height: auto;
-    width: auto;
-}
-
-
 .scroller {
-  background: red;
+  
   position: fixed;
   bottom: 16px;
   right:32px;
   width:50px;
   height:50px;
-  border-radius: 50%;
-  display: contents;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size:32px;
@@ -231,8 +195,94 @@ color: black;
   opacity:1;
   pointer-events: auto;
   text-decoration: none;
+  color: #E26D5C;
 }
 
 .fa-chevron-up{
-    color: #39393A;
+    color: #E26D5C;
+    text-decoration: none;
 }
+
+
+/* add symptom form */
+.dropdown-content li>span {
+    font-size: 16px;
+    color: #723d46;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+.modal{
+    height: auto;
+    width: auto;
+}
+
+#delete-confirmation{
+    height: auto;
+    width: 340px;
+}
+
+.datepicker{
+    width: 100%;
+    height: 350px;
+}
+
+
+.divider{
+    background-color: #E26D5C;
+    margin-top:1rem;
+    padding-bottom:1rem;
+}
+
+.collapsible-header {
+    background-color: #472d30;
+    border-bottom: 2px solid #C9CBA3;
+}
+
+
+textarea{
+    border: none;
+    padding-top:.5rem;
+
+}
+
+#mood{
+    padding:1rem .2rem 0rem .2rem;
+}
+
+.delete{
+    background-color:#C9CBA3;
+
+}
+
+.edit{
+    background-color:#723D46;
+    color:#fafafa;
+
+}
+
+select{
+   font-family:'Roboto',  'sans-serif';
+    font-weight: 500;
+    color: black;
+    font-size: 18;
+    padding: .5rem .25rem .5rem .25rem;
+
+
+}
+.isolation_status-label{
+   padding:.5rem 2.2rem 0 0; 
+}
+.select-wrapper input.select-dropdown {
+    position: absolute;
+    padding:0 2.2rem;
+    border-bottom:none;
+}
+/* media queries */
+
+  @media #{$small-and-down} .input-field>label {
+   {
+padding: 1rem 1rem .5rem 0;
+
+}
+  }
