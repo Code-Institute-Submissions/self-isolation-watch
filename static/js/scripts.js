@@ -59,10 +59,10 @@ function activeNavBar(){
         $('.menu-item').removeClass('active-page')
         $(this).closest('.menu-item').addClass('active-page')
     })
-    activeNavBar()
+    
 };
 
 
-
+activeNavBar()
 
 

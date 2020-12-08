@@ -278,7 +278,7 @@ select{
 }
 .select-wrapper input.select-dropdown {
     position: absolute;
-    padding:0 2.2rem;
+   
     border-bottom:none;
 }
 /* media queries */
