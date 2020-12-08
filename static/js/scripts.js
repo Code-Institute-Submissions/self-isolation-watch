@@ -55,7 +55,7 @@ window.addEventListener("scroll" , () => {
 });
 // current page highlighted
 function activeNavBar(){
-    $('.menu-list .menu-item').click(function() {
+    $('.menu-list .menu-item a').click(function() {
         $('.menu-item').removeClass('active-page')
         $(this).closest('.menu-item').addClass('active-page')
     })

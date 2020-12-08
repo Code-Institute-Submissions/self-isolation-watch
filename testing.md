@@ -1,8 +1,8 @@
-## Testing
+# Testing
 
-### Accessibilty
+## Accessibilty
 My mentor alerted me to the importance of the accesibility of my site. 
-i used [wave](), 
+i used [wave](https://wave.webaim.org/)
 this was a screenshot of my first use of the tool. 
 ![1st attempt with wave](/testing/screenshots/wave-test-1-(homepage).png) as you can see, i had a serious contrast issue, so i immediatley resolved this on every page. 
 my ![second attempt](/testing/screenshots/wave-test-2-(homepage).png) was better and i started to understamd the importance of the contrast issues and labelling objects that i wouldnt assume necessary to label. for example, lists and nav bars. ![third attempt](/testing/screenshots/wave-test-3-(homepage).png)
@@ -55,7 +55,7 @@ I made some changes and simplified the content, but i was still unhapy that at t
 - i did some research and added some media queries in. 
 
 ### solution 
-- 
+- unresolved. 
 
 ### add symptom form 
 on the add symptom form, when a user clicks on the input fields, the labels became slightly obstructed. 
@@ -102,7 +102,7 @@ top:.50rem;
 i did the same for the text area's of the input fields and eventually maanged to make the form more aesthetically pleasing and readable 
 ![add symptom form- iphone 5](/testing/responsiveness/iphone-5-add-symptom-form.png)
 
-### user stories testing
+## User stories testing
 
 - 'As a recent self isolater, I want to keep track of what symptoms I have and how long I have had them, so that I have more information to give to the doctor.'
 
@@ -143,3 +143,9 @@ A user can update their symtpoms and see it listed with their other symptoms, on
 ![Readable symptoms](/testing/user-stories/readable-symptoms(6).png)
 - If the user has searched a keyword that is present somewhere in the symptoms, that will also be displayed. 
 - I was very happy with the functionality of the search box. 
+
+## WW3 HTML validation 
+## WW3 CSS validation 
+## PEP8 validation 
+## Javascript validation 
+## compatability

@@ -97,22 +97,21 @@ Selected colour palette:
 It was important to me that the seriousness of the topic wasn't distracted from and the site was still inviting and palatable. For this reason i decided on ![This colour scheme](/wireframes/Colour-scheme.png)
 
 Wireframes:
-![Desktop devices](wireframes/desktop.png)
-![Mobile devices](wireframes/mobile.png)
-![Tablet devices](wireframes/tablet.png)
+![Desktop devices](/wireframes/desktop.png)
+![Mobile devices](/wireframes/mobile.png)
+![Tablet devices]()
 
 
 ## Features
-### Future Features 
-- This list is limited to ' ' and they can click ' ' if they want to see the entire list.
-- chat and share symptoms
-## Features
-### Future Features 
-- This list is limited to ' ' and they can click ' ' if they want to see the entire list.
-- chat and share symptoms
-- line remains under page on nav bar to indictae what page you are on.
-- images
 
+### Future Features 
+- As the site becomes more accesed and used for purpose, it would be wise to limit the number of symptoms that show on the list on the homepage. For aesthetic and readability purposes.
+
+- It would be necessary to have some more defensive programming on the site to ensure that; the data is not hacked and accessed and users are not misusing the tool.
+
+- Indicator of which page you are on.
+
+- Images, although i decided not to add any for this project, in the future, more images could be more inviting for a user. 
 
 
 ### Existing Features
@@ -149,51 +148,78 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 - All flash messages appear with the same CSS.
 
 
-#### symptoms (homepage)
+#### Symptoms (homepage)
 - The user sees a few short sentences to welcome them in and to help them immediately understand what the purpose of this app is. There is then a link which when pressed takes the user to the register page. 
 
-- as the user scrolls down, they see a list of the symptoms that have been previously added. 
-- below the list of symptoms, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the MongoDB collection that the symptoms are located in. I achieved this function by following the steps from the Code Institue module, lesson ' '  
-- on the list, they will see edit delete buttons on the items they have added. if they do either flash messages appear
+- As the user scrolls down, they see a list of the symptoms that have been previously added. 
 
+- On the list, they will see edit delete buttons on the items they have added. If they choose to edit their symptom, they will be taken to their completed form and change the answers to the form questions, as they wish and after saving, a flash message will appear, telling them that their symptom has been updated. 
 
-### sign up  
-- this page is pretty empty, there is nothing other than a form for the user to sign up. 
-- if a person tries to sign up with an existing username a flash message appears, I decided no to do an error page for this as it is a human error often made because people click sign up instead of login. 
-- if a person then remembers that they do have an account, they can also login from here top, using the login link next to the register button. 
+- If they choose to delete the symptom, a confirmation modal will appear, this was good defensive programming as, deleting their symptom is an irreversible action, so I wanted the user a second chance to be sure that they wanted to carry this action out! When they do choose to delete, a flash message appears, informing them that their symptom has been deleted.
 
-### login
-- this page is pretty empty, there is nothing other than a form for the user to login.
-- if a person then remembers that they do not have an account, they can also sign up from here top, using the sign up link next to the login button. 
-- if they are on trying to use a username that doesn't exist, if they are entering a password that doesn't exist or both, they are redirected to an error page. 
-- the error page states the potential reasons for their failure to login and a link to try again. I wanted to use an error page here instead of a flash message because, I thought it was better defensive programming then telling a potential hacker, what exactly the issue was. 
+- In both scenarios, the user is redirected to their 'my symptoms' page, once their action has been completed. 
 
-### add symptom
-- this page is not a page, rather a part of the 'my symptoms' page. 
-- the 'add symptom' link leads the user directly to the 'add symptom' form.
--The form asks: I chose these questions because;
+- Below the list of symptoms, on the homepage, there is a search box where the user can search through the list items using keywords that could be found in either the symptom_name / description fields of the MongoDB collection that the symptoms are located in. I achieved this function by following the steps from the Code Institue module 'searching' lesson 'Search within the database'.
 
-### my symptoms
+#### Register 
+- This page is pretty empty, there is nothing other than a form for the user to sign up. 
+
+- If a person tries to sign up with an existing username a flash message appears, I decided no to do an error page for this as it is a human error often made because people click sign up instead of login. 
+
+- If a person then remembers that they do have an account, they can also login from here too, using the login link next to the register button. 
+
+#### Login
+- This page is very similar to the register page, it is also quite scarce.
+
+- If a person remembers that they do not have an account, they can also register from here, using the register link next to the login button. 
+
+- If they are on trying to use a username that doesn't exist, if they are entering a password that doesn't exist or both, they are redirected to an error page. 
+
+- The error page states the potential reasons for their failure to login and a link to try again. I wanted to use an error page here instead of a flash message because, I thought it was better defensive programming then telling a potential hacker, what exactly the issue was. 
+
+### Add symptom
+- This page is not a seperate page, rather a part of the 'my symptoms' page. 
+
+- The 'add symptom' link leads the user directly to the 'add symptom' form.
+
+- The form asks: 
+
+* What is your isolation status
+I chose this questions because; it would be important for medical professionals to know if this person has been in contact with other people, when experiencing their symptoms. 
+
+* What is the name of your symptom 
+I chose this question because; it would be important for medical professionals when in the diagnosis process. 
+
+* When did you start experiencing this symptom 
+I chose this question because; it would be important for the user and the medical professionals to know, when in the diagnosis process. 
+
+* How is your mood and mental health 
+I chose this question because; in keeping with my initial aim in my idea conception phase, i wanted the user to have a moment to reflect on how their physical health is affecting their mental health. It could also be beneficial for the user, when updating their symptoms, to know how they were feeling emotionally, when experiencing these symptoms. 
+
+- When the form is completed and saved, a flash message appears, informing the user that the symptom has been added and they are redirected to the top of their 'my symptoms' page, where they will see their most recently added symptom, either forming a list of symptoms or part of an already formed list. 
+
+### My symptoms
 - I wanted the user to see their current symptoms here, so provided a list of their user-specific symptoms, which from here they could edit or delete. 
-- if they choose to delete any of their current symptoms, a modal is in place for them to confirm deleting. Again, this was good UX and defensive programming.
-- if the user clicks edit, they will be taken to their symptom, with the fields filled out as was originally saved. they can edit or cancel. 
-- if the user has no current symptoms, the alternative text will appear saying : 
- I didn't want to use a flash message here as I wanted the body text to be consistent and more persuasive. flash messages disappear and this text wouldn't until a new symptom was added. 
 
-### logout
- - on logging out the user will see a flash message saying: and the user is directed back to the home page (symptoms)
+- If they chose to edit or delete any of their symtpoms, the same process is carried, as above (if they chose to edit or delete from the homepage).
+
+- If the user has no current symptoms, the alternative text will appear informing the user that they do not currently have any symptoms and prompting them to start adding some. I didn't want to use a flash message here as I wanted the body text to be consistent and more persuasive. Flash messages disappear and this text wouldn't until a new symptom was added. 
+
+### Logout
+ - On logging out a flash message will appear, informing the user that they have been logged out, the user is also simultaneously redirected back to the home page (symptoms).
  
-
 
 # Bugs discovered
 
-## - Password not encoding
-### solution:
+## Password not encoding
+
+### Solution:
 * Simply had forgotten to add the correct type to the password field on both register and login forms.
 
 ![rectified](testing/screenshots/solving-password-encode.png)
 
-## - Jinja if statement and for loop, not functioning correctly 
+## Jinja if statement and for loop, not functioning correctly 
+
 * I wanted a title for the symptom list to appear on the 'my symtpoms' page, followed by the users' symptoms. If they did not have any symptoms, I wanted to provide text that prompts them to add one. I tried to execute this with 
 ```
 {% if symptom %}
@@ -220,12 +246,16 @@ To do this I used clipboard.js (referenced below). When a user successfully copi
 ```
 However, when executing this code I was getting 
 ![this](/testing/screenshots/if-my_symptoms(1).png)
+
 The correct text shows until I add a symptom and then the symptom displays, (which is correct) but I wanted the 'looks like you don't have any current symptoms' to disappear and be replaced with 'here are your symptoms'. 
 
 * I changed the 
 ``` {% if symptom %} ``` to ``` {% if symptoms %} ``` 
-as 'symptoms' is the name of my variable, this resulted in ![this](/testing/screenshots/if-my_symptoms(2).png). This was because i was using the 'symptoms' variable, which I had defined in the my_symptoms view. 
-![this](/testing/screenshots/if-my_symptoms(3).png)
+as 'symptoms' is the name of my variable, this resulted in ![this](/testing/screenshots/if-my_symptoms(2).png). 
+
+This was because I was using the 'symptoms' variable, which I had defined in the my_symptoms view. 
+
+![This](/testing/screenshots/if-my_symptoms(3).png)
 However, as you can see, that list has no filter and is calling all of the symptoms. Hence why 'here are your symptoms' appears the same number of times as there are total symptoms.
 
 * I changed the symptoms variable to  ```symptoms = list(mongo.db.symptoms.find({"symptom_recipient": username}))`` so that it would now only show the list of the symptoms of that user on their 'my symptoms' page. 
@@ -280,11 +310,13 @@ and no longer needed to define a condition for the session user.
 ### solution:
 * Adding a filter on the symptoms list within the app.py file and making the jinja code more formatted and clearer. 
 
-## - Refresh causing null data input
+## Refresh causing null data input
 
 * Everytime I was refreshing the page and logged in, a new input which was blank was being added to my mongo db. It was then also showing up on my page, as I was displaying all mongo.db entries. 
-* tried to add an if statement syaing on form submit, only submit if its filled out correctly, but because my form is a dictionary this function doesnt work!
-* added an if else statement to state that the post method means that the form should be be inserted and the get mehtod means that the current symptoms should simply display: 
+
+* Tried to add an 'if' statement stating that 'on form submit', only submit if its filled out correctly, but because my form is a dictionary this function doesnt work!
+
+* Added an 'if else' statement to state that the 'POST' method means that the form should be be inserted and the 'GET' method means that the current symptoms should simply display: 
 ```
 @app.route("/add_symptom", methods=["GET", "POST"])
 def add_symptom():
@@ -335,14 +367,16 @@ def my_symptoms(username):
         username=username, symptoms=symptoms, status=status)
         
 ```
-## flash messages displaying with ``` [' '] ```
+## Flash messages displaying with ``` [' '] ```
 
 * I started trying to solve this issue by applying some CSS to the flash messages. This indeed made them more aesthetically pleasing but did not solve the issue. 
+
 * I then began to do some research which threw up plenty of alternative options for writing a conditional statement and for loop for my flash messages to sit within, but none helped me. 
+
 * Finally, I found a thread in slack of someone experiencing the same issue! 
 
 ### solution:
-1. I simply had to change the 'messages' object in the curly brackets to singular. I realised that I had initially made this mistake, because I was thinking of it as, all the flash messages must follow this format, but in reality, I only want one message at a time and EACH message must follow the same conditions. 
+* I simply had to change the 'messages' object in the curly brackets to singular. I realised that I had initially made this mistake, because I was thinking of it as, all the flash messages must follow this format, but in reality, I only want one message at a time and EACH message must follow the same conditions. 
 ```
 <div class="row">
 {% with messages = get_flashed_messages() %}
@@ -382,12 +416,13 @@ Proof of me working through this :
 
 ## Known Bugs
 
-### layout of footer not adhering to sizing rules
-### 
+* Layout of footer not adhering to sizing rules
+* add symptom forms input fields appear crowded and slightly harder to read on smaller devices. 
+
 
 ## Deployment
 
-This project was developed using Gitpod as the chosen IDE and GitHub as a remote repository. 
+This project was developed using Gitpod as the chosen IDE and GitHub as a remote repository. Although this projects contains secure information, i have ommitted this information, with the use of an env.py file. 
 
 The deployed project can be viewed on the following link: 
 
@@ -480,24 +515,19 @@ This completed the process of deploying the project to Heroku. Once deployed, I 
 
 ### Content
 
-The content of this website is entirely fictional and written by myself.
-
-### Images
-![background image by sarah kilian](https://unsplash.com/photos/yvxw4K9lYKo)
-
-
+The content of this website is entirely fictional and written by myself. The structure was inspired by the 'mini project- putting it all together' delivered by [Code Institute](https://codeinstitute.net/)
 
 ### Acknowledgements
 
 Thank you to the following people who helped with support and inspiration:
 [Nick bell]() 
 [Miranda](), read me structure
+[Siobhan O'brien]()
 
+### Credits
 
-### credits
+[Helpful link for copy to clipboard function](https://clipboardjs.com/)
 
-[helpful link for copy to clipboard function](https://clipboardjs.com/)
+[Scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
 
-[scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
-
-[helpful tutorial on active nav bar](https://www.youtube.com/watch?v=oGlBrTUrslk)
+[Helpful tutorial on active nav bar](https://www.youtube.com/watch?v=oGlBrTUrslk)
