@@ -499,3 +499,5 @@ Thank you to the following people who helped with support and inspiration:
 [helpful link for copy to clipboard function](https://clipboardjs.com/)
 
 [scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
+
+[helpful tutorial on active nav bar](https://www.youtube.com/watch?v=oGlBrTUrslk)
