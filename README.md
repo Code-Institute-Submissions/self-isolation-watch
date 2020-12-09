@@ -148,7 +148,7 @@ users | _id  | None | ObjectId
 Username | username | text, `minlength="5"` | string
 Password | password | text, `maxlength="15"`| string
 
-[Example JSON from the users collection]()
+[Example JSON from the users collection](/data/schemas/users.json)
 
 
 #### Symptoms Collection
@@ -162,12 +162,15 @@ Description | description | text, `required`| string
 Start date | start_date| datepicker | DateTime
 Mood | mood | text, `required` | string
 
+[Example JSON from the symptoms collection](/data/schemas/symptoms.json)
+
 #### Status Collection
 | Title | Key in db | Form validation type | Data type |
 --- | --- | --- | --- 
 Status | _id | None | ObjectId 
 Isolation Status | isolation_status | None | string
 
+[Example JSON from the symptoms collection](/data/schemas/status.json)
 
 
 #### Consistent features across all pages
