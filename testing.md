@@ -9,7 +9,7 @@ my ![second attempt](/testing/screenshots/wave-test-2-(homepage).png) was better
 Due to my sites restrictions on what content can be seen by other users, i was not able to run the the my symptoms page through the wave test, however i simply applied the previous logic to this page and made necessary adjustments. 
 ![Final wave text](/testing/screenshots/wave-test-final.png)
 
-### Responsiveness
+## Responsiveness
 luckily, materialize is made for responsive and upwards, therefore i kept the use of col sizes minimal and made sure everything would fit a small screen first and mainly used the col size of s12. 
 
 ### footer
@@ -102,6 +102,28 @@ top:.50rem;
 i did the same for the text area's of the input fields and eventually maanged to make the form more aesthetically pleasing and readable 
 ![add symptom form- iphone 5](/testing/responsiveness/iphone-5-add-symptom-form.png)
 
+### Overspill from content causing responsiveness issue
+- At desktop screensize there was a vertical over spill of content, causing the page to jiggle from side to side. I also saw a horizontal over spill too.
+
+![Overspill](/testing/responsiveness/footer-overspill(1).png)
+![horizontal overspill](/testing/responsiveness/horizontal-overspill(1).png)
+### solution 
+- using the [unicorn revealer tool](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) 
+I scrolled to see the issue and where the overspills lie. 
+![Overspill](/testing/responsiveness/footer-overspill(2).png)
+![horizontal overspill](/testing/responsiveness/horizontal-overspill(2).png)
+
+- Eventually I saw the overspill was in the footer.
+![Overspill](/testing/responsiveness/footer-overspill(3).png)
+- Also in the `body` element.
+
+- To solve this I added a `div` with the class of `container`
+![Solved](/testing/responsiveness/overspill-solved(1).png)
+![Solved](/testing/responsiveness/overspill-solved(2).png)
+
+- To solve the overspill in the body, i removed some extra padding i had added. 
+![Solved](/testing/responsiveness/horizontal-overspill-solved.png)
+
 ## User stories testing
 
 - 'As a recent self isolater, I want to keep track of what symptoms I have and how long I have had them, so that I have more information to give to the doctor.'
@@ -143,6 +165,12 @@ A user can update their symtpoms and see it listed with their other symptoms, on
 ![Readable symptoms](/testing/user-stories/readable-symptoms(6).png)
 - If the user has searched a keyword that is present somewhere in the symptoms, that will also be displayed. 
 - I was very happy with the functionality of the search box. 
+
+
+## Usability testing
+
+
+
 
 ## WW3 HTML validation 
 ## WW3 CSS validation 

@@ -1,6 +1,7 @@
 
 ## Milestone 3 project
 
+[Site can be found here](https://self-isolation-watch.herokuapp.com/) 
 # Self-isolation watch
 'Self-isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 
 This will help them keep a note of their potential retraction of the virus as well as give them an indication into how contagious they are. Users will be able to create a profile, where they save their symptoms, update them accordingly and when they are no longer symptomatic, they can delete them.' 
@@ -574,8 +575,9 @@ The content of this website is entirely fictional and written by myself. The str
 
 Thank you to the following people who helped with support and inspiration:
 [Nick bell]() 
-[Miranda](), read me structure
-[Siobhan O'brien]()
+[Miranda Thewlis- read me structure and support throughout](https://github.com/mkthewlis/Milestone-Project-3/blob/master/README.md), read me structure
+[Sinead O'brien](https://github.com/SinCron)
+[Anna greaves, data schemas in read me](https://raw.githubusercontent.com/AJGreaves/familyhub/master/README.md)
 
 ### Credits
 
