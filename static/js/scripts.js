@@ -9,6 +9,7 @@
         format: "dd mmmm, yyyy",
         yearRange: 3,
         showClearBtn: true,
+        autoClose: true,
         i18n:{
             done: "select"
         }
