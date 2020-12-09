@@ -9,10 +9,11 @@
 
     <p class="paragraphs">
         We all know the strain that COVID-19 has placed upon our hero health care systems. 
-        We wanted to create an app that you could use to <strong>track</strong>,  <strong>share</strong> and <strong>edit</strong> your potential COVID-19 symptoms,so that if you do need to speak to a doctor or nurse, because you think you may have corona virus, you can hand them some documented data, to make their life easier and your diagnosis faster!
+        I wanted to create an app that you could use to <strong>track</strong>,  <strong>share</strong> and <strong>edit</strong> your potential COVID-19 symptoms. If you need to speak to a doctor or nurse because you think you may have Corona Virus, you can hand them some documented data! Make their lives easier and your diagnosis faster!
 
     </p>
-       <h2 class="subtitles">Monitor your health and use this as a tool!</h2>
+       <h2 class="titles">Monitor your health and use this as a tool!</h2>
+          <p>When you add your symptom it will appear in the list below. You will be able to edit or delete your symptom once youve added it. Simply click on either button to perform your desired action!</p>
            <a
           class="btn waves-effect white"
           href="{{ url_for('register') }}"
@@ -22,64 +23,16 @@
 </div>
 </div>
 
-<!--symptom list -->
-<div class="row">
-  <div class="col s8">
-    <ul class="collapsible" aria-label="list of all symtpoms from all users">
-      {% for symptom in symptoms %}
-      <li>
-        <div class="collapsible-header">
-          <div class="col s3">
-            <i class="prefix fas fa-viruses"></i>
-            <!--making the session user able to edit/ delete their symtpom from the list, if theyre logged in  -->
-            {% if session.user| lower == symptom.symptom_recipient | lower %}
 
-            <a
-              href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}"
-              class="btn-small edit"
-              >Edit</a
-            >
-            <!--delete confirmation modal  -->
-            <a
-              class="waves-effect btn modal-trigger delete "
-              href="#delete-confirmation"
-              >Delete</a
-            >
-            <div id="delete-confirmation" class="modal">
-              <div class="modal-content col s12">
-                <h4 class="subtitles">Are you sure you want to delete?</h4>
-              </div>
-              <div class="modal-footer">
-                <a
-                  href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}"
-                  class="modal-close waves-effect waves-green btn-flat"
-                  >Yes</a
-                >
-                <a
-                  href="#!"
-                  class="modal-close waves-effect waves-green btn-flat"
-                  >No</a
-                >
-              </div>
-            </div>
-
-            {% endif %}
-          </div>
-          <div class="col s4 m6">
-            <h2 class="subtitles white-text">{{ symptom.symptom_name }} </h2> <h2 class="subtitles white-text">Experienced Since :</h2>
-            <h3 class="subtitles white-text">{{ symptom.start_date}}</h3> <h3 class="subtitles white-text">added by :</h3> <h3 class="subtitles white-text"> {{
-            symptom.symptom_recipient }}</h3>
-          </div>
-        </div>
-        <div class="collapsible-body"><p class="paragraphs">{{ symptom.description }}</p></div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
 <!--search function to search through symptom list  -->
 <div class="row">
-  <div class="col s8 m6">
+  <div class="col s6 m6">
+  <h2 class="titles">This list keeps growing!</h2>
+  <p>To save you from scrolling, if you have a symptom name or key descriptor of a symptom, in mind, search for it and see if any of the symptoms have incorporated the word! </p>
+</div>
+</div>
+<div class="row">
+  <div class="col s4 m4">
     <form class="card-panel" action="{{ url_for('search') }}" method="POST">
       <div class="valign-wrapper center-align">
         <div class="input-field col center-align s4">
@@ -105,10 +58,75 @@
       </div>
     </form>
   </div>
+  </div>
    {% if symptoms %}
    {% else %}
     <h2 class="subtitles"> Oh no! Looks like noone has used that word in their symptom name or description! Doesn't mean it can't be <a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms" aria-label="Link to add symptom"> added!</a> </h2>
     {% endif %}
+
+
+<!--symptom list -->
+<div class="row">
+    <div class="col s12">
+        <h2 class="titles">Symptom List</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 m6">
+        <ul class="collapsible" aria-label="list of all symptoms from all users">
+        {% for symptom in symptoms %}
+        <li class="list-content">
+            <div class="collapsible-header">
+            
+            <h2 class="subtitles"> Click here to read this symptom's description </h2>
+                <!--making the session user able to edit/ delete their symtpom from the list, if theyre logged in  -->
+                {% if session.user| lower == symptom.symptom_recipient | lower %}
+                <div class="col s4">
+                    <a
+                    href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}"
+                    class="btn edit"
+                    >Edit</a
+                    >
+                    <!--delete confirmation modal  -->
+                    <a
+                    class="waves-effect btn modal-trigger delete "
+                    href="#delete-confirmation"
+                    >Delete</a
+                    >
+                    </div>
+                    <div id="delete-confirmation" class="modal">
+                    <div class="modal-content col s12">
+                        <h4 class="subtitles">Are you sure you want to delete?</h4>
+                      
+                   </div>
+                     <div class="modal-footer">
+                        <a
+                        href="{{ url_for('delete_symptom', symptom_id=symptom._id) }}"
+                        class="modal-close waves-effect waves-green btn-flat"
+                        >Yes</a
+                        >
+                        <a
+                        href="#!"
+                        class="modal-close waves-effect waves-green btn-flat"
+                        >No</a
+                        >
+                        </div>
+                    </div>
+                    
+                    
+
+                {% endif %}   
+                    </div><h2 class="subtitles">Symptom :</h2><h2 class="subtitles">{{ symptom.symptom_name }} </h2> <h2 class="subtitles">Experienced Since :</h2>
+            <h3 class="subtitles">{{ symptom.start_date}}</h3> <h3 class="subtitles">added by :</h3> <h3 class="subtitles"> {{
+            symptom.symptom_recipient }}</h3>
+      
+
+    
+        <div class="collapsible-body col s12"><strong><p class="paragraphs">{{ symptom.description }}</p></strong></div>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
 </div>
 
 {% endblock %}

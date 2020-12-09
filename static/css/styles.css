@@ -8,7 +8,6 @@ body{
     color: #472D30;
     text-align: center;
     font-size: 20px;
-    padding: 1rem 0rem 0rem 0rem;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -82,13 +81,16 @@ color: #e26d5c;
 }
 
 /* headings paragraphs and labels */
-
+p{
+        margin-top: 1rem;
+}
 .titles{
    font-family: 'Quicksand', sans-serif;
     font-weight: 600;
      font-size: 30px;
     text-align: center;
     color:#723D46;
+        padding-top: 1rem;
 }
 .button-labels{
       font-family: 'Quicksand', sans-serif;
@@ -218,11 +220,30 @@ top:.50rem;
 .modal{
     height: auto;
     width: auto;
+    
 }
 
+.modal .modal-footer{
+        background-color:#E26D5C;
+    color:white;
+}
 #delete-confirmation{
     height: auto;
     width: 340px;
+}
+
+#delete-confirmation .modal .modal-footer{
+color:white;
+    background-color:#E26D5C;
+}
+
+#delete-confirmation .modal-content{
+color:white;
+    background-color:#E26D5C;
+}
+
+.btn-flat{
+color:white;
 }
 
 .datepicker{
@@ -237,8 +258,17 @@ top:.50rem;
     padding-bottom:1rem;
 }
 
+.collapsible{
+        border-top: 2px solid #723d46;
+        border-bottom: 2px solid #723d46;
+    border-right: 2px solid #723d46;
+    border-left: 2px solid #723d46;
+}
+
 .collapsible-header {
-    background-color: #472d30;
+       text-align:right;
+    color:white;
+    background-color:#723d46;
     border-bottom: 2px solid #C9CBA3;
 }
 
@@ -259,7 +289,7 @@ textarea{
 }
 
 .edit{
-    background-color:#723D46;
+    background-color:#E26D5C;
     color:#fafafa;
 
 }
