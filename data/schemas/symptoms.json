@@ -1,0 +1,10 @@
+[{
+    "_id": {
+        "$oid": "<objectId>"
+    },
+    "isolation_status": "<string>",
+    "symptom_name": "<string>",
+    "description": "<string>",
+    "start_date": "<datetime",
+    "mood": "<string>"
+}]

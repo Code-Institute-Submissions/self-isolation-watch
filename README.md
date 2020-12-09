@@ -119,12 +119,55 @@ The app has 5 pages in total: symptoms, register, login, my symptoms, log out. o
 
 Whilst building, I had 'add symptom' as a separate page, however, towards the end of building the site, I saw that it was possible and better UX to have the add symptom form on my symptoms/ profile page. I simply made the navigation link to add symptom, the id of the add symptom form, which is on the 'my symptoms' page. 
 
+# Information Architecture
+
 #### Database structure
 
 The data for this project is stored in my MongoDB database within three collections as follows:
 - *Users* - This collection stores the user's username and their encrypted password created when they signed up to self-isolation watch.
 - *Symptoms* - When a user creates a symptom, it is stored within this collection with the following information: The username linking the symptom to their profile, the symptom name, the users' self-isolation status, description of their symptom, date from which they have been experiencing the symptom and their mood and mental health. 
 - *Status* - The self-isolation status options are saved in separate documents within the status collection. The statuses are iterated through to provide the self-isolation status of the user when completing the form to add a symptom. 
+
+
+### Data Storage Types
+
+The types of data stored in MongoDB for this project are:
+- ObjectId
+- String
+- DateTime
+
+### Collections Data Structure
+
+The self-isolation watch website relies on three database collections:
+
+#### Users Collection
+
+| Title | Key in db | Form validation type | Data type |
+-----  | ---  | --- | ---
+users | _id  | None | ObjectId 
+Username | username | text, `minlength="5"` | string
+Password | password | text, `maxlength="15"`| string
+
+[Example JSON from the users collection]()
+
+
+#### Symptoms Collection
+
+| Title | Key in db | Form validation type | Data type |
+--- | --- | --- | --- 
+Symptoms | _id | None | ObjectId 
+Isolation Status | isolation_status |select-dropdown, `required` | string
+Symptom | symptom_name | text, `required` | string
+Description | description | text, `required`| string
+Start date | start_date| datepicker | DateTime
+Mood | mood | text, `required` | string
+
+#### Status Collection
+| Title | Key in db | Form validation type | Data type |
+--- | --- | --- | --- 
+Status | _id | None | ObjectId 
+Isolation Status | isolation_status | None | string
+
 
 
 #### Consistent features across all pages
@@ -510,6 +553,13 @@ git push
 
 
 This completed the process of deploying the project to Heroku. Once deployed, I continued to push all changes made to the project to Heroku throughout the remaining development process.
+
+
+
+
+
+
+### Tools
 
 ## Credits
 
