@@ -636,3 +636,4 @@ Thank you to the following people who helped with support and inspiration:
 [Helpful tutorial on active nav bar](https://www.youtube.com/watch?v=oGlBrTUrslk)
 
 [data schema tutorial ](https://www.youtube.com/watch?v=leNCfU5SYR8)
+[active nav bar](https://www.codegrepper.com/code-examples/html/flask+navbar+template+active)

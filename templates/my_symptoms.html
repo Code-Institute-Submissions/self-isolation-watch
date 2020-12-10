@@ -64,9 +64,8 @@
           
        
                 <div class="input-field status-options">
-                
-                    <select id="isolation_status" name="isolation_status" class="validate" required> 
-                    
+                    <select id="isolation_status" name="isolation_status" class="validate" aria-label="isolation-status dropdown" required> 
+                    <label> </label>
                         <option value="" disabled selected>What is your Self-isolation status?</option>
                         {% for stat in status %}
                         <option value="{{ stat.isolation_status }}">
@@ -76,7 +75,7 @@
                        
                     </select>
                     
-                    <label for="isolation_status"></label>
+                    
                 
                     </div>
                  
