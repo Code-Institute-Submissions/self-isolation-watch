@@ -41,9 +41,11 @@ nav ul a {
  
 .active-page{
     background-color:#723D46;
-    color: white;
-}
 
+}
+.active-page .nav-titles{
+        color:white;
+}
 /* footer */
 
 .page-footer {
@@ -145,6 +147,23 @@ p{
 }
 
 /* elements used throughout all pages */
+a{
+    color:#723d46;
+}
+.btn:hover{
+   background-color:#C9CBA3; 
+   color:black;
+}
+
+.delete:hover{
+    background-color:#FFE1A9;
+    color:black;
+}
+
+.edit:hover{
+background-color:#FFE1A9;
+color:black;
+}
 
 form{
     background-color: white;
@@ -247,6 +266,8 @@ color:white;
 color:white;
     background-color:#E26D5C;
 }
+
+
 
 .btn-flat{
 color:white;
