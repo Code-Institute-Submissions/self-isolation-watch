@@ -131,7 +131,8 @@ def add_symptom():
                 "symptom_recipient": session["user"]
             }
         mongo.db.symptoms.insert_one(new_symptom)
-        flash("Your symptom has been added!")
+        flash("Your symptom has been added! Add another or head back to the" +
+              "symptoms page!")
         return redirect(url_for(
             "my_symptoms", username=session['user']))
     else:
@@ -154,7 +155,8 @@ def edit_symptom(symptom_id):
         mongo.db.symptoms.update_one(
             {"_id": ObjectId(symptom_id)},
             {"$set": updated_symptom})
-        flash("Your symptom has been updated!")
+        flash("Your symptom has been updated!" +
+              "You'll see it in the list below!")
         return redirect(url_for("my_symptoms", username=session['user']))
     symptom = mongo.db.symptoms.find_one({"_id": ObjectId(symptom_id)})
     status = mongo.db.status.find()

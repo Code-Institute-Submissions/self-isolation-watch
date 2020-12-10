@@ -256,6 +256,54 @@ I chose this question because; in keeping with my initial aim in my idea concept
  - On logging out a flash message will appear, informing the user that they have been logged out, the user is also simultaneously redirected back to the home page (symptoms).
  
 
+## Technologies Used
+
+### Languages, libraries, databases, frameworks, editors and version control
+
+- HTML5
+    * The language used to create add structure and content to the website.
+- CSS3 
+    * The language used to style the HTML5 elements according to the design colour scheme.
+- JavaScript
+    * The languge used to make the app interactive, including the use of the clipboard.js functionality. 
+- [jQuery](https://jquery.com/)
+    * I used the jQuery library to help write the JavaScript code used in this project.
+- Python
+    * The programming languaged used to create the back-end function of the app.
+- PyMongo
+    * PyMongo was used as the Python API for MongoDB. This API enabled me to link the data from the back-end database to the front-end app.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    * The Python microframework used to help write the Python code for this project.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    * Jinja templating language was used with Flask in the HTML code. This allowed for template inheritance from the base.html file and to link the back-end to the front-end. 
+- [MongoDB](https://www.mongodb.com/)
+    * This was the selected database chosen to store data in the cloud.  
+- [Bootstrap framework](https://getbootstrap.com/) 
+    * I used Bootstrap's grid container system as I wanted to design my project with a 'mobile first' approach. I also used Bootstrap's modal, carousel and accordion features to add structure to my content. 
+- [Gitpod](https://www.gitpod.io/)
+    * I relied on Gitpod's dev environment to write the code for my project.
+- [Git Version Control](https://git-scm.com/)
+    * I used Git for Version Control to track and record changes to my code and refer back when needed.
+- [GitHub](https://github.com/)
+    * I used GitHub as my remote repository, to push to and store the commited changes to my app from Git.
+- [Heroku](https://www.heroku.com/)
+    * I used Heroku as a hosting platform to deploy the live version of my app. 
+
+### Additional tools used
+
+- [FontAwesome](https://fontawesome.com/) 
+    * I relied on free FontAwesome icons, including a copy icon, different types of arrows and a 'tick' to show items as complete.
+
+- [Google Fonts](https://fonts.google.com/)
+    * I used two complementary fonts from Google for my project: Roboto and Quicksand. 
+
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    * This was a great tool throughout the project to check whether there were any errors in my HTML and CSS code (as discussed in more detail in the Testing section).
+ - [JSHint](https://jshint.com/) 
+    * This tool helped me test my JavaScript and jQuery code (explained in more detail in the Testing section). 
+- [PEP 8 online](http://pep8online.com/)
+    * I used PEP 8 to check that my Python code complied with formatting standards.  
+
 # Bugs discovered
 
 ## Password not encoding
@@ -586,3 +634,5 @@ Thank you to the following people who helped with support and inspiration:
 [Scroll up js from previous project](https://github.com/mayasaffron/PT-n-Podcaster/blob/master/assets/js/index.js)
 
 [Helpful tutorial on active nav bar](https://www.youtube.com/watch?v=oGlBrTUrslk)
+
+[data schema tutorial ](https://www.youtube.com/watch?v=leNCfU5SYR8)

@@ -5,41 +5,39 @@
   <div class="col s12">
        <h1 class="titles"> Get registered to start adding, viewing and editing your symptoms! </h1>
 
- 
     <form  method="POST" action="{{ url_for('register') }}">
 
 <!--username for register -->
       <div class="input-field col s12">
-          <i class="fas fa-envelope"></i>
-          <input aria-label="username input field" id="username" type="text" class="validate" name="username" placeholder="Choose a Username" required pattern="^[a-zA-Z0-9_-]{3,16}$" minlength="5">
+          <i class="fas prefix fa-envelope"></i>
+          <input aria-label="username input field" id="username" type="text" class="validate" name="username" placeholder="Choose a Username" required minlength="5">
         </div>
 <!--password for register -->
       <div class="input-field col s12">
-          <i class="fas fa-lock"></i>
+          <i class="fas prefix fa-lock"></i>
           <input aria-label="password input field"  id="password" type="password" class="validate" name="password" placeholder="Create a Password" required minlength="5" maxlength="15">
      </div>
 <!-- confirm password -->
       <div class="input-field col s12">
-          <i class="fas fa-lock"></i>
+          <i class="fas prefix fa-lock"></i>
           <input aria-label="confirm password input field" id="confirmpassword" type="password" class="validate" name="confirmpassword" placeholder="Confirm Password" required minlength="5" maxlength="15">
      </div>
 <div class="col s6">
- <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Register
-  <i class="fas fa-user-plus"></i>
-  </button>
+ <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Register</button>
 </div>
-          
 
-<div class="col s6">
-     <h3 class="small-titles center-align">
-  Already have an account? <a class="btn waves-effect waves-light" href="{{ url_for('login') }}"><i class="fas prefix fa-sign-in-alt"></i> Log in here! </a></h3>
+<div class="col s3">
+     <h3 class="small-titles center-align">OR</h3>
+     </div>
+  <div class="col s3">
+  <a class="btn waves-effect waves-light button-labels" href="{{ url_for('login') }}"> Log in here! </a>
+  </div>
 
-</div>
 
     </form>
+    </div>
+</div>
 
-  </div>
-  </div>
-
+  
 
 {% endblock %}

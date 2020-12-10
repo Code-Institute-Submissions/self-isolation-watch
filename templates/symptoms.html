@@ -27,10 +27,24 @@
 <!--search function to search through symptom list  -->
 <div class="row">
   <div class="col s6 m6">
-  <h2 class="titles">This list keeps growing!</h2>
+  <h2 class="subtitles">This list keeps growing!</h2>
   <p>To save you from scrolling, if you have a symptom name or key descriptor of a symptom, in mind, search for it and see if any of the symptoms have incorporated the word! </p>
 </div>
 </div>
+
+{% if symptoms %}
+   {% else %}
+    <h2 class="subtitles"> Oh no! Looks like noone has used that word in their symptom name or description! Why not add it to the list?</h2>
+    {% if session.user %}
+
+    <a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms" aria-label="Link to add symptom">Add my symptom</a> 
+
+    {% else %}
+    <a href="{{ url_for('login') }}" aria-label="Link to add symptom">Add my symptom</a>
+     {% endif %}
+     <h2 class="subtitles"> If not just hit reset and keep scrolling!</h2>
+    {% endif %}
+
 <div class="row">
   <div class="col s4 m4">
     <form class="card-panel" action="{{ url_for('search') }}" method="POST">
@@ -59,10 +73,7 @@
     </form>
   </div>
   </div>
-   {% if symptoms %}
-   {% else %}
-    <h2 class="subtitles"> Oh no! Looks like noone has used that word in their symptom name or description! Doesn't mean it can't be <a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms" aria-label="Link to add symptom"> added!</a> </h2>
-    {% endif %}
+   
 
 
 <!--symptom list -->
@@ -79,21 +90,23 @@
             <div class="collapsible-header">
             
             <h2 class="subtitles"> Click here to read this symptom's description </h2>
-                <!--making the session user able to edit/ delete their symtpom from the list, if theyre logged in  -->
+                <!--making the session user able to edit/ delete their symptom from the list, if theyre logged in  -->
                 {% if session.user| lower == symptom.symptom_recipient | lower %}
-                <div class="col s4">
+                <div class="col s6">
                     <a
                     href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}"
                     class="btn edit"
                     >Edit</a
                     >
+                    </div>
                     <!--delete confirmation modal  -->
+                     <div class="col s6">
                     <a
                     class="waves-effect btn modal-trigger delete "
                     href="#delete-confirmation"
                     >Delete</a
                     >
-                    </div>
+                   </div>
                     <div id="delete-confirmation" class="modal">
                     <div class="modal-content col s12">
                         <h4 class="subtitles">Are you sure you want to delete?</h4>
@@ -112,21 +125,26 @@
                         >
                         </div>
                     </div>
-                    
-                    
+                   
 
-                {% endif %}   
-                    </div><h2 class="subtitles">Symptom :</h2><h2 class="subtitles">{{ symptom.symptom_name }} </h2> <h2 class="subtitles">Experienced Since :</h2>
-            <h3 class="subtitles">{{ symptom.start_date}}</h3> <h3 class="subtitles">added by :</h3> <h3 class="subtitles"> {{
+                {% endif %}  
+                 
+                    </div>
+                    <h2 class="subtitles">Symptom: {{ symptom.symptom_name }} </h2> 
+            <h3 class="subtitles">Experienced Since: {{ symptom.start_date}}</h3>  <h3 class="subtitles">Added by: {{
             symptom.symptom_recipient }}</h3>
       
 
     
-        <div class="collapsible-body col s12"><strong><p class="paragraphs">{{ symptom.description }}</p></strong></div>
+        <div class="collapsible-body col s12"><h3 class="subtitles">Description : </h3><p class="paragraphs">{{ symptom.description }}</p></div>
+     
+       
       </li>
       {% endfor %}
     </ul>
 </div>
 </div>
+
+
 
 {% endblock %}

@@ -12,12 +12,12 @@
             <ul>
                 {% for symptom in symptoms %}
                     <li>
-                        <h2 class="subtitles">{{ symptom.symptom_name }}</h2>
-                        <p>{{ symptom.description }}</p>
+                        <h2 class="subtitles">Symptom: {{ symptom.symptom_name }}</h2>
+                        <p>Description: {{ symptom.description }}</p>
                         <h3 class="small-titles">
                             Experienced Since : {{ symptom.start_date}} added by : {{ symptom.symptom_recipient }}
                         </h3>
-                        <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn-small edit">Edit</a>
+                        <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn edit">Edit</a>
                         <!-- confirm delete modal -->
                         <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
                         <div id="delete-confirmation" class="modal">
@@ -59,24 +59,26 @@
         <!--new symptom form  -->
         <form method="POST" class="col s12" action="{{ url_for('add_symptom') }}">
             <!--status of your self isolation  -->
-            <div class="row">
-                <div class="input-field col s6">
-                <i class="fas left fa-house-user"></i>
-                    <select id="isolation_status" name="isolation_status" class="validate" required>
-                        <option value="" disabled selected>
-                            What's your self isolation status?
-                        </option>
+          
+       
+                <div class="input-field status-options">
+                
+                    <select id="isolation_status" name="isolation_status" class="validate" required> 
+                    
+                        <option value="" disabled selected>What is your Self-isolation status?</option>
                         {% for stat in status %}
                         <option value="{{ stat.isolation_status }}">
                             {{ stat.isolation_status }}
                         </option>
                         {% endfor %}
+                       
                     </select>
+                    
                     <label for="isolation_status"></label>
-                </div>
-            </div>
-
-            <!--new symptom  -->
+                
+                    </div>
+                 
+            <!--symptom  -->
             <div class="row">
                 <div class="input-field col s6">
                     <i class="prefix fas fa-viruses"></i>
@@ -96,7 +98,7 @@
             <div class="row">
                 <div class="input-field col s6">
                     <i class="prefix fas fa-calendar-alt"></i>
-                    <input type="text" class="datepicker validate close" id="start_date" name="start_date" required />
+                    <input type="text" class="datepicker validate" id="start_date" name="start_date" required />
                     <label for="start_date">Start date</label>
                 </div>
             </div>

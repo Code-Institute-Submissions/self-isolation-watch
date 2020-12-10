@@ -210,6 +210,12 @@ top:.50rem;
 
 
 /* add symptom form */
+
+.status-options{
+    padding-right:4rem;
+}
+
+
 .dropdown-content li>span {
     font-size: 16px;
     color: #723d46;
@@ -246,10 +252,21 @@ color:white;
 color:white;
 }
 
+.datepicker-controls .select-month input {
+  width: auto;
+ 
+}
 .datepicker{
     width: 100%;
     height: 350px;
 }
+
+.datepicker-clear,.datepicker-cancel{
+   color:black;
+   background-color:#E26D5C; 
+}
+
+
 
 
 .divider{
@@ -279,9 +296,7 @@ textarea{
 
 }
 
-#mood{
-    padding:1rem .2rem 0rem .2rem;
-}
+
 
 .delete{
     background-color:#C9CBA3;
@@ -303,14 +318,64 @@ select{
 
 
 }
-.isolation_status-label{
-   padding:.5rem 2.2rem 0 0; 
+
+
+
+
+
+ li.selected {
+    background-color: rgba(0,0,0,0.03);
+       color: #723d46;
+    padding:none;
+    font-weight: 500;
 }
-.select-wrapper input.select-dropdown {
-    position: absolute;
    
+
+.select-wrapper>input{
+    position: relative;
     border-bottom:none;
+    color: black;
+    padding-left:4rem;
+    padding-right:2rem;
+    margin:none;
 }
+.status-options li>span{
+    color: black;
+    padding:none;
+    font-weight: 500;
+}
+
+/* edit symptom form */
+.edit-symptom input{
+    padding:.5rem 0 .5rem 0;
+}
+.edit-symptom .input-field .prefix ~ input{
+    padding:2rem 0 0 0;
+    font-size:1.2rem;
+}
+
+.edit-symptom .input-field .prefix ~ label{
+ padding:.2rem 0 0 0;
+    font-size:1.5rem;
+}
+
+.edit-symptom textarea{
+    height:5rem;
+      padding:2rem 0 0 0;  
+  font-size:1.2rem;
+}
+
+.edit-textarea ~ label{
+     padding:2rem 0 0 0;
+}
+
+#mood {
+    margin: 2rem 3rem 0;
+    height: 9rem;
+
+}
+
+
 /* media queries */
 
   @media #{$small-and-down} .input-field>label {
