@@ -3,37 +3,40 @@
 {% block nav_register %} active-page {% endblock %}
 {% block content %}
 
-  <div class="row">
-  <div class="col s12">
-       <h1 class="titles"> Get registered to start adding, viewing and editing your symptoms! </h1>
+<div class="row">
+    <div class="col s12">
+        <h1 class="titles"> Get registered to start adding, viewing and editing your symptoms! </h1>
 
-    <form  method="POST" action="{{ url_for('register') }}">
+        <form method="POST" action="{{ url_for('register') }}">
 
-<!--username for register -->
-      <div class="input-field col s12">
-          <i class="fas prefix fa-envelope"></i>
-          <input aria-label="username input field" id="username" type="text" class="validate" name="username" placeholder="Choose a Username" required minlength="5">
-        </div>
-<!--password for register -->
-      <div class="input-field col s12">
-          <i class="fas prefix fa-lock"></i>
-          <input aria-label="password input field"  id="password" type="password" class="validate" name="password" placeholder="Create a Password" required minlength="5" maxlength="15">
-     </div>
-<!-- confirm password -->
-      <div class="input-field col s12">
-          <i class="fas prefix fa-lock"></i>
-          <input aria-label="confirm password input field" id="confirmpassword" type="password" class="validate" name="confirmpassword" placeholder="Confirm Password" required minlength="5" maxlength="15">
-     </div>
-<div class="col s6">
- <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Register</button>
-</div>
+            <!--username for register -->
+            <div class="input-field col s12">
+                <i class="fas prefix fa-envelope"></i>
+                <input aria-label="username input field" id="username" type="text" class="validate" name="username"
+                    placeholder="Choose a Username" required minlength="5">
+            </div>
+            <!--password for register -->
+            <div class="input-field col s12">
+                <i class="fas prefix fa-lock"></i>
+                <input aria-label="password input field" id="password" type="password" class="validate" name="password"
+                    placeholder="Create a Password" required minlength="5" maxlength="15">
+            </div>
+            <!-- confirm password -->
+            <div class="input-field col s12">
+                <i class="fas prefix fa-lock"></i>
+                <input aria-label="confirm password input field" id="confirmpassword" type="password" class="validate"
+                    name="confirmpassword" placeholder="Confirm Password" required minlength="5" maxlength="15">
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Register</button>
+            </div>
 
 
 
-    </form>
+        </form>
     </div>
 </div>
 
-  
+
 
 {% endblock %}

@@ -15,19 +15,22 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+""" The following code is inspired by the
+    code institute Mini project,tutorial videos.
+    The below code allow a user to register, login and view their
+    symptoms. They can also manage their symptoms with all CRUD functions
+    to optimise the user's experience and achieve the site goals."""
+
 
 # view for the main page
-
-
 @app.route("/")
 @app.route("/get_symptoms")
 def get_symptoms():
     symptoms = list(mongo.db.symptoms.find())
     return render_template("symptoms.html", symptoms=symptoms)
 
-# view for the search bar beneath the list of symptoms on the home page
 
-
+# view for the search bar for the list of symptoms on the home page
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
@@ -35,9 +38,8 @@ def search():
         symptoms = list(mongo.db.symptoms.find({"$text": {"$search": query}}))
         return render_template("symptoms.html", symptoms=symptoms)
 
-# views for the registratio and login pages
 
-
+# views for the registration and login pages
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -86,9 +88,8 @@ def login():
             return render_template("error_page.html")
     return render_template("login.html")
 
+
 # view for the users profile page
-
-
 @app.route("/my_symptoms/<username>", methods=["GET", "POST"])
 def my_symptoms(username):
     # applicable to GET and POST methods
@@ -115,9 +116,8 @@ def my_symptoms(username):
         "my_symptoms.html",
         username=username, symptoms=symptoms, status=status)
 
-# view for the add symtpom functionality
 
-
+# view for the add symptom functionality
 @app.route("/add_symptom", methods=["GET", "POST"])
 def add_symptom():
     if request.method == "POST":
@@ -132,15 +132,14 @@ def add_symptom():
             }
         mongo.db.symptoms.insert_one(new_symptom)
         flash("Your symptom has been added! Add another or head back to the" +
-              "symptoms page!")
+              " symptoms page!")
         return redirect(url_for(
             "my_symptoms", username=session['user']))
     else:
         return render_template("my_symptoms.html", status=status)
 
-# view for the edit symtpom functionality
 
-
+# view for the edit symptom functionality
 @app.route("/edit_symptom/<symptom_id>", methods=["GET", "POST"])
 def edit_symptom(symptom_id):
     if request.method == "POST":
@@ -162,9 +161,8 @@ def edit_symptom(symptom_id):
     status = mongo.db.status.find()
     return render_template("edit_symptom.html", status=status, symptom=symptom)
 
-# view for the delete symtpom functionality
 
-
+# view for the delete symptom functionality
 @app.route("/delete_symptom/<symptom_id>")
 def delete_symptom(symptom_id):
     mongo.db.symptoms.remove(
@@ -172,9 +170,8 @@ def delete_symptom(symptom_id):
     flash("Your symptom has been deleted! Why not add another?")
     return redirect(url_for("my_symptoms", username=session['user']))
 
+
 # view for the log out functionality
-
-
 @app.route("/logout")
 def logout():
     flash("You have been logged out. See you soon and take care!")

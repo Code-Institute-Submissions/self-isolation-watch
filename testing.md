@@ -4,7 +4,7 @@
 My mentor alerted me to the importance of the accesibility of my site. 
 i used [wave](https://wave.webaim.org/)
 this was a screenshot of my first use of the tool. 
-![1st attempt with wave](/testing/screenshots/wave-test-1-(homepage).png) as you can see, i had a serious contrast issue, so i immediatley resolved this on every page. 
+![1st attempt with wave](/testing/accesibility/wave-test-1-(homepage).png) as you can see, i had a serious contrast issue, so i immediatley resolved this on every page. 
 my ![second attempt](/testing/screenshots/wave-test-2-(homepage).png) was better and i started to understamd the importance of the contrast issues and labelling objects that i wouldnt assume necessary to label. for example, lists and nav bars. ![third attempt](/testing/screenshots/wave-test-3-(homepage).png)
 ![Final wave text](/testing/screenshots/wave-test-final.png)
 
@@ -18,7 +18,8 @@ The empty link being sighted on the page, is the scroll to top function which ap
 On this page the link button to log in (if users already had an account), after the wave test pointed out that this was in fact bad usability and therefore user experience, i removed it. In aiming to be a simple to use site and adding surplus buttons for user ease, i had in turn over populated the site with useless buttons, which had the opposite effect! I removed the extra log in button. 
 
 - ![Login page](/testing/screenshots/wave-my_symptoms.png)
-the missing form label is for the first question on the add symptom form ```<div class="input-field status-options">
+the missing form label is for the first question on the add symptom form 
+``` <div class="input-field status-options">
                     <select id="isolation_status" name="isolation_status" class="validate" aria-label="isolation-status dropdown" required> 
                     <label for="isolation_status"> </label>
                         <option value="" disabled selected>What is your Self-isolation status?</option>
@@ -29,9 +30,10 @@ the missing form label is for the first question on the add symptom form ```<div
                         {% endfor %}
                        
                     </select>                    
-                    </div>
-                    ```
-Due to the nature of this input field, it prooved less aesthetically pleasing and responsive to have a label AND a disabled seleted option. I opted for the disabled selected option instead of a label, because the disabled selected option could function as a label. I also added an aria- label for users who rely on labels. 
+                    </div> 
+```
+
+Due to the nature of this input field, it prooved less aesthetically pleasing and responsive to have a label AND a disabled selected option. I opted for the disabled selected option instead of a label, because the disabled selected option could function as a label. I also added an aria- label for users who rely on labels. 
 
 
 ## Responsiveness
@@ -193,39 +195,118 @@ A user can update their symtpoms and see it listed with their other symptoms, on
 
 
 ## Usability testing
-- homepage 
-[user lands on homepage](/testing/usability/home(1).png)
+
+### homepage 
+![user lands on homepage](/testing/usability/home(1).png)
 * name of page is highlighted in nav bar, uyser knows they are on the symtpoms page. 
 * user reads the text and clicks 'get started now'
-[user lands on homepage](/testing/usability/home(2).png)
+![user lands on homepage](/testing/usability/home(2).png)
 * button highlights, aesthetically pleasing, user is given feedback that they have hovered/ clicked on the button.
-[user lands on homepage](/testing/usability/home(3).png)
+![user lands on homepage](/testing/usability/home(3).png)
 * user is taken to register page after clicking, again register is highlighted and page is simple and functional. 
-[user lands on homepage](/testing/usability/home(4).png)
+![user lands on homepage](/testing/usability/home(4).png)
 if user comes back to the homepage, they are met with the search bar. if they perform a none format fitting search, they are told what is wrong and how to solve the issue. 
-[user lands on homepage](/testing/usability/home(5).png)
+![user lands on homepage](/testing/usability/home(5).png)
 if search does not match any of the listed symptoms, they see a mesage explaining that with a link. 
 this message could be stronger and more obviously a feedback message. 
 
+![user lands on homepage](/testing/usability/home(13).png)
+- here i have added a div with class 'alert' around the if statement which actions the feedback text, letting the user know that their search item was unmatched and what they should do next. I checked its accessibility too and found no issues with style. 
 
-
-[user lands on homepage](/testing/usability/home(6).png)
+![user lands on homepage](/testing/usability/home(6).png)
 user resets and scrolls down to find the list of added symptoms. 
-[user lands on homepage](/testing/usability/home(7).png)
-[user lands on homepage](/testing/usability/home(8).png)
+![user lands on homepage](/testing/usability/home(7).png)
+![user lands on homepage](/testing/usability/home(8).png)
 user is informed with text that the list is clickable after clicking, they see the description. 
 
-[user lands on homepage](/testing/usability/home(9).png)
-[user lands on homepage](/testing/usability/home(10).png)
-[user lands on homepage](/testing/usability/home(11).png)
+![user lands on homepage](/testing/usability/home(9).png)
+![user lands on homepage](/testing/usability/home(10).png)
+![user lands on homepage](/testing/usability/home(11).png)
 scrolling down to bottom of page, copy url functionality is hovered, clicked and gives feedback. 
 
-[user lands on homepage](/testing/usability/home(12).png)
+![user lands on homepage](/testing/usability/home(12).png)
 link works, however when testing rea;ised i had forgotten to add `"_blank"` attribute. since added and link opens to new tab. 
+
+### register 
+- after clicking one of the homepage links or after clicking register in the nav bar, user arrives at the registration page 
+![register](/testing/usability/register(1).png)
+![register](/testing/usability/register(2).png)
+
+* the registration page nav bar link is highlighted, the registration form provides feedback of the allowances of choosing a username and or password. Originally i had added pretty strict rules for the username and password, as i wanted to improve my defensive programing, however after testing, i realised that these features actually inhibited a good ux. I since removed them and now the only requirements for a username/ password are the minimum lengths. 
+
+![register](/testing/usability/register(3).png)
+* after successfully registering, user is taken directly to the my symptoms page where they are informed that they have no symptoms currently and are encouraged to add one. Initially i had a link to the add symptom form, however again when testing, i realised that it was axctually confusing to have an additional link for a process which is a mere scroll away!
+
+![register](/testing/usability/register(4).png)
+* if user tries to login with a username that is already in use they are taken to the login page 
+![register](/testing/usability/register(5).png)
+
+### login 
+- when logging in with an error, user is taken to an error page, which does not say the specific reason they have not successfully logged in, but gives all possible reasons. i felt this was better defensive programming, than a mere flash message. 
+![login](/testing/usability/login(1).png)
+![login](/testing/usability/login(2).png)
+- The link in error page, brings user back to login. 
+![login](/testing/usability/login(3).png)
+![login](/testing/usability/login(4).png)
+- if login is successful; 
+![login](/testing/usability/login(5).png)
+
+### add symptom
+- when the user has logged in / registered and now wants to add a symptom
+![add symptom](/testing/usability/add_symptom(1).png)
+they fill in the form and receive feedback once complete. 
+![add symptom](/testing/usability/add_symptom(2).png)
+
+### edit symptom
+- when the user wants to edit;
+![edit symptom](/testing/usability/edit_symptom(1).png)
+![edit symptom](/testing/usability/edit_symptom(2).png)
+- the text at the top of the page explains to the user why it is important to continually update their symptoms.
+- the users original form is loaded.
+
+![edit symptom](/testing/usability/edit_symptom(3).png)
+- when changes are made to the form, the user clicks the save button. 
+![edit symptom](/testing/usability/edit_symptom(4).png)
+- at this point the user is given feedback that the symptomn is updated and where it can be found. 
+
+### delete symptom
+- when deleting a symptom; 
+![deleting symptom](/testing/usability/delete_symptom(1).png)
+![deleting symptom](/testing/usability/delete_symptom(2).png)
+a modal will appear asking the user if they are sure they want to delete. 
+![deleting symptom](/testing/usability/delete_symptom(3).png)
+if yes, they will be given a feedback message, prompting them to add another. i didnt think a link to add symptom was neccessary,again. it may overcrowd and have an undesired effect. 
+![deleting symptom](/testing/usability/delete_symptom(4).png)
+if no, the box simply closes. 
 
 
 ## WW3 HTML validation 
+As expected, each of my pages flagged errors due to my use of jinja code, i also had some warnings about the misuse of the ` aria-label` attribute, however since i had added these after taking my sites accessibility into account, i thought that the wave tool was liley to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
+
+Other than the jinja code related errors, i had no other validation errors. 
+
+
+
+
 ## WW3 CSS validation 
+
+
+
+
 ## PEP8 validation 
+- My python code had no errors.
+![PEP8](/testing/usability/PEP8.png)
+
+
 ## Javascript validation 
+- My javascript code had no errors, but did have 3 warnings. The warnings were about the use of keywords such as `let` and `const`, to avoid any issues with this, in the future i would ensure that all of my JS functions had an `error` response, if anything i was using, was not supported in the users browser. Similar to the error function i used for the creation of my copy to clipboard function. 
+```
+clipboard.on('error', function(e) {
+alert("Oops, it looks like this function isn't supported on your browser! Don't worry, Just copy this: https://self-isolation-watch.herokuapp.com/"); 
+```
+
+![JS-Hint](/testing/usability/JS-Hint.png)
+
+
+
 ## compatability

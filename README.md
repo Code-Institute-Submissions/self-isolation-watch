@@ -95,7 +95,8 @@ If you click on it, then you will see the description of the symptom. I didn't w
 
 Selected colour palette:
 ### Colour scheme
-It was important to me that the seriousness of the topic wasn't distracted from and the site was still inviting and palatable. For this reason i decided on ![This colour scheme](/wireframes/Colour-scheme.png)
+It was important to me that the seriousness of the topic wasn't distracted from and the site was still inviting and palatable. For this reason i decided on
+![This colour scheme](/wireframes/Colour-scheme.png)
 
 Wireframes:
 ![Desktop devices](/wireframes/desktop.png)
@@ -278,8 +279,8 @@ I chose this question because; in keeping with my initial aim in my idea concept
     * Jinja templating language was used with Flask in the HTML code. This allowed for template inheritance from the base.html file and to link the back-end to the front-end. 
 - [MongoDB](https://www.mongodb.com/)
     * This was the selected database chosen to store data in the cloud.  
-- [Bootstrap framework](https://getbootstrap.com/) 
-    * I used Bootstrap's grid container system as I wanted to design my project with a 'mobile first' approach. I also used Bootstrap's modal, carousel and accordion features to add structure to my content. 
+- [materialize framework](https://materializecss.com/) 
+    * I used materialize's grid container system as I wanted to design my project with a 'mobile first' approach. I also used materialize's modal, form features to add structure to my content. Along with their css. 
 - [Gitpod](https://www.gitpod.io/)
     * I relied on Gitpod's dev environment to write the code for my project.
 - [Git Version Control](https://git-scm.com/)
@@ -292,15 +293,20 @@ I chose this question because; in keeping with my initial aim in my idea concept
 ### Additional tools used
 
 - [FontAwesome](https://fontawesome.com/) 
-    * I relied on free FontAwesome icons, including a copy icon, different types of arrows and a 'tick' to show items as complete.
+    * I relied on free FontAwesome icons, including a copy icon, bars icon to indicate the navbar at smaller screen sizes, various icons for my forms and a globe icon for a link in my footer. 
 
 - [Google Fonts](https://fonts.google.com/)
     * I used two complementary fonts from Google for my project: Roboto and Quicksand. 
 
+- [Grammarly](https://app.grammarly.com/)
+    * Grammarly is my saving grace in ALL of my projects, used to correct my site content's spelling and grammar.
+
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     * This was a great tool throughout the project to check whether there were any errors in my HTML and CSS code (as discussed in more detail in the Testing section).
+
  - [JSHint](https://jshint.com/) 
     * This tool helped me test my JavaScript and jQuery code (explained in more detail in the Testing section). 
+
 - [PEP 8 online](http://pep8online.com/)
     * I used PEP 8 to check that my Python code complied with formatting standards.  
 
@@ -607,11 +613,6 @@ git push
 This completed the process of deploying the project to Heroku. Once deployed, I continued to push all changes made to the project to Heroku throughout the remaining development process.
 
 
-
-
-
-
-### Tools
 
 ## Credits
 

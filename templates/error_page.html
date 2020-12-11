@@ -1,27 +1,27 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="row">
-<div class="col s12">
-<h1 class="titles">
-Sorry! </h1>
-<h2>
-Something is wrong.. 
-</h2>
-<p class="paragraphs">
-Don't worry, heres a few things it could be:
-</p>
-<ul class="list-styled">
-<li>
-You have typed the incorrect password?
-</li>
-<li>
-You are using a username we don't have in our database?
-</li>
-<li>
-You are using a username we don't recongnise, along with an incorrect password!
-</li>
-</ul>
-<a href="{{ url_for('login') }}">Click here to try again</a>
-</div>
+    <div class="col s12">
+        <h1 class="titles">
+            Sorry! </h1>
+        <h2>
+            Something is wrong..
+        </h2>
+        <p class="paragraphs">
+            Don't worry, heres a few things it could be:
+        </p>
+        <ul class="list-styled">
+            <li>
+                You have typed the incorrect password?
+            </li>
+            <li>
+                You are using a username we don't have in our database?
+            </li>
+            <li>
+                You are using a username we don't recognise, along with an incorrect password!
+            </li>
+        </ul>
+        <a href="{{ url_for('login') }}">Click here to try again</a>
+    </div>
 </div>
 {% endblock %}

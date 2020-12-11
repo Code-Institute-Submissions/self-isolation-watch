@@ -89,7 +89,7 @@ p{
 .titles{
    font-family: 'Quicksand', sans-serif;
     font-weight: 600;
-     font-size: 30px;
+     font-size: 25px;
     text-align: center;
     color:#723D46;
         padding-top: 1rem;
@@ -130,12 +130,16 @@ p{
     text-decoration: none;
 }
 
-
+.alert{
+    border:2px solid #472D30;
+    font-weight: 600;
+    background-color: #C9CBA3;
+}
 .flashes{
     font-family: 'Quicksand', sans-serif;
     color: #723D46;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
 
 }
@@ -233,9 +237,17 @@ top:.50rem;
 
 /* add symptom form */
 
-.status-options{
-    padding-right:4rem;
+#add_symptoms, #edit_symptoms{
+    margin: 0;
+    
+
 }
+#symptom_form, #edit_form{
+    margin: 0;
+    overflow-x: hidden;
+    margin-bottom: 2rem;
+}
+
 
 
 .dropdown-content li>span {
@@ -339,10 +351,6 @@ select{
 
 }
 
-
-
-
-
  li.selected {
     background-color: rgba(0,0,0,0.03);
        color: #723d46;
@@ -372,6 +380,7 @@ select{
 .edit-symptom .input-field .prefix ~ input{
     padding:2rem 0 0 0;
     font-size:1.2rem;
+    height: 5rem;
 }
 
 .edit-symptom .input-field .prefix ~ label{
@@ -389,18 +398,12 @@ select{
      padding:2rem 0 0 0;
 }
 
+
 #mood {
-    margin: 2rem 3rem 0;
+    margin: 2rem;
     height: 9rem;
-
+    padding-left: 1rem;
 }
-
 
 /* media queries */
 
-  @media #{$small-and-down} .input-field>label {
-   {
-padding: 1rem 1rem .5rem 0;
-
-}
-  }

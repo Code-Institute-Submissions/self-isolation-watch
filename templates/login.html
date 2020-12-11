@@ -4,38 +4,41 @@
 {% block content %}
 
 <div class="row">
-<div class="col s12">
-    <h1 class="titles"> Login to review, edit or delete your current symptoms and add new ones! 
-    </h1>
-    
-    <form method="POST" action="{{ url_for('login') }}">
+    <div class="col s12">
+        <h1 class="titles"> Login to review, edit or delete your current symptoms and add new ones!
+        </h1>
 
-<!--username for register -->
-      <div class="input-field col s12">
-          <i class="fas prefix fa-envelope"></i>
-          <input aria-label="username input field" id="username" type="text" class="validate input-styles" name="username" placeholder="username" required  minlength="5">
-      </div>
-<!--password for register -->
-      <div class="input-field col s12">
-          <i class="fas prefix fa-lock"></i>
-          <input aria-label="password input field" id="password" type="password" class="validate" name="password" placeholder="password" required minlength="5" maxlength="15">
-      </div>
-           <div class="col s6">
- <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Log in</button>
-  </div>
+        <form method="POST" action="{{ url_for('login') }}">
 
-<div class="col s3">
-     <h4 class="small-titles center-align">
-  Unless you need to register?</h4></div>
-  <div class="col s3">
-   <a class="btn waves-effect waves-light button-labels" href="{{ url_for('register') }}">Register</a>
+            <!--username for register -->
+            <div class="input-field col s12">
+                <i class="fas prefix fa-envelope"></i>
+                <input aria-label="username input field" id="username" type="text" class="validate input-styles"
+                    name="username" placeholder="username" required minlength="5">
+            </div>
+            <!--password for register -->
+            <div class="input-field col s12">
+                <i class="fas prefix fa-lock"></i>
+                <input aria-label="password input field" id="password" type="password" class="validate" name="password"
+                    placeholder="password" required minlength="5" maxlength="15">
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Log in</button>
+            </div>
 
-</div>
+            <div class="col s3">
+                <h4 class="small-titles center-align">
+                    Unless you need to register?</h4>
+            </div>
+            <div class="col s3">
+                <a class="btn waves-effect waves-light button-labels" href="{{ url_for('register') }}">Register</a>
+
+            </div>
 
 
-    </form>
+        </form>
 
-</div>
+    </div>
 </div>
 
 {% endblock %}
