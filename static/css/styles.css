@@ -1,5 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto:wght@100;300;400;500&display=swap');
 
+/* headings paragraphs and labels */
+p{
+    margin-top: 1rem;
+}
+.titles{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color:#723D46;
+    padding-top: 1rem;
+}
+.button-labels{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color:black;  
+    border:#472D30 1px solid;  
+}
+.small-titles{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color:#723d46;   
+}
+.subtitles{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding:1rem 0 .5rem;
+    
+}
+.underline{
+    text-decoration:underline;
+    
+}
+.nav-titles{
+    font-size: 1.5rem;
+    display: block;
+    padding: 15px 0;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    text-transform:uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+.alert{
+    border:2px solid #472D30;
+    font-weight: 600;
+    background-color: #C9CBA3;
+}
+.flashes{
+    font-family: 'Quicksand', sans-serif;
+    color: #723D46;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.white-text{
+    font-family:'Roboto',  'sans-serif';
+    font-weight: 500;
+    
+}
+
+/* features */
+.scroller {
+  
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#39393A;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.scroller.active {
+  bottom:32px;
+  opacity:1;
+  pointer-events: auto;
+  text-decoration: none;
+  color: #E26D5C;
+}
+
+.fa-chevron-up{
+    color: #E26D5C;
+    text-decoration: none;
+}
+
+
+.fa-copy:hover{
+    color: #e26d5c;
+}
+
+.copied{
+color: #e26d5c;
+}
+
+/* buttons and links */
+a{
+    color:#723d46;
+}
+.btn:hover{
+   background-color:#C9CBA3; 
+   color:black;
+}
+
+.delete , .edit{
+    background-color:#C9CBA3;
+
+}
+
+.delete:hover{
+    background-color:#FFE1A9;
+    color:black;
+}
+
+.edit:hover{
+    background-color:#FFE1A9;
+    color:black;
+}
+.start, .search, .reset{
+    background-color:#723D46;
+    color:white;
+}
+
+.btn-flat{
+    color:white;
+}
+
 /* base.html */
 
 body{
@@ -44,134 +186,46 @@ nav ul a {
 
 }
 .active-page .nav-titles{
-        color:white;
+    color:white;
 }
 /* footer */
 
 .page-footer {
     color: black;
     background-color: #C9CBA3;
-position: relative;
-width:100%;
-  bottom: 0;
-  padding:2rem 0rem 1rem 0rem;
-
-
+    position: relative;
+    width:100%;
+    bottom: 0;
+    padding:2rem 0rem 1rem 0rem;
 }
+
 .fa-globe-americas:hover{
     color: #e26d5c;
-    }
+}
 
-.fa-copy:hover{
-    color: #e26d5c;
-}
-.copied{
-color: #e26d5c;
-}
+
 
 /* symptoms */
 
-.welcome{
-    background-image:url("/static/images/carousel-1.jpg");
-
+.collapsible{
+    border-top: 2px solid #723d46;
+    border-bottom: 2px solid #723d46;
+    border-right: 2px solid #723d46;
+    border-left: 2px solid #723d46;
 }
 
-
-
-.symptom-container{
-    padding: 5rem 1rem 1rem 1rem
-}
-
-/* headings paragraphs and labels */
-p{
-        margin-top: 1rem;
-}
-.titles{
-   font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-     font-size: 25px;
-    text-align: center;
-    color:#723D46;
-        padding-top: 1rem;
-}
-.button-labels{
-      font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-     font-size: 15px;
-    color:black;  
-    border:#472D30 1px solid;  
-}
-.small-titles{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-     font-size: 15px;
-    color:#723d46;   
-}
-.subtitles{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-     font-size: 20px;
-    text-align: center;
-    padding:1rem 0 .5rem;
-    
-}
-.underline{
-    text-decoration:underline;
-    
-}
-.nav-titles{
-    font-size: 1.5rem;
-    display: block;
-    padding: 15px 0;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    text-transform:uppercase;
-    color: black;
-    text-decoration: none;
-}
-
-.alert{
-    border:2px solid #472D30;
-    font-weight: 600;
-    background-color: #C9CBA3;
-}
-.flashes{
-    font-family: 'Quicksand', sans-serif;
-    color: #723D46;
-    font-weight: 500;
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.white-text{
-       font-family:'Roboto',  'sans-serif';
-    font-weight: 500;
-    font-size: 20;
-}
-
-/* elements used throughout all pages */
-a{
-    color:#723d46;
-}
-.btn:hover{
-   background-color:#C9CBA3; 
-   color:black;
-}
-
-.delete:hover{
-    background-color:#FFE1A9;
-    color:black;
-}
-
-.edit:hover{
-background-color:#FFE1A9;
-color:black;
-}
-.start, .search, .reset{
-    background-color:#723D46;
+.collapsible-header {
+    text-align:right;
     color:white;
+    background-color:#723d46;
+    border-bottom: 2px solid #C9CBA3;
 }
+
+
+
+
+/* login, register */
+
 form{
     background-color: white;
     opacity: .7;
@@ -183,18 +237,18 @@ form{
 
 
 label{
-     font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 500;
     color: black;
-    font-size: 18;
+    font-size: 18px;
     padding: .5rem .25rem .5rem .25rem;
     text-align: left;
 
 }
 .input-field>label {
-color: black;
-left:2rem;
-top:.50rem;
+    color: black;
+    left:2rem;
+    top:.50rem;
 }
 
 .input-field{
@@ -202,40 +256,15 @@ top:.50rem;
     color: #E26D5C;
 }
 
-.scroller {
-  
-  position: fixed;
-  bottom: 16px;
-  right:32px;
-  width:50px;
-  height:50px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size:32px;
-  color:#39393A;
-  text-decoration: none;
-  opacity:0;
-  pointer-events: none;
-  transition: all .4s;
+/* my symptoms */
+.divider{
+    background-color: #E26D5C;
+    margin-top:1rem;
+    padding-bottom:1rem;
 }
-
-.scroller.active {
-  bottom:32px;
-  opacity:1;
-  pointer-events: auto;
-  text-decoration: none;
-  color: #E26D5C;
-}
-
-.fa-chevron-up{
-    color: #E26D5C;
-    text-decoration: none;
-}
-
 
 /* add symptom form */
+
 
 #add_symptoms, #edit_symptoms{
     margin: 0;
@@ -248,8 +277,6 @@ top:.50rem;
     margin-bottom: 2rem;
 }
 
-
-
 .dropdown-content li>span {
     font-size: 16px;
     color: #723d46;
@@ -257,41 +284,18 @@ top:.50rem;
     line-height: 22px;
     padding: 14px 16px;
 }
-.modal{
+
+.datepicker-modal{
     height: auto;
     width: auto;
     
 }
 
-.modal .modal-footer{
-        background-color:#E26D5C;
-    color:white;
-}
-#delete-confirmation{
-    height: auto;
-    width: 340px;
-}
-
-#delete-confirmation .modal .modal-footer{
-color:white;
-    background-color:#E26D5C;
-}
-
-#delete-confirmation .modal-content{
-color:white;
-    background-color:#E26D5C;
-}
-
-
-
-.btn-flat{
-color:white;
-}
-
 .datepicker-controls .select-month input {
-  width: auto;
+    width: auto;
  
 }
+
 .datepicker{
     width: 100%;
     height: 350px;
@@ -302,29 +306,22 @@ color:white;
    background-color:#E26D5C; 
 }
 
-
-
-
-.divider{
-    background-color: #E26D5C;
-    margin-top:1rem;
-    padding-bottom:1rem;
-}
-
-.collapsible{
-        border-top: 2px solid #723d46;
-        border-bottom: 2px solid #723d46;
-    border-right: 2px solid #723d46;
-    border-left: 2px solid #723d46;
-}
-
-.collapsible-header {
-       text-align:right;
+#delete-confirmation{
+    height: auto;
+    width: 340px;
     color:white;
-    background-color:#723d46;
-    border-bottom: 2px solid #C9CBA3;
+    background-color:#E26D5C;
 }
 
+#delete-confirmation .modal-footer{
+    color:white;
+    background-color:#E26D5C;
+}
+
+#delete-confirmation .modal, .modal-content{
+    color:white;
+    background-color:#E26D5C;
+}
 
 textarea{
     border: none;
@@ -332,44 +329,31 @@ textarea{
 
 }
 
-
-
-.delete , .edit{
-    background-color:#C9CBA3;
-
-}
-
-
-
-select{
-   font-family:'Roboto',  'sans-serif';
-    font-weight: 500;
-    color: black;
-    font-size: 18;
-    padding: .5rem .25rem .5rem .25rem;
-
-
-}
-
- li.selected {
-    background-color: rgba(0,0,0,0.03);
-       color: #723d46;
-    padding:none;
-    font-weight: 500;
-}
-   
-
 .select-wrapper>input{
     position: relative;
     border-bottom:none;
     color: black;
     padding-left:4rem;
     padding-right:2rem;
-    margin:none;
+    
 }
+
+select{
+   font-family:'Roboto',  'sans-serif';
+    font-weight: 500;
+    color: black;
+    font-size: 18px;
+    padding: .5rem .25rem .5rem .25rem;
+}
+
+ li.selected {
+    background-color: rgba(0,0,0,0.03);
+    color: #723d46;
+    font-weight: 500;
+}
+   
 .status-options li>span{
     color: black;
-    padding:none;
     font-weight: 500;
 }
 
@@ -384,20 +368,19 @@ select{
 }
 
 .edit-symptom .input-field .prefix ~ label{
- padding:.2rem 0 0 0;
+    padding:.2rem 0 0 0;
     font-size:1.5rem;
 }
 
 .edit-symptom textarea{
     height:5rem;
-      padding:2rem 0 0 0;  
-  font-size:1.2rem;
+    padding:2rem 0 0 0;  
+    font-size:1.2rem;
 }
 
 .edit-textarea ~ label{
-     padding:2rem 0 0 0;
+    padding:2rem 0 0 0;
 }
-
 
 #mood {
     margin: 2rem;
@@ -405,5 +388,9 @@ select{
     padding-left: 1rem;
 }
 
-/* media queries */
+/* error page */
 
+.error-list li{
+    padding: 1rem 0 1rem 0;
+    font-weight: 400;
+}

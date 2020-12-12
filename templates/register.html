@@ -3,10 +3,12 @@
 {% block nav_register %} active-page {% endblock %}
 {% block content %}
 
+<!--register page welcome text-->  
 <div class="row">
     <div class="col s12">
         <h1 class="titles"> Get registered to start adding, viewing and editing your symptoms! </h1>
 
+<!--registration form--> 
         <form method="POST" action="{{ url_for('register') }}">
 
             <!--username for register -->
@@ -30,9 +32,6 @@
             <div class="col s6">
                 <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Register</button>
             </div>
-
-
-
         </form>
     </div>
 </div>

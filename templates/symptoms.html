@@ -4,9 +4,8 @@
 {% block nav_home_public %} active-page {% endblock %}
 {% block content %}
 <!--main page body-->
+
 <!--welcome text -->
-
-
 <div class="row">
     <div class="col s8 m6">
         <h1 class="titles">Welcome</h1>
@@ -21,11 +20,17 @@
         <h2 class="titles">Monitor your health and use this as a tool!</h2>
         <p>When you add your symptom it will appear in the list below. You will be able to edit or delete your symptom
             once you have added it. Simply click on either button to perform your desired action!</p>
-        <a class="btn start waves-effect" href="{{ url_for('register') }}" target="blank">Get started now!</a>
+<!--if statement distinguishing which page is triggered when button is pressed -->             
+       {% if session.user %}
+<a class="btn start waves-effect" aria-label="Link to add symptom" href="{{ url_for('my_symptoms', username=session['user']) }}#add-symptom-section"  target="blank">Get started now!</a>
+
+{% else %}
+<a class="btn start waves-effect" aria-label="Link to add symptom" href="{{ url_for('register') }}" target="blank">Get started now!</a>
+{% endif %}     
+        
 
     </div>
 </div>
-
 
 <!--search function to search through symptom list  -->
 <div class="row">
@@ -42,12 +47,14 @@
 <div class="alert">
 <h2 class="subtitles"> Oh no! Looks like noone has used that word in their symptom name or description! Why not add it
     to the list?</h2>
+
+<!--if statement distinguishing which page is triggered when button is pressed -->      
 {% if session.user %}
 
-<a href="{{ url_for('my_symptoms', username=session['user']) }}#add_symptoms" aria-label="Link to add symptom">Add my symptom</a>
+<a href="{{ url_for('my_symptoms', username=session['user']) }}#add-symptom-section" target="_blank" aria-label="Link to add symptom">Add my symptom</a>
 
 {% else %}
-<a href="{{ url_for('login') }}" aria-label="Link to add symptom">Add my symptom</a>
+<a href="{{ url_for('login') }}" target="_blank" aria-label="Link to add symptom">Add my symptom</a>
 {% endif %}
 <h2 class="subtitles"> If not just hit reset and keep scrolling!</h2>
 </div>
@@ -73,8 +80,6 @@
     </div>
 </div>
 
-
-
 <!--symptom list -->
 <div class="row">
     <div class="col s12">
@@ -87,7 +92,6 @@
             {% for symptom in symptoms %}
             <li class="list-content">
                 <div class="collapsible-header">
-
                     <h2 class="subtitles"> Click here to read this symptom's description </h2>
                     <!--making the session user able to edit/ delete their symptom from the list, if theyre logged in  -->
                     {% if session.user| lower == symptom.symptom_recipient | lower %}
@@ -110,7 +114,6 @@
                         </div>
                     </div>
 
-
                     {% endif %}
 
                 </div>
@@ -119,14 +122,10 @@
                 <h3 class="subtitles">Added by: {{
             symptom.symptom_recipient }}</h3>
 
-
-
                 <div class="collapsible-body col s12">
                     <h3 class="subtitles">Description : </h3>
                     <p class="paragraphs">{{ symptom.description }}</p>
                 </div>
-
-
             </li>
             {% endfor %}
         </ul>

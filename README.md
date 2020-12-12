@@ -1,4 +1,3 @@
-
 ## Milestone 3 project
 ![am i responsive](/wireframes/am-i-responsive.png)
 [Site can be found here](https://self-isolation-watch.herokuapp.com/) 
@@ -512,8 +511,9 @@ Proof of me working through this :
 ![I found someone in slack with the same issue.. but it was written in Croatian..](/testing/screenshots/flash-messages(2).png)
 ![Double checked that this person did, in fact, have the same issue, before reaching out](/testing/screenshots/flash-messages(3).png)
 
-
-[More in depth testing can be found here](testing.md) 
+## More Testing
+- More in depth testing can be found at the below link to my testing.md file.
+[Testing in depth](testing.md) 
 
 ## Known Bugs
 
@@ -525,9 +525,9 @@ Proof of me working through this :
 
 This project was developed using Gitpod as the chosen IDE and GitHub as a remote repository. Although this projects contains secure information, i have ommitted this information, with the use of an env.py file. 
 
-The deployed project can be viewed on the following link: 
+The deployed project can be viewed on the following link: [Live link to self-isolation watch](https://self-isolation-watch.herokuapp.com/)
 
-The project's GitHub repository can be viewed with the following link: 
+The project's GitHub repository can be viewed with the following link: [Git hub repo for self-isolation watch](https://github.com/mayasaffron/self-isolation-watch)
 
 ### Local deployment
 
@@ -607,7 +607,7 @@ git push
 
 11. finally i clicked deploy! 
 
-12. to ensure that my app had successfully been deployed i clicked open app and saw the text 'hello world' which i had used as a test and returned within my first view in my app.py folder. 
+12. to ensure that my app had successfully been deployed i clicked open app and saw the text 'hello world' which i had used as a test and returned within my first view in my 'app.py' folder. 
 
 
 This completed the process of deploying the project to Heroku. Once deployed, I continued to push all changes made to the project to Heroku throughout the remaining development process.

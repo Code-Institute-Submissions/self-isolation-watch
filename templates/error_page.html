@@ -1,26 +1,25 @@
 {% extends "base.html" %} {% block content %}
-
+<!--error page body -->
 <div class="row">
     <div class="col s12">
-        <h1 class="titles">
+        <h1>
             Sorry! </h1>
-        <h2>
-            Something is wrong..
+        <h2 class="titles">
+            Something is wrong..Here's a few things it could be:
         </h2>
-        <p class="paragraphs">
-            Don't worry, heres a few things it could be:
-        </p>
-        <ul class="list-styled">
+
+        <ul class="error-list">
             <li>
-                You have typed the incorrect password?
+                - You have typed the incorrect password
             </li>
             <li>
-                You are using a username we don't have in our database?
+                - You are using a username we don't have in our database?
             </li>
             <li>
-                You are using a username we don't recognise, along with an incorrect password!
+                - You are using a username we don't recognise, along with an incorrect password!
             </li>
         </ul>
+        <!--link to login page -->
         <a href="{{ url_for('login') }}">Click here to try again</a>
     </div>
 </div>

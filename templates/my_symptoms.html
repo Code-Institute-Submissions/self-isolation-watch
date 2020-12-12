@@ -5,12 +5,13 @@
 <!--my symptoms page body-->
 <!--welcome text -->
 
-
 <!--if statement stating which html to display and when  -->
 {% if symptoms %}
 <div class="row">
     <div class="col s12">
         <h1 class="titles">Here are your symptoms</h1>
+
+        <!-- for loop iterating through users current symptoms and displaying them in a list -->
         <ul>
             {% for symptom in symptoms %}
             <li>
@@ -19,6 +20,7 @@
                 <h3 class="small-titles">
                     Experienced Since : {{ symptom.start_date}} added by : {{ symptom.symptom_recipient }}
                 </h3>
+                <!--edit button -->
                 <a href="{{ url_for('edit_symptom', symptom_id=symptom._id) }}" class="btn edit">Edit</a>
                 <!-- confirm delete modal -->
                 <a class="btn modal-trigger delete" href="#delete-confirmation">Delete</a>
@@ -52,10 +54,8 @@
 </div>
 {% endif %}
 
-
-
 <!--add symptom form -->
-<div class="row">
+<div class="row" id="add-symptom-section">
     <div class="col s12">
         <h1 class="titles">Add your symptoms</h1>
     </div>
@@ -79,9 +79,6 @@
                     {% endfor %}
 
                 </select>
-
-
-
             </div>
 
             <!--symptom  -->
@@ -120,8 +117,6 @@
             <!--submit button  -->
             <div class="row">
                 <div class="col center-align s6">
-                    <!--add an are you sure button  -->
-
                     <button class="btn waves-effect waves-light" type="submit" name="action">
                         Save
                         <i class="fas fa-check-square"></i>

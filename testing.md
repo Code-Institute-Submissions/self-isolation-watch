@@ -205,6 +205,7 @@ A user can update their symtpoms and see it listed with their other symptoms, on
 * button highlights, aesthetically pleasing, user is given feedback that they have hovered/ clicked on the button.
 ![user lands on homepage](/testing/usability/home(3).png)
 * user is taken to register page after clicking, again register is highlighted and page is simple and functional. 
+* *If user is already logged in and clicks this same button, they are redirected to the add add symptom form* 
 ![user lands on homepage](/testing/usability/home(4).png)
 if user comes back to the homepage, they are met with the search bar. if they perform a none format fitting search, they are told what is wrong and how to solve the issue. 
 ![user lands on homepage](/testing/usability/home(5).png)
@@ -213,6 +214,10 @@ this message could be stronger and more obviously a feedback message.
 
 ![user lands on homepage](/testing/usability/home(13).png)
 - here i have added a div with class 'alert' around the if statement which actions the feedback text, letting the user know that their search item was unmatched and what they should do next. I checked its accessibility too and found no issues with style. 
+
+- *If user clicks on the link to add the symptom, they are redirected to the login page.*
+
+- *If user is already logged in and clicks this same button, they are redirected to the add add symptom form* 
 
 ![user lands on homepage](/testing/usability/home(6).png)
 user resets and scrolls down to find the list of added symptoms. 
@@ -290,7 +295,8 @@ Other than the jinja code related errors, i had no other validation errors.
 
 
 ## WW3 CSS validation 
-
+- My CSS had no errors.
+![PEP8](/testing/usability/CSS-Validator.png)
 
 
 

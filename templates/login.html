@@ -3,11 +3,13 @@
 {% block nav_login %} active-page {% endblock %}
 {% block content %}
 
+<!--login page welcome text--> 
 <div class="row">
     <div class="col s12">
         <h1 class="titles"> Login to review, edit or delete your current symptoms and add new ones!
         </h1>
 
+        <!--login form--> 
         <form method="POST" action="{{ url_for('login') }}">
 
             <!--username for register -->
@@ -26,6 +28,7 @@
                 <button class="btn waves-effect waves-light button-labels" type="submit" name="action">Log in</button>
             </div>
 
+            <!--link to registration form -->
             <div class="col s3">
                 <h4 class="small-titles center-align">
                     Unless you need to register?</h4>
@@ -34,10 +37,7 @@
                 <a class="btn waves-effect waves-light button-labels" href="{{ url_for('register') }}">Register</a>
 
             </div>
-
-
         </form>
-
     </div>
 </div>
 
