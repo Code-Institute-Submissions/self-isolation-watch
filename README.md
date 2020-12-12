@@ -1,6 +1,6 @@
 
 ## Milestone 3 project
-
+![am i responsive](/wireframes/am-i-responsive.png)
 [Site can be found here](https://self-isolation-watch.herokuapp.com/) 
 # Self-isolation watch
 'Self-isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 

@@ -11,7 +11,8 @@ my ![second attempt](/testing/screenshots/wave-test-2-(homepage).png) was better
 
 Due to my sites restrictions on what content can be seen by other users, i was not able to run the the my symptoms page through the wave test. to ensure i was able to maintain the same diligence to the accessibility of the site, i added downloaded the [google chrome extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh/related). 
 
--  ![Login page](/testing/screenshots/wave-login.png)
+-  
+![Login page](/testing/screenshots/wave-login.png)
 The empty link being sighted on the page, is the scroll to top function which appears as dormant on the login and register pages because, the pages have so little contnet that the function is not activated. To add clarity to the scroll to top button/ link, i added a aria- label, explaiinng that it was a scroll to top link. 
 
 - ![register page](/testing/screenshots/wave-register.png)
@@ -271,12 +272,12 @@ they fill in the form and receive feedback once complete.
 
 ### delete symptom
 - when deleting a symptom; 
-![deleting symptom](/testing/usability/delete_symptom(1).png)
-![deleting symptom](/testing/usability/delete_symptom(2).png)
+![deleting symptom](/testing/usability/delete-symptom(1).png)
+![deleting symptom](/testing/usability/delete-symptom(2).png)
 a modal will appear asking the user if they are sure they want to delete. 
-![deleting symptom](/testing/usability/delete_symptom(3).png)
+![deleting symptom](/testing/usability/delete-symptom(3).png)
 if yes, they will be given a feedback message, prompting them to add another. i didnt think a link to add symptom was neccessary,again. it may overcrowd and have an undesired effect. 
-![deleting symptom](/testing/usability/delete_symptom(4).png)
+![deleting symptom](/testing/usability/delete-symptom(4).png)
 if no, the box simply closes. 
 
 
@@ -308,5 +309,4 @@ alert("Oops, it looks like this function isn't supported on your browser! Don't 
 ![JS-Hint](/testing/usability/JS-Hint.png)
 
 
-
-## compatability
+* link to main read me 
