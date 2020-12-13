@@ -1,6 +1,6 @@
 # Testing
 
-> [To return to previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
+> [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
 
 ## Table of contents
 
@@ -28,10 +28,13 @@
 * I used [wave](https://wave.webaim.org/) to achieve better accessibility on my site. 
 
 ### Symptoms
-* ![First attempt with wave](/testing/accesibility/wave-test-1-(homepage).png)  
-I had a serious contrast issue, so I immediately resolved this on every page. 
 
-* ![After resolving contrast issue](/testing/screenshots/wave-test-2-(homepage).png). I started to understand the importance of the contrast issues and labelling objects that I wouldn't assume necessary to label. For example, lists and navbars. ![After adding more aria-labels where necessary](/testing/screenshots/wave-test-3-(homepage).png)
+![First attempt with wave](/testing/accesibility/wave-test-1-(homepage).png)  
+* I had a serious contrast issue, so I immediately resolved this on every page. 
+
+![After resolving contrast issue](/testing/screenshots/wave-test-2-(homepage).png). 
+* I started to understand the importance of the contrast issues and labelling objects that I wouldn't assume necessary to label. For example, lists and navbars. 
+![After adding more aria-labels where necessary](/testing/screenshots/wave-test-3-(homepage).png)
 ![Final wave test on homepage](/testing/screenshots/wave-test-final.png)
 
 * Due to my sites restrictions on what content can be seen by other users, I was not able to run the 'my symptoms' page through the wave test. To ensure I was able to maintain the same diligence to the accessibility of the site, across all pages, I added wave's google chrome extension to my browser. 
@@ -40,12 +43,12 @@ I had a serious contrast issue, so I immediately resolved this on every page.
 
  ### Login
 
-* ![Login page](/testing/screenshots/wave-login.png)
-The empty link being sighted on the page is the scroll to top function which appears as dormant on the login and register pages because, the pages have so little contnet that the function is not activated. To add clarity to the scroll to top button/ link, i added a aria- label, explaiinng that it was a scroll to top link. 
+![Login page](/testing/screenshots/wave-login.png)
+* The empty link being sighted on the page is the scroll to top function which appears as dormant on the login and register pages because, the pages have so little contnet that the function is not activated. To add clarity to the scroll to top button/ link, i added a aria- label, explaiinng that it was a scroll to top link. 
 
  ### Register
-* ![register page](/testing/screenshots/wave-register.png)
-On the register page, I also had a link button to 'log in' (if users already had an account). The wave test pointed out that this was in fact bad usability and could actually be confusing for a user, therefore contributing to bad user experience. 
+![register page](/testing/screenshots/wave-register.png)
+* On the register page, I also had a link button to 'log in' (if users already had an account). The wave test pointed out that this was in fact bad usability and could actually be confusing for a user, therefore contributing to bad user experience. 
 
 * I removed the login link. 
 
@@ -53,8 +56,8 @@ On the register page, I also had a link button to 'log in' (if users already had
 
  ### My symptoms
 
-* ![My symptoms](/testing/screenshots/wave-my_symptoms.png)
-The missing 'form label' is for the first question on the add symptom form 
+![My symptoms](/testing/screenshots/wave-my_symptoms.png)
+* The missing 'form label' is for the first question on the add symptom form 
 ``` <div class="input-field status-options">
                     <select id="isolation_status" name="isolation_status" class="validate" aria-label="isolation-status dropdown" required> 
                     <label for="isolation_status"> </label>
@@ -124,7 +127,8 @@ I made some changes and simplified the content, but I was still unhappy that at 
 
 ### add symptom form 
 
-- On the add symptom form, when a user clicks on the input fields, the labels became slightly obstructed. ![add symptom form](/testing/responsiveness/ipad-pro-add-symptom-form(1).png)
+- On the add symptom form, when a user clicks on the input fields, the labels became slightly obstructed. 
+![add symptom form](/testing/responsiveness/ipad-pro-add-symptom-form(1).png)
 
 * Using inspect in dev tools, I adjusted the position of the label in the input field.
 
@@ -228,15 +232,15 @@ I scrolled to see the issue and where the overspills lie.
 
 * *If user is already logged in and clicks this same button, they are redirected to the add add symptom form* 
 
-* ![search bar on homepage](/testing/usability/home(4).png)
-if the user comes back to the homepage, they are met with the search bar. If they perform a none format fitting search, they are told what is wrong and how to solve the issue. 
-* ![none formatting search item](/testing/usability/home(5).png)
+![search bar on homepage](/testing/usability/home(4).png)
+* If the user comes back to the homepage, they are met with the search bar. If they perform a none format fitting search, they are told what is wrong and how to solve the issue. 
+![none formatting search item](/testing/usability/home(5).png)
 
 * If, search item does not match any of the listed symptoms, the user sees a message explaining that with a link. 
 
 - This message could be stronger and more obviously a feedback message. 
 
-- !['search item doesnt exist' message](/testing/usability/home(13).png)
+!['search item doesnt exist' message](/testing/usability/home(13).png)
 Here I have added a div with class 'alert' around the if statement which actions the feedback text, letting the user know that their search item was unmatched and what they should do next. I checked its accessibility too and found no issues with style. 
 
 - *If user clicks on the link to add the symptom, they are redirected to the login page.*
@@ -256,7 +260,7 @@ Here I have added a div with class 'alert' around the if statement which actions
 ![copy url functionality gives feedback](/testing/usability/home(11).png)
 
 
-* Link in footer works, however when testing i noticed i had forgotten to add `"_blank"` attribute. since added and link opens to new tab. 
+* Link in footer works, however when testing I noticed I had forgotten to add `"_blank"` attribute. I have since added and the link now opens to a new tab. 
 ![user lands on homepage](/testing/usability/home(12).png)
 
 
@@ -267,19 +271,19 @@ Here I have added a div with class 'alert' around the if statement which actions
 
 * The registration page nav bar link is highlighted, the registration form provides feedback of the allowances of choosing a username and or password. 
 
-* Originally i had added a pattern that the user must adhere when choosing a username and password. I did this because I wanted to improve my defensive programing, however after testing, i realised that these features actually inhibited a good ux. I since removed them and now the only requirements for a username/ password are the minimum lengths. 
+* Originally, I had added a pattern that the user must adhere when choosing a username and password. I did this because I wanted to improve my defensive programing, however, after testing, I realised that these features actually inhibited a good UX. I since removed them and now the only requirements for a username/ password are the minimum lengths. 
 
-* after successfully registering, user is taken directly to the my symptoms page where they are informed that they have no symptoms currently and are encouraged to add one.
+* After successfully registering, the user is taken directly to the 'my symptoms' page where they are informed that they have no symptoms currently and are encouraged to add one.
 ![register](/testing/usability/register(3).png)
 
-* Initially i had a link to the add symptom form, however again when testing, i realised that it was axctually confusing to have an additional link for a process which is a mere scroll away! 
+* Initially I had a link to the add symptom form, however again when testing, I realised that it was actually confusing to have an additional link for a process which is a mere scroll away! 
 ![register](/testing/usability/register(4).png)
 
-* If user tries to login with a username that is already in use they are taken to the login page 
+* If the user tries to login with a username that is already in use they are taken to the login page 
 ![register](/testing/usability/register(5).png)
 
 ### Login page usability 
-- When logging in with an error, user is taken to an error page, which does not say the specific reason they have not successfully logged in, but gives all possible reasons. i felt this was better defensive programming, than a mere flash message. 
+- When logging in with an error, the user is taken to an error page, which does not say the specific reason they have not successfully logged in, but gives all possible reasons. I felt this was better defensive programming than a mere flash message. 
 ![login](/testing/usability/login(1).png)
 ![login](/testing/usability/login(2).png)
 
@@ -287,56 +291,57 @@ Here I have added a div with class 'alert' around the if statement which actions
 ![login](/testing/usability/login(3).png)
 ![login](/testing/usability/login(4).png)
 
-- if login is successful; 
+- If login is successful; 
 ![login](/testing/usability/login(5).png)
 
 ### Add symptom usability
-- when the user has logged in / registered and now wants to add a symptom
+- When the user has logged in / registered and now wants to add a symptom,
 ![add symptom](/testing/usability/add_symptom(1).png)
 
-- they fill in the form and receive feedback once complete. 
+- The user fills in the form and receives feedback once complete. 
 ![add symptom](/testing/usability/add_symptom(2).png)
 
 ### Edit symptom usability
-- when the user wants to edit;
+- When the user wants to edit;
+
 ![edit symptom](/testing/usability/edit_symptom(1).png)
+
+- The text at the top of the page explains to the user why it is important to continually update their symptoms.
+
 ![edit symptom](/testing/usability/edit_symptom(2).png)
 
-- the text at the top of the page explains to the user why it is important to continually update their symptoms.
-
-- the users original form is loaded.
+- The users' original form is loaded.
 
 ![edit symptom](/testing/usability/edit_symptom(3).png)
-- when changes are made to the form, the user clicks the save button. 
+
+- When changes are made to the form, the user clicks the save button. 
 
 ![edit symptom](/testing/usability/edit_symptom(4).png)
-- at this point the user is given feedback that the symptomn is updated and where it can be found. 
+
+- At this point, the user is given feedback that the symptom is updated and where it can be found. 
 
 ### Delete symptom usability
-- when deleting a symptom; 
+- When deleting a symptom; 
 ![deleting symptom](/testing/usability/delete-symptom(1).png)
 ![deleting symptom](/testing/usability/delete-symptom(2).png)
-- a modal will appear asking the user if they are sure they want to delete. 
 
-- if yes, they will be given a feedback message, prompting them to add another. i didnt think a link to add symptom was neccessary,again. it may overcrowd and have an undesired effect. 
+- A modal will appear asking the user if they are sure they want to delete. 
+- If yes, they will be given a feedback message, prompting them to add another. I didn't think a link to 'add symptom' was necessary, again,  it may have contributed to bad UX.
 ![deleting symptom](/testing/usability/delete-symptom(3).png)
 
-
-- if no, the box simply closes. 
+- If no, the box simply closes. 
 ![deleting symptom](/testing/usability/delete-symptom(4).png)
 
 ## Validators and Lintners
 
 ### WW3 HTML validation 
-As expected, each of my pages flagged errors due to my use of jinja code, i also had some warnings about the misuse of the ` aria-label` attribute, however since i had added these after taking my sites accessibility into account, i thought that the wave tool was liley to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
+As expected, each of my pages flagged errors due to my use of jinja code, I also had some warnings about the misuse of the `aria-label` attribute, however since I had added these after taking the accessibility of my site into account, I thought that the wave tool was likely to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
 
-Other than the jinja code related errors, i had no other validation errors. 
-
+Other than the jinja code-related errors, I had no other HTML validation errors. 
 
 ### WW3 CSS validation 
 - My CSS had no errors.
-![PEP8](/testing/usability/CSS-Validator.png)
-
+![CSS Validator](/testing/usability/CSS-Validator.png)
 
 ### PEP8 validation 
 - My python code had no errors.
@@ -344,7 +349,7 @@ Other than the jinja code related errors, i had no other validation errors.
 
 
 ### Javascript validation 
-- My javascript code had no errors, but did have 3 warnings. The warnings were about the use of keywords such as `let` and `const`, to avoid any issues with this, in the future i would ensure that all of my JS functions had an `error` response, if anything i was using, was not supported in the users browser. Similar to the error function i used for the creation of my copy to clipboard function. 
+- My javascript code had no errors but did have 3 warnings. The warnings were about the use of keywords such as `let` and `const`, to avoid any issues with this, in the future I would ensure that all of my JS functions had an `error` response, if anything I was using, was not supported in the users' browser. Similar to the error function I used for the creation of my copy to clipboard function. 
 ```
 clipboard.on('error', function(e) {
 alert("Oops, it looks like this function isn't supported on your browser! Don't worry, Just copy this: https://self-isolation-watch.herokuapp.com/"); 
@@ -353,4 +358,4 @@ alert("Oops, it looks like this function isn't supported on your browser! Don't 
 ![JS-Hint](/testing/usability/JS-Hint.png)
 
 
-> [To return to previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 
+> [To return to the previous document please click here](https://github.com/mayasaffron/self-isolation-watch/blob/master/README.md) 

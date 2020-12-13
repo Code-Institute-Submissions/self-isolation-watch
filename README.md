@@ -1,11 +1,46 @@
 # Self-isolation watch (Milestone 3 project)
 ![am i responsive](/wireframes/am-i-responsive.png)
-[Site can be found here](https://self-isolation-watch.herokuapp.com/) 
 
 'Self-isolation watch' is designed to help people keep track of their symptoms and see what other users' symptoms are. They can add a symptom, description and the date they started feeling this way. 
 This will help them keep a note of their potential retraction of the virus as well as give them an indication into how contagious they are. Users will be able to create a profile, where they save their symptoms, update them accordingly and when they are no longer symptomatic, they can delete them.' 
 
+[Site can be found here](https://self-isolation-watch.herokuapp.com/) 
+
+## Table of contents
+
+- [**UX**](#UX)
+    - [Main Aims](#Main-Aims)
+    - [User Stories](#User-Stories)
+    - [Personas ](#Personas)
+- [**UX Design process**](#UX-Design-process)
+   - [UX Research ](#UX-Research) 
+   - [UX Design ](#UX-Design)
+   - [Colour scheme ](#Colour-scheme)
+   - [Wireframes ](#Wireframes)
+   - [Features](#Features)
+- [**Information Architecture**](#Information-Architecture)
+    - [Database structure](#Database-structure)
+    - [Data Storage Types](#Data-StorageTypes)
+    - [**Collections Data Structure**](#Collections-Data-Structure)
+        - [Users Collection](#Users-Collection)
+        - [Symptoms Collection](#Symptoms-Collection)
+        - [Status Collection](#Status-Collection)
+- [**Bugs discovered**](#Bugs-discovered)
+    - [Known bugs](#Known-bugs)
+    - [More Testing](#More-Testing)
+- [**Technologies Used**](#Technologies-Used)
+- [**Deployment**](#Deployment)
+    - [Local deployment](#Local-deployment)
+    - [Deploying this project to Heroku](#Deploying-this-project-to-Heroku)
+- [**Credits**](#Credits)
+    - [Content](#Content)
+    - [Acknowledgements](#Acknowledgements)
+    - [Links and tutorials](#Links-and-tutorials)
+
+## UX 
+
 ## Main Aims 
+
 - To create an app that gives people a platform to share their symptoms and learn about each other.
 - Take the pressure of a person to remember when they started feeling this way. 
 
@@ -29,7 +64,7 @@ This will help them keep a note of their potential retraction of the virus as we
 
 ## UX Design process
 
-### Design Process: UX Research 
+### UX Research 
 Initially, I had the idea to make an app which I would use in my career as a Personal Trainer, however, with the help of my wonderful [mentor](https://github.com/SinCron) I recognised that my emotional investment in the fruition of this project idea, was blocking my ability to see the importance of the functionality. It was also an idea, which required the user to already be aware of other such apps/ technology and was therefore not as accessible as the current idea I have run with. 
 
 I went for a COVID test and in the booking stages, I was being asked about what symptoms I have had to make me think that I may have contracted the virus. 
@@ -47,7 +82,7 @@ I knew that I wanted to create an app that would:
 I based my simplistic functional aspect of the app on the module-[mini-project-task-application]() expertly delivered by [code Institute](). Everything in this project is entirely fictionally and all content was created by me. 
 
 
-### Design process: UX Design
+### UX Design
 
 1. Strategy plane: According to healthcare professionals, one of the biggest strains, when having to diagnose a patient, is the lack of detail regarding the patients' symptoms. 
 I deduced that this app could be used as a tool to directly lighten the workload of some of the hardworking front line staff that are in charge of diagnosing. 
@@ -105,7 +140,7 @@ Selected colour palette:
 It was important to me that the seriousness of the topic wasn't distracted from and the site was still inviting and palatable. For this reason, I decided on
 ![This colour scheme](/wireframes/Colour-scheme.png)
 
-Wireframes:
+### Wireframes
 ![Desktop devices](/wireframes/desktop.png)
 ![Mobile devices](/wireframes/mobile.png)
 ![Tablet devices](/wireframes/tablet.png)
@@ -255,60 +290,6 @@ Status | _id | None | ObjectId
 Isolation Status | isolation_status | None | string
 
 [Example JSON from the symptoms collection](/data/schemas/status.json)
-
-
-## Technologies Used
-
-### Languages, libraries, databases, frameworks, editors and version control
-
-- HTML5
-    * The language used to create, add structure and content to the website.
-- CSS3 
-    * The language used to style the HTML5 elements according to the design colour scheme.
-- JavaScript
-    * The language used to make the app interactive, including the use of the clipboard.js functionality. 
-- [jQuery](https://jquery.com/)
-    * I used the jQuery library to help write the JavaScript code used in this project.
-- Python
-    * The programming languaged used to create the back-end function of the app.
-- PyMongo
-    * PyMongo was used as the Python API for MongoDB. This API enabled me to link the data from the back-end database to the front-end app.
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-    * The Python microframework used to help write the Python code for this project.
-- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
-    * Jinja templating language was used with Flask in the HTML code. This allowed for template inheritance from the base.html file and to link the back-end to the front-end. 
-- [MongoDB](https://www.mongodb.com/)
-    * This was the selected database chosen to store data in the cloud.  
-- [materialize framework](https://materializecss.com/) 
-    * I used materialize's grid container system as I wanted to design my project with a 'mobile-first' approach. I also used materialize's modal, form features to add structure to my content. Along with their CSS. 
-- [Gitpod](https://www.gitpod.io/)
-    * I relied on Gitpod's dev environment to write the code for my project.
-- [Git Version Control](https://git-scm.com/)
-    * I used Git for Version Control to track and record changes to my code and refer back when needed.
-- [GitHub](https://github.com/)
-    * I used GitHub as my remote repository, to push to and store the committed changes to my app from Git.
-- [Heroku](https://www.heroku.com/)
-    * I used Heroku as a hosting platform to deploy the live version of my app. 
-
-### Additional tools used
-
-- [FontAwesome](https://fontawesome.com/) 
-    * I relied on free FontAwesome icons, including a copy icon, bars icon to indicate the navbar at smaller screen sizes, various icons for my forms and a globe icon for a link in my footer. 
-
-- [Google Fonts](https://fonts.google.com/)
-    * I used two complementary fonts from Google for my project: Roboto and Quicksand. 
-
-- [Grammarly](https://app.grammarly.com/)
-    * Grammarly is my saving grace in ALL of my projects, used to correct my site content's spelling and grammar.
-
-- [W3C Markup Validation Service](https://validator.w3.org/) 
-    * This was a great tool throughout the project to check whether there were any errors in my HTML and CSS code (as discussed in more detail in the Testing section).
-
- - [JSHint](https://jshint.com/) 
-    * This tool helped me test my JavaScript and jQuery code (explained in more detail in the Testing section). 
-
-- [PEP 8 online](http://pep8online.com/)
-    * I used PEP 8 to check that my Python code complied with formatting standards.  
 
 ## Bugs discovered
 
@@ -508,16 +489,68 @@ I started trying to solve this issue by applying some CSS to the flash messages.
 </div>
 
 ```
+## Known bugs
+
+* Layout of footer not adhering to sizing rules
+* 'add symptom' forms' input fields appear crowded and slightly harder to read on smaller devices. 
 
 ## More Testing
 - More in-depth testing can be found at the below link to my testing.md file.
 [Testing in depth](https://github.com/mayasaffron/self-isolation-watch/blob/master/testing.md) 
 
-## Known Bugs
 
-* Layout of footer not adhering to sizing rules
-* 'add symptom' forms' input fields appear crowded and slightly harder to read on smaller devices. 
+## Technologies Used
 
+### Languages, libraries, databases, frameworks, editors and version control
+
+- HTML5
+    * The language used to create, add structure and content to the website.
+- CSS3 
+    * The language used to style the HTML5 elements according to the design colour scheme.
+- JavaScript
+    * The language used to make the app interactive, including the use of the clipboard.js functionality. 
+- [jQuery](https://jquery.com/)
+    * I used the jQuery library to help write the JavaScript code used in this project.
+- Python
+    * The programming languaged used to create the back-end function of the app.
+- PyMongo
+    * PyMongo was used as the Python API for MongoDB. This API enabled me to link the data from the back-end database to the front-end app.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    * The Python microframework used to help write the Python code for this project.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    * Jinja templating language was used with Flask in the HTML code. This allowed for template inheritance from the base.html file and to link the back-end to the front-end. 
+- [MongoDB](https://www.mongodb.com/)
+    * This was the selected database chosen to store data in the cloud.  
+- [materialize framework](https://materializecss.com/) 
+    * I used materialize's grid container system as I wanted to design my project with a 'mobile-first' approach. I also used materialize's modal, form features to add structure to my content. Along with their CSS. 
+- [Gitpod](https://www.gitpod.io/)
+    * I relied on Gitpod's dev environment to write the code for my project.
+- [Git Version Control](https://git-scm.com/)
+    * I used Git for Version Control to track and record changes to my code and refer back when needed.
+- [GitHub](https://github.com/)
+    * I used GitHub as my remote repository, to push to and store the committed changes to my app from Git.
+- [Heroku](https://www.heroku.com/)
+    * I used Heroku as a hosting platform to deploy the live version of my app. 
+
+### Additional tools used
+
+- [FontAwesome](https://fontawesome.com/) 
+    * I relied on free FontAwesome icons, including a copy icon, bars icon to indicate the navbar at smaller screen sizes, various icons for my forms and a globe icon for a link in my footer. 
+
+- [Google Fonts](https://fonts.google.com/)
+    * I used two complementary fonts from Google for my project: Roboto and Quicksand. 
+
+- [Grammarly](https://app.grammarly.com/)
+    * Grammarly is my saving grace in ALL of my projects, used to correct my site content's spelling and grammar.
+
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    * This was a great tool throughout the project to check whether there were any errors in my HTML and CSS code (as discussed in more detail in the Testing section).
+
+ - [JSHint](https://jshint.com/) 
+    * This tool helped me test my JavaScript and jQuery code (explained in more detail in the Testing section). 
+
+- [PEP 8 online](http://pep8online.com/)
+    * I used PEP 8 to check that my Python code complied with formatting standards.  
 
 ## Deployment
 
@@ -618,9 +651,13 @@ The content of this website is entirely fictional and written by myself. The str
 ### Acknowledgements
 
 Thank you to the following people who helped with support and inspiration:
+
 [Nick bell](https://github.com/NickBell123) 
+
 [Miranda Thewlis- README structure and support throughout](https://github.com/mkthewlis/Milestone-Project-3/blob/master/README.md)
+
 [Sinead O'Brien- knowledgable and patient when supporting me through the process as a mentor](https://github.com/SinCron)
+
 [Anna greaves-  Providing me with a structure for my Data schemas and generally suppprtive](https://raw.githubusercontent.com/AJGreaves/familyhub/master/README.md)
 
 ### Links and tutorials
