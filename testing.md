@@ -18,7 +18,7 @@
     - [Add symptom](#Add-symptom-usability)
     - [Edit symptom](#Edit-symptom-usability)
     - [Delete symptom](#Delete-symptom-usability)
-- [**Validators and Lintners**](#Validators-and-Lintners)
+- [**Validators and Linters**](#Validators-and-Linters)
     - [WW3 HTML validation](#WW3-HTML-validation)
     - [WW3 CSS validation](#WW3-CSS-validation)
     - [PEP8 validation](#PEP8-validation)
@@ -332,7 +332,7 @@ Here I have added a div with class 'alert' around the if statement which actions
 - If no, the box simply closes. 
 ![deleting symptom](/testing/usability/delete-symptom(4).png)
 
-## Validators and Lintners
+## Validators and Linters
 
 ### WW3 HTML validation 
 As expected, each of my pages flagged errors due to my use of jinja code, I also had some warnings about the misuse of the `aria-label` attribute, however since I had added these after taking the accessibility of my site into account, I thought that the wave tool was likely to be a better judge of the use of this particular attribute and felt comfortable with my choice. 
